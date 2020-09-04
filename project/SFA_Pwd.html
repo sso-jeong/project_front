@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SFA Login</title>
+    <title>SFA PwdFind</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -18,27 +18,39 @@
 <body>
     <div class="login-box">
 
-        <span class="logo-img">
-            <img src="images/logo.png" />
-        </span>
+        <img src="images/logo.png" />
+
 
         <form name="" method="POST" action="">
 
             <div class="pos">
+                <span class="form-title">
+                    <h4>사번</h4>
+                </span>
+                <span class="form-icon">
+                    <i class="far fa-user-circle"></i>
+                </span>
+                <input type="text" name="" id="userid" class="input" tabindex="1" placeholder="등록한 사번을 입력해주세요"
+                    autofocus>
+            </div>
 
+            <div class="pos">
+                <span class="form-title">
+                    <h4>이메일</h4>
+                </span>
                 <span class="form-icon">
                     <i class="far fa-envelope"></i>
                 </span>
-                <input type="text" name="" id="userid" class="input" tabindex="1" placeholder="Email" autofocus>
+                <input type="text" name="" id="email" class="input" tabindex="2" placeholder="등록한 이메일 입력해주세요">
             </div>
 
             <div class="">
-                <button class="btn" id="btn">LOGIN</button>
+                <button class="btn2" id="btn2">확인</button>
             </div>
             <div class="register">
-                <div class="account-top">
-                    <span class="account">Don't have and Account ?</span>
-                    <span class="signup"><a href="#">Sign up</a></span>
+                <div class="account-top2">
+                    <span class="account">회원가입 정보가 없습니까? </span>
+                    <span class="signup"><a href="#">회원가입</a></span>
                 </div>
                 <div class="clearfix"></div>
             </div>

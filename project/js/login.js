@@ -25,5 +25,22 @@ $(function () {
 
     });
 
-    
+    $("#btn2").click(function () {
+        if ($("#userid").val() == '') {
+            alert("사번을 입력해 주세요.");
+            $("#userid").focus();
+            $("#userid").val("");
+            return false;
+
+        } else if ($("#email").val() == '') {
+            alert("이메일을 입력하세요.");
+            $("#email").focus();
+            $("#email").val("");
+            return false;
+
+        }
+
+    });
+
+
 });
