@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EAH Login</title>
+    <title>SFA Login</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
@@ -18,19 +18,16 @@
 <body>
     <div class="login-box">
 
-        <div class="logo">
-            <span class="logo-img">
-                <i class="fas fa-user"></i>
-            </span>
-
-        </div>
+        <span class="logo-img">
+            <img src="images/logo.png" />
+        </span>
 
         <form name="" method="POST" action="">
 
             <div class="pos">
 
                 <span class="form-icon">
-                    <i class="far fa-address-card"></i>
+                    <i class="far fa-user-circle"></i>
                 </span>
                 <input type="text" name="" id="userid" class="input" tabindex="1" placeholder="Identification"
                     autofocus>
@@ -44,14 +41,18 @@
             </div>
 
             <div class="">
-                <button class="btn" id="btn">Login</button>
+                <button class="btn" id="btn">LOGIN</button>
             </div>
             <div class="register">
-                <span class="forgot"><a href="#">Forgot Your Password?</a></span>
-                <span class="account"><a href="#">Create New Account</a></span>
+                <div class="forgot"><a href="./SFA_Pwd.html">Forgot Your Password?</a></div>
+                <div class="account-top">
+                    <span class="account">Don't have and Account ?</span>
+                    <span class="signup"><a href="#">Sign up</a></span>
+                </div>
                 <div class="clearfix"></div>
             </div>
         </form>
+
 
     </div>
 
