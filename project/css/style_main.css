@@ -19,28 +19,121 @@
 .title-top {
     width: 85%;
     position: relative;
-    background-color: darkorange;
+    /* background-color: darkorange; */
 }
 
 .clearfix {
     clear: both;
 }
 
-.auth {
+.auth div {
     text-align: right;
+}
+
+.pic-wrap .user i {
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 50px;
+    color: #0b409c;
+    cursor: pointer;
 }
 
 .menu-top {
     width: 100%;
-    margin-top: 35px;
+    /* margin-top: 35px; */
     text-align: center;
-    background-color: darkmagenta;
-
+    /* background-color: darkmagenta; */
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
     justify-content: center;
 }
+
+.menu-top a {
+    color: #0b409c;
+}
+
+/***************관리자 작은 페이지(로그아웃, 권한주기 용)***************/
+.dropbtn {
+    background-color: transparent;
+    color: #0b409c;
+    padding: 16px;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    border: solid 1px #e7e7e7;
+    background-color: #f9f9f9;
+    min-width: 330px;
+    height: 500px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content .ad-top {
+    position: relative;
+    height: 20%;
+    background-color: #0b409c;
+    text-align: center;
+
+}
+
+.ad-top i {
+    margin-top: 30px;
+    font-size: 60px;
+    color: #f1f1f1;
+}
+
+.ad-name {
+    margin: 10px 10px;
+    font-size: 20px;
+}
+
+.ad-name .ad-admin,
+.ad-name .ad-authChange-top {
+    text-align: center;
+}
+
+.ad-name .ad-authChange-top {
+    margin-top: 15px;
+}
+
+.ad-authChange {
+    margin: 15px 10px;
+    height: 200px;
+    border: solid 2px #0b409c;
+}
+
+.ad-logout {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: #0b409c;
+}
+
+.ad-logout a {
+    height: 30%;
+    margin: 10px 10px;
+    font-size: 20px;
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.show {
+    display: block;
+}
+
+
+/***************관리자 작은 페이지(로그아웃, 권한주기 용) 끝 ***************/
 
 ul li {
     list-style: none;
