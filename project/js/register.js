@@ -68,6 +68,7 @@ $(function () {
         // if (id == '' || id == null) {
         //     alert("사번을 입력해주세요.");
         //     return false;
+        //test 지울것
 
         // }
         // else {
