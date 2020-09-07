@@ -3,7 +3,7 @@
 
 .login-box {
     width: 500px;
-    height: 700px;
+    height: 90vh;
     position: absolute;
     top: 45%;
     left: 50%;
@@ -84,7 +84,11 @@ form {
 }
 
 .right {
-    right: -85%;
+    position: absolute;
+    top: 55%;
+    transform: translateY(-55%);
+    right: 10px;
+    color: #8898aa;
 }
 
 .btn,
@@ -132,4 +136,17 @@ form {
 
 .register {
     margin-top: 10px;
+}
+
+.red {
+    color: #f00;
+}
+
+.green {
+    color: #00ff00;
+}
+
+.disen {
+    background-color: gray;
+    cursor:none; 
 }

@@ -17,10 +17,6 @@
 <body>
     <div class="login-box lsp">
 
-        <!-- <div class="">
-            <img class="logo-img" src="images/logo.png" />
-        </div> -->
-
         <form name="" method="POST" action="">
 
             <div class="pos">
@@ -31,7 +27,7 @@
                     <i class="far fa-user-circle"></i>
                 </span>
                 <input type="text" name="" id="userid" class="input isp" tabindex="1" placeholder="사번을 입력해주세요"
-                    autofocus />
+                    autofocus  />
             </div>
 
             <div class="pos">
@@ -51,7 +47,7 @@
                 <span class="form-icon fisp">
                     <i class="fas fa-key"></i>
                 </span>
-                <input type="password" name="" id="password" class="input isp" tabindex="3" placeholder="비밀번호를 입력해주세요">
+                <input type="password" name="" id="password" class="input isp" tabindex="3" placeholder="비밀번호를 입력해주세요" />
             </div>
 
             <div class="pos">
@@ -65,9 +61,8 @@
                 </span>
 
                 <input type="password" name="" id="cfm-password" class="input isp" tabindex="4"
-                    placeholder="비밀번호를 한번 더 입력해주세요">
-
-                <span class="form-icon fisp right">
+                    placeholder="비밀번호를 한번 더 입력해주세요" />
+                <span class="right">
                     <i class="fas fa-check" id="pwdcheck"></i>
                 </span>
 
@@ -80,7 +75,7 @@
                 <span class="form-icon fisp">
                     <i class="fas fa-mobile-alt"></i>
                 </span>
-                <input type="text" name="" id="name" class="input isp" tabindex="5"
+                <input type="text" name="" id="phone" class="input isp" tabindex="5"
                     placeholder="전화번호를 입력해주세요(하이폰 없이 입력해주세요)" />
             </div>
 
@@ -91,7 +86,7 @@
                 <span class="form-icon fisp">
                     <i class="far fa-envelope"></i>
                 </span>
-                <input type="text" name="" id="name" class="input isp" tabindex="6" placeholder="이메일을 입력해주세요" />
+                <input type="text" name="" id="mail" class="input isp" tabindex="6" placeholder="이메일을 입력해주세요" />
             </div>
 
             <div class="pos">
@@ -101,11 +96,11 @@
                 <span class="form-icon fisp">
                     <i class="far fa-map"></i>
                 </span>
-                <input type="text" name="" id="name" class="input isp" tabindex="7" placeholder="주소를 입력해주세요" />
+                <input type="text" name="" id="addr" class="input isp" tabindex="7" placeholder="주소를 입력해주세요" />
             </div>
 
-            <div class="">
-                <button class="btn" id="btn">회원가입</button>
+            <div class=""> <!--onclick="linklogin()" -->
+                <button class="btn" id="btn" type="submit"><a href="SFA_login.html">회원가입</a></button>
             </div>
 
 
@@ -117,4 +112,5 @@
 
 </body>
 <script src="js/register.js"></script>
+
 </html>
