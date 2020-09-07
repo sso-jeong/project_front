@@ -16,7 +16,6 @@ body {
 
 a {
     text-decoration: none;
-    color: #f1f1f1;
 }
 
 .page-wrap {
@@ -26,9 +25,18 @@ a {
 
 nav {
     width: 100%;
+    background-color: #F2F7FF;
 }
+
 
 table {
     width: 100%;
     border-collapse: collapse;
+    color: #005b9e;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
 }
