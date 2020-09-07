@@ -26,13 +26,23 @@
     clear: both;
 }
 
-.auth {
+.auth div {
     text-align: right;
+}
+
+.pic-wrap .user i {
+    width: 50px;
+    height: 50px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 50px;
+    color: #0b409c;
+    cursor: pointer;
 }
 
 .menu-top {
     width: 100%;
-    margin-top: 35px;
+    /* margin-top: 35px; */
     text-align: center;
     background-color: darkmagenta;
 
