@@ -22,12 +22,48 @@
 
                     <div class="title-top">
                         <div class="auth">
-                            <div class="pic-wrap">
-                                <span class="user">
-                                    <i class="fas fa-user-cog"></i>
-                                </span>
+                            <div class="dropdown">
+                                <button type="button" class="dropbtn" onclick="btnIcon()">
+                                    <span class="icon">
+                                        <i class="fas fa-user-cog"></i>
+                                    </span>
+                                </button>
+
+                                <div id="adminDropdown" class="dropdown-content">
+                                    <div class="ad-top">
+                                        <span class="">
+                                            <i class="far fa-user-circle"></i>
+                                        </span>
+                                    </div>
+                                    <div class="ad-name">
+                                        <div class="ad-admin">
+                                            관리자
+                                        </div>
+                                        <div class="ad-middle">
+                                            <span class="ad-tel">
+                                                <i class="fas fa-mobile-alt"> 010-0000-0000</i>
+                                            </span>
+
+                                            <span class="ad-email">
+                                                <i class="far fa-envelope"></i> admin@sfa.co.kr</i>
+                                            </span>
+                                        </div>
+
+                                        <div class="ad-authChange-top">
+                                            메뉴 권한 변경
+                                            <div class="ad-authChange">
+                                                내용
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="ad-logout">
+                                        <a href="#">닫기</a>
+                                        <a href="#">로그아웃</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                         <div class="">
                             <ul class="menu-top" id="">
                                 <li class=""><a href="#">메뉴1</a>
