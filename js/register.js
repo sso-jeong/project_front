@@ -48,7 +48,7 @@ $(function () {
 
 
     $(".pos #phone").keyup(function () {
-        var RegExp = /[ \{\}\[\]\/?.,;:|\)*~`!^\-_+┼<>@\#$%&\'\"\\\(\=]/gi;//정규식 구문
+        var RegExp = /[ \{\}\[\]\/?.,;:|\)*~`!^\-_+┼<>@\#$%&\'\"\\\(\=]/gi; //정규식 구문
         var obj = $("#phone").val();
         if (RegExp.test(obj)) {
             alert("특수문자는 입력하실 수 없습니다.");
@@ -57,44 +57,35 @@ $(function () {
 
     });
 
-    $('.back').click(function() {
-        location.href = "./SFA_login.html";
-    });
-
-
 });
 
 $(function linklogin() {
 
-    $('#btn').click(function(){
+    $('#btn').click(function () {
 
         var id = $("#userid").val();
         var name = $("#name").val();
         var pwd = $("#password").val();
         var cnt = 0;
-        
-        
 
 
-            if (id == '' || id == null) {
-                alert("사번을 입력해주세요.");
-                return false;
-            } else if (name == '' || name == null) {
-                alert("이름을 입력해주세요.");
-                return false;
-            } else if (pwd == '' || pwd == null) {
-                alert("비밀번호를 입력해주세요.");
-                return false;
-            }
-            // } else {
-            //     location.href = "./SFA_login.html";
-            // }
-        
-        
+
+
+        if (id == '' || id == null) {
+            alert("사번을 입력해주세요.");
+            return false;
+        } else if (name == '' || name == null) {
+            alert("이름을 입력해주세요.");
+            return false;
+        } else if (pwd == '' || pwd == null) {
+            alert("비밀번호를 입력해주세요.");
+            return false;
+        }
+        // } else {
+        //     location.href = "./SFA_login.html";
+        // }
+
+
 
     });
 });
-
-
-
-

@@ -29,8 +29,7 @@
     top: 15px;
     color: #8898aa;
     cursor: pointer;
-    width: 9px;
-    height: 9px;
+    z-index: 9999;
 }
 
 form {
@@ -83,7 +82,7 @@ form {
 }
 
 .fisp {
-    top:65%;
+    top: 65%;
     transform: translateY(-65%);
 }
 
@@ -157,5 +156,5 @@ form {
 
 .disen {
     background-color: gray;
-    cursor:none; 
+    cursor: none;
 }

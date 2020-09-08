@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SFA_admin</title>
-    <link rel="stylesheet" href="css/reset_main.css">
-    <link rel="stylesheet" href="css/test2.css">
+    <link rel="stylesheet" href="../css/reset_main.css">
+    <link rel="stylesheet" href="test2.css">
     <script src="https://kit.fontawesome.com/b1cadc3305.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -14,10 +14,10 @@
 <body>
     <div class="page-wrap">
         <header>
-            <nav>
+            <nav id="topMenu">
                 <div class="top">
                     <div class="logo">
-                        <img src="images/logo_sfa.png" alt="" title="SFA" />
+                        <img src="../images/logo_sfa.png" alt="" title="SFA" />
                     </div>
 
                     <div class="title-top">
@@ -63,71 +63,49 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="menu-top">
-                            <ul>
-                                <li>
-                                    <div class="menu-title"><a href="#">영업관리</a></div>
-                                    <ul class="menu-sub">
-                                        <li>
-                                            <a href="#">품목관리</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">거래처등록</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">수주관리</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">구매관리</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <div class="menu-title"><a href="#">관리자메뉴</a></div>
-                                    <ul class="menu-sub">
-                                        <li>
-                                            <a href="#">품목품목등록등록</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">품목등록</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">품목등록</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <div class="menu-title"><a href="#">관리자메뉴</a></div>
-                                    <ul class="menu-sub">
-                                        <li>
-                                            <a href="#">품목품목등록등록</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">품목등록</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">품목등록</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <div class="menu-title"><a href="#">관리자메뉴</a></div>
-                                    <ul class="menu-sub">
-                                        <li>
-                                            <a href="#">품목품목등록등록</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">품목등록</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">품목등록</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+                        <ul>
+                            <li class="topMenuLi">
+                                <a class="menuLink" href="#">영업관리</a>
+                                <ul class="subMenu">
+                                    <li> <a class="submenuLink longLink" href="#">품목관리</a></li>
+                                    <li> <a class="submenuLink longLink" href="#">거래처등록</a></li>
+                                    <li> <a class="submenuLink longLink" href="#">수주관리</a></li>
+                                    <li> <a class="submenuLink longLink" href="#">구매관리</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="topMenuLi">
+                                <a class="menuLink" href="#">인사관리</a>
+                                <ul class="subMenu">
+                                    <li> <a class="submenuLink" href="#">서브메뉴1</a></li>
+                                    <li> <a class="submenuLink" href="#">서브메뉴2</a></li>
+                                    <li> <a class="submenuLink" href="#">서브메뉴3</a></li>
+                                    <li> <a class="submenuLink" href="#">서브메뉴4</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="topMenuLi">
+                                <a class="menuLink" href="#">근태관리</a>
+                                <ul class="subMenu">
+                                    <li> <a class="submenuLink" href="#">서브메뉴1</a></li>
+                                    <li> <a class="submenuLink" href="#">서브메뉴2</a></li>
+                                    <li> <a class="submenuLink" href="#">서브메뉴3</a></li>
+                                    <li> <a class="submenuLink" href="#">서브메뉴4</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="topMenuLi">
+                                <a class="menuLink" href="#">관리자메뉴</a>
+                                <ul class="subMenu">
+                                    <li> <a class="submenuLink" href="#">서브메뉴1</a></li>
+                                    <li> <a class="submenuLink" href="#">서브메뉴2</a></li>
+                                    <li> <a class="submenuLink" href="#">서브메뉴3</a></li>
+                                    <li> <a class="submenuLink" href="#">서브메뉴4</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
                     </div>
-                </div>
             </nav>
         </header>
 
@@ -347,7 +325,7 @@
     </div>
 
 </body>
-<script src="js/main.js"></script>
-<script src="js/main-cal.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/main-cal.js"></script>
 
 </html>
