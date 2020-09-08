@@ -1,5 +1,6 @@
 // 캘린더 함수
 $(function () {
+
     const today = new Date();
 
     const setCalendarData = (year, month) => {
@@ -48,19 +49,19 @@ $(function () {
                 // i == 0: 1주차일 때
                 // j < firstDayName: 이번 달 시작 요일 이전 일 때
                 if (i == 0 && j < firstDayName) {
-                    //일요일일 때, 토요일일 때, 나머지 요일 일 때
+                    // 일요일일 때, 토요일일 때, 나머지 요일 일 때
                     if (j == 0) {
                         // 스타일링을 위한 클래스 추가
                         calHtml +=
-                            `<div style= color:red;' class='calendar__day horizontalGutter'><span>${(prevLastDay - (firstDayName - 1) + j)}</span><span></span></div>`;
+                            `<div style= color:#F2F7FF;' class='calendar__day horizontalGutter'><span>${(prevLastDay - (firstDayName - 1) + j)}</span><span></span></div>`;
                     } else if (j == 6) {
                         // 스타일링을 위한 클래스 추가
                         calHtml +=
-                            `<div class='calendar__day'><span>${(prevLastDay - (firstDayName - 1) + j)}</span><span></span></div>`;
+                            `<div style= color:#F2F7FF;' class='calendar__day'><span>${(prevLastDay - (firstDayName - 1) + j)}</span><span></span></div>`;
                     } else {
                         // 스타일링을 위한 클래스 추가
                         calHtml +=
-                            `<div class='calendar__day horizontalGutter'><span>${(prevLastDay - (firstDayName - 1) + j)}</span><span></span></div>`;
+                            `<div style= color:#F2F7FF;' class='calendar__day horizontalGutter'><span>${(prevLastDay - (firstDayName - 1) + j)}</span><span></span></div>`;
                     }
                 } else if (i == 0 && j == firstDayName) {
                     if (j == 0) {
@@ -104,21 +105,22 @@ $(function () {
                         calHtml +=
                             `<div class='calendar__day horizontalGutter verticalGutter'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
                     }
-                } else if (startDayCount > lastDay) {
-                    if (j == 0) {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div class='calendar__day horizontalGutter verticalGutter'><span>${lastDayCount++}</span><span></span></div>`;
-                    } else if (j == 6) {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div style='color:blue;' class='calendar__day verticalGutter'><span>${lastDayCount++}</span><span></span></div>`;
-                    } else {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div class='calendar__day horizontalGutter verticalGutter'><span>${lastDayCount++}</span><span></span></div>`;
-                    }
                 }
+                // else if (startDayCount > lastDay) {
+                //     if (j == 0) {
+                //         // 스타일링을 위한 클래스 추가
+                //         calHtml +=
+                //             `<div style='color:rgba(255,255,255,0.5);' class='calendar__day horizontalGutter verticalGutter'><span>${lastDayCount++}</span><span></span></div>`;
+                //     } else if (j == 6) {
+                //         // 스타일링을 위한 클래스 추가
+                //         calHtml +=
+                //             `<div style='color:rgba(0,0,255,0.5);' class='calendar__day verticalGutter'><span>${lastDayCount++}</span><span></span></div>`;
+                //     } else {
+                //         // 스타일링을 위한 클래스 추가
+                //         calHtml +=
+                //             `<div style='color:rgba(255,255,255,0.5);' class='calendar__day horizontalGutter verticalGutter'><span>${lastDayCount++}</span><span></span></div>`;
+                //     }
+                // }
             }
         }
         document
