@@ -4,6 +4,7 @@
 .top {
     display: flex;
     padding: 10px 10px;
+    height: 150px;
     justify-content: space-between;
 }
 
@@ -12,14 +13,14 @@
 }
 
 .logo>img {
+    display: inline-block;
     width: 100%;
-    height: 100%;
+    height: 90%;
+    padding-left: 10px;
 }
 
 .title-top {
-    width: 85%;
-    position: relative;
-    /* background-color: darkorange; */
+    width: 90%;
 }
 
 .clearfix {
@@ -42,32 +43,42 @@
 
 .menu-top {
     width: 100%;
+    padding: 0 10px;
     text-align: center;
-    display: flex;
-    justify-content: space-between;
-    justify-content: center;
     font-size: 25px;
+
 }
 
 .menu-top a {
     color: #0b409c;
 }
 
-ul li {
-    list-style: none;
-    width: 20%;
-    color: #0b409c;
-    margin-right: 30px;
-    font-weight: 700;
-}
-
-ul li:hover>ul {
+ul,
+.menu-title ul {
     display: flex;
     justify-content: space-between;
+
 }
 
-ul ul {
-    display: none;
+.menu-title {
+    padding-right: 20px;
+    justify-content: center;
+    font-weight: 700;
+
+}
+
+.menu-sub {
+    width: 150px;
+    font-size: 20px;
+    visibility: hidden;
+}
+
+ul li:hover .menu-sub {
+    visibility: visible;
+}
+
+ul li:hover .menu-title {
+    border-bottom: solid 1px #005b9e;
 }
 
 /***************관리자 작은 페이지(로그아웃, 권한주기 용)***************/

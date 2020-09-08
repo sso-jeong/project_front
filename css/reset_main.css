@@ -28,6 +28,11 @@ nav {
     background-color: #F2F7FF;
 }
 
+ul li,
+ul ul li {
+    list-style: none;
+}
+
 
 table {
     width: 100%;
