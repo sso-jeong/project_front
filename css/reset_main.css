@@ -10,12 +10,12 @@
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
     background-color: #F2F7FF;
 }
 
 a {
     text-decoration: none;
-    /* color: #F2F7FF; */
 }
 
 .page-wrap {
@@ -26,7 +26,6 @@ a {
 nav {
     width: 100%;
     background-color: #005b9e;
-    /* color: #F2F7FF; */
 }
 
 ul li,
@@ -36,8 +35,8 @@ ul ul li {
 
 
 table {
-    width: 100%;
     border-collapse: collapse;
+    width: 100%;
     color: #005b9e;
 }
 
@@ -45,4 +44,5 @@ button {
     border: 0;
     outline: 0;
     cursor: pointer;
+    vertical-align: top;
 }

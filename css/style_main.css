@@ -4,7 +4,6 @@
 .top {
     display: flex;
     padding: 10px 10px;
-    height: 150px;
     justify-content: space-between;
 }
 
@@ -15,7 +14,6 @@
 .logo>h2 {
     display: inline-block;
     width: 100%;
-    height: 90%;
     padding-left: 10px;
     font-size: 85px;
 }
@@ -38,10 +36,8 @@
 
 .pic-wrap .user i {
     width: 50px;
-    height: 50px;
     font-size: 35px;
     text-align: center;
-    line-height: 50px;
     color: #F2F7FF;
     cursor: pointer;
 }
@@ -51,22 +47,18 @@
 }
 
 #topMenu ul li {
-    /* color: #0b409c; */
-
     color: #F2F7FF;
     float: left;
-    line-height: 30px;
     vertical-align: middle;
     text-align: center;
 }
 
 .menuLink,
 .submenuLink {
-    /* color: #0b409c; */
     display: block;
     width: 150px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 26px;
 }
 
 .menuLink {
@@ -76,10 +68,6 @@
 .submenuLink {
     color: #005b9e;
 }
-
-/* .menuLink:hover {
-    border-bottom: solid 1px #005b9e;
-} */
 
 .subMenu {
     position: absolute;
@@ -101,7 +89,7 @@
 }
 
 .topMenuLi:hover .subMenu {
-    height: 32px;
+    height: auto;
 }
 
 /***************관리자 작은 페이지(로그아웃, 권한주기 용)***************/
@@ -194,10 +182,6 @@
     height: 100vh;
 }
 
-.middle h3 {
-    height: 50px;
-}
-
 .middle i {
     cursor: pointer;
     color: #005b9e;
@@ -216,29 +200,27 @@
     font-size: 15px;
 }
 
-.main1 .sale-tbl {
-    width: 49.5%;
+.main1 .sale-top,
+.main1 .commute-top,
+.main1 .map-top,
+.main2 .tbl {
     background-color: #ffffff;
     box-shadow: 1px 1px 1px 1px #005b9e;
 }
 
-.main1 .commute-tbl {
+.main1 .sale-top {
+    width: 49.5%;
+}
+
+.main1 .commute-top {
     width: 28.5%;
-    background-color: #ffffff;
-    box-shadow: 1px 1px 1px 1px #005b9e;
 }
 
 .main1 .map-top {
     width: 20%;
-    background-color: #ffffff;
-    box-shadow: 1px 1px 1px 1px #005b9e;
 }
 
-.sale-top,
-.commute-top,
-.map,
-.calendar,
-.notice-top {
+.tbl-top {
     display: flex;
     justify-content: space-between;
 }
@@ -248,27 +230,19 @@ tr {
 }
 
 tr:first-child {
-    border-top: solid 1px #005b9e;
+    border-top: 1px solid #005b9e;
 }
 
 tr:nth-child(2n) {
     background-color: #ebedf1;
 }
 
-/* #sale:hover {
-    background-color: #ebedf1;
-} */
-
-
 .main2 {
     padding-top: 20px;
 }
 
-.main2 .calendar-top,
-.main2 .notice-tbl {
+.main2 .tbl {
     width: 49.5%;
-    background-color: #ffffff;
-    box-shadow: 1px 1px 1px 1px #005b9e;
 }
 
 /***************calendar***************/
@@ -298,6 +272,6 @@ tr:nth-child(2n) {
 /***************footer***************/
 
 .bottom {
-    padding: 30px 20px;
+    padding: 10px 20px;
     text-align: right;
 }
