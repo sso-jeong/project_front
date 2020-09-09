@@ -110,7 +110,7 @@
     display: none;
     position: absolute;
     right: 0;
-    border: solid 1px #e7e7e7;
+    border: 1px solid #e7e7e7;
     background-color: #f9f9f9;
     min-width: 330px;
     height: 500px;
@@ -148,7 +148,7 @@
 .ad-authChange {
     margin: 15px 10px;
     height: 200px;
-    border: solid 2px #005b9e;
+    border: 2px solid #005b9e;
 }
 
 .ad-logout {
