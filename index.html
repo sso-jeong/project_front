@@ -48,10 +48,44 @@
                                         </div>
 
                                         <div class="ad-authChange-top">
-                                            사용자 권한 변경
-                                            <div class="ad-authChange">
-                                                내용
+                                            <div class="ad-todo-top">
+                                                To Do
+                                                <form method="post" action="SFA_TODO_list.html">
+                                                    <button type="button" class="btn-on"
+                                                        onClick="location.href='SFA_TODO_insert.html'">신규</button>
+                                                    <button type="button" class="btn-off"
+                                                        onClick="location.href='SFA_TODO_list.html'">완료</button>
+                                                </form>
                                             </div>
+                                            <div class="ad-todo">
+                                                <table>
+                                                    <tr>
+                                                        <td class="td-3">
+                                                            <input type="checkbox" />
+                                                        </td>
+                                                        <td class="left p-lr10"
+                                                            style="text-overflow: ellipsis; overflow: hidden;">
+                                                            <a href="#">
+                                                                <nobr>2020.09.10 14:00 미팅
+                                                                </nobr>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="td-3">
+                                                            <input type="checkbox" />
+                                                        </td>
+                                                        <td class="left p-lr10"
+                                                            style="text-overflow: ellipsis; overflow: hidden;">
+                                                            <a href="#">
+                                                                <nobr>2020.09.28 15:00 외근
+                                                                </nobr>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+
                                         </div>
                                     </div>
                                     <div class="ad-logout">
@@ -63,42 +97,41 @@
                         </div>
                         <ul>
                             <li class="topMenuLi">
-                                <a class="menuLink" href="#" title="영업관리" alt="">영업관리</a>
+                                <a class="menuLink" href="#" title="영업" alt="">영업</a>
                                 <ul class="subMenu">
                                     <li> <a class="submenuLink longLink" href="#" title="품목관리" alt="">품목관리</a></li>
-                                    <li> <a class="submenuLink longLink" href="#" title="거래처등록" alt="">거래처등록</a></li>
+                                    <li> <a class="submenuLink longLink" href="#" title="거래처등록" alt="">거래처관리</a></li>
                                     <li> <a class="submenuLink longLink" href="#" title="수주관리" alt="">수주관리</a></li>
-                                    <li> <a class="submenuLink longLink" href="#" title="구매관리" alt="">구매관리</a></li>
+                                    <li> <a class="submenuLink longLink" href="#" title="판매관리" alt="">판매관리</a></li>
+                                    <li> <a class="submenuLink longLink" href="#" title="재고관리" alt="">재고관리</a></li>
                                 </ul>
                             </li>
 
                             <li class="topMenuLi">
-                                <a class="menuLink" href="#" title="" alt="">관리메뉴2</a>
+                                <a class="menuLink" href="#" title="인사/급여" alt="">인사/급여</a>
                                 <ul class="subMenu">
-                                    <li> <a class="submenuLink" href="#" title="" alt="">메뉴2-서브메뉴1</a></li>
-                                    <li> <a class="submenuLink" href="#" title="" alt="">메뉴2-서브메뉴2</a></li>
-                                    <li> <a class="submenuLink" href="#" title="" alt="">메뉴2-서브메뉴3</a></li>
-                                    <li> <a class="submenuLink" href="#" title="" alt="">메뉴2-서브메뉴4</a></li>
+                                    <li> <a class="submenuLink" href="#" title="사원관리" alt="">사원관리</a></li>
+                                    <li> <a class="submenuLink" href="#" title="인사관리" alt="">인사관리</a></li>
+                                    <li> <a class="submenuLink" href="#" title="근태관리" alt="">근태관리</a></li>
                                 </ul>
                             </li>
 
                             <li class="topMenuLi">
-                                <a class="menuLink" href="#" title="" alt="">관리메뉴3</a>
+                                <a class="menuLink" href="#" title="시스템" alt="">시스템</a>
                                 <ul class="subMenu">
-                                    <li> <a class="submenuLink" href="#" title="" alt="">메뉴3-서브메뉴1</a></li>
-                                    <li> <a class="submenuLink" href="#" title="" alt="">메뉴3-서브메뉴2</a></li>
-                                    <li> <a class="submenuLink" href="#" title="" alt="">메뉴3-서브메뉴3</a></li>
-                                    <li> <a class="submenuLink" href="#" title="" alt="">메뉴3-서브메뉴4</a></li>
+                                    <li> <a class="submenuLink" href="#" title="공지사항" alt="">공지사항</a></li>
+                                    <li> <a class="submenuLink" href="#" title="일정" alt="">일정</a></li>
+                                    <li> <a class="submenuLink" href="#" title="거래처지도" alt="">거래처지도</a></li>
                                 </ul>
                             </li>
 
                             <li class="topMenuLi">
-                                <a class="menuLink" href="#" title="" alt="">관리메뉴4</a>
+                                <a class="menuLink" href="#" title="관리자메뉴" alt="">관리자메뉴</a>
                                 <ul class="subMenu">
-                                    <li> <a class="submenuLink" href="#" title="" alt="">메뉴4-서브메뉴1</a></li>
-                                    <li> <a class="submenuLink" href="#" title="" alt="">메뉴4-서브메뉴2</a></li>
-                                    <li> <a class="submenuLink" href="#" title="" alt="">메뉴4-서브메뉴3</a></li>
-                                    <li> <a class="submenuLink" href="#" title="" alt="">메뉴4-서브메뉴4</a></li>
+                                    <li> <a class="submenuLink" href="#" title="영업관리 권한" alt="">영업관리 권한</a></li>
+                                    <li> <a class="submenuLink" href="#" title="인사관리 권한" alt="">인사관리 권한</a></li>
+                                    <li> <a class="submenuLink" href="#" title="근태관리 권한" alt="">근태관리 권한</a></li>
+                                    <li> <a class="submenuLink" href="#" title="환경설정" alt="">환경설정</a></li>
                                 </ul>
                             </li>
 
@@ -114,81 +147,87 @@
                         <div class="tbl-top">
                             <h3>수주 화면 타이틀</h3>
                             <span>
-                                <a href="#" title="수주관리" alt=""><i class="fas fa-share-square"></i></a>
+                                <a href="#" title="수주관리로 이동" alt=""><i class="fas fa-share-square"></i></a>
                             </span>
                         </div>
                         <table id="sale" class="table">
                             <tr>
                                 <td>번호</td>
-                                <td>거래처코드명</td>
-                                <td>품목명</td>
-                                <td>바코드</td>
-                                <td>입고단가</td>
-                                <td>출하단가</td>
-                                <td>금액합계</td>
-                                <td>담당자코드</td>
-                                <td>담당자명</td>
+                                <td>수주일자</td>
+                                <td>거래처명</td>
                                 <td>품목구분</td>
+                                <td>수주품명</td>
+                                <td>담당자</td>
+                                <td>수량</td>
+                                <td>가격</td>
+                                <td>비고</td>
+                                <td>일자</td>
+                                <td>수주담당자명</td>
                             </tr>
                             <tr>
                                 <td>5</td>
-                                <td>BU-001</td>
-                                <td>부자재1</td>
-                                <td>BU001</td>
-                                <td>100</td>
-                                <td>0</td>
-                                <td>10,000</td>
-                                <td>K-202001</td>
+                                <td>2020.10.01</td>
+                                <td>(주)AFS</td>
+                                <td>완제품</td>
+                                <td>CCD-1000</td>
                                 <td>김그린</td>
-                                <td>부재료</td>
+                                <td>5</td>
+                                <td>500,000</td>
+                                <td>-</td>
+                                <td>2020.09.09</td>
+                                <td>홍길동</td>
                             </tr>
                             <tr>
                                 <td>4</td>
-                                <td>BU-001</td>
-                                <td>부자재1</td>
-                                <td>BU001</td>
-                                <td>100</td>
-                                <td>0</td>
-                                <td>10,000</td>
-                                <td>K-202001</td>
+                                <td>2020.10.01</td>
+                                <td>(주)AFS</td>
+                                <td>완제품</td>
+                                <td>CCD-1000</td>
                                 <td>김그린</td>
-                                <td>부재료</td>
+                                <td>5</td>
+                                <td>500,000</td>
+                                <td>-</td>
+                                <td>2020.09.09</td>
+                                <td>홍길동</td>
                             </tr>
                             <tr>
                                 <td>3</td>
-                                <td>BU-001</td>
-                                <td>부자재1</td>
-                                <td>BU001</td>
-                                <td>100</td>
-                                <td>0</td>
-                                <td>10,000</td>
-                                <td>K-202001</td>
+                                <td>2020.10.01</td>
+                                <td>(주)AFS</td>
+                                <td>완제품</td>
+                                <td>CCD-1000</td>
                                 <td>김그린</td>
-                                <td>부재료</td>
+                                <td>5</td>
+                                <td>500,000</td>
+                                <td>-</td>
+                                <td>2020.09.09</td>
+                                <td>홍길동</td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>BU-001</td>
-                                <td>부자재1</td>
-                                <td>BU001</td>
-                                <td>100</td>
-                                <td>0</td>
-                                <td>10,000</td>
-                                <td>K-202001</td>
+                                <td>2020.10.01</td>
+                                <td>(주)AFS</td>
+                                <td>완제품</td>
+                                <td>CCD-1000</td>
                                 <td>김그린</td>
-                                <td>부재료</td>
+                                <td>5</td>
+                                <td>500,000</td>
+                                <td>-</td>
+                                <td>2020.09.09</td>
+                                <td>홍길동</td>
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td>BU-002</td>
-                                <td>부자재2</td>
-                                <td>BU002</td>
-                                <td>200</td>
-                                <td>0</td>
-                                <td>10,000</td>
-                                <td>H-202001</td>
+                                <td>2020.10.01</td>
+                                <td>(주)AFS</td>
+                                <td>완제품</td>
+                                <td>CCD-1000</td>
+                                <td>김그린</td>
+                                <td>5</td>
+                                <td>500,000</td>
+                                <td>-</td>
+                                <td>2020.09.09</td>
                                 <td>홍길동</td>
-                                <td>부재료</td>
                             </tr>
                         </table>
                     </div>
@@ -196,38 +235,35 @@
                         <div class="tbl-top">
                             <h3>근태 화면 타이틀</h3>
                             <span>
-                                <a href="#" title="근태관리" alt=""><i class="fas fa-share-square"></i></a>
+                                <a href="#" title="근태관리로 이동" alt=""><i class="fas fa-share-square"></i></a>
                             </span>
                         </div>
                         <table id="commute" class="table">
                             <tr>
                                 <td>번호</td>
                                 <td>일자</td>
+                                <td>사번</td>
                                 <td>사원명</td>
-                                <td>소속부서</td>
                                 <td>출근시간</td>
                                 <td>퇴근시간</td>
-                                <td>근태코드</td>
-                                <td>근태수</td>
+                                <td>근태명</td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>20200901</td>
+                                <td>20200902</td>
+                                <td>H001</td>
                                 <td>홍길동</td>
-                                <td>판매</td>
                                 <td>08:25</td>
                                 <td>18:30</td>
-                                <td>-</td>
                                 <td>-</td>
                             </tr>
                             <tr>
-                                <td>2</td>
+                                <td>1</td>
                                 <td>20200901</td>
+                                <td>H001</td>
                                 <td>홍길동</td>
-                                <td>판매</td>
-                                <td>08:25</td>
+                                <td>08:20</td>
                                 <td>18:30</td>
-                                <td>-</td>
                                 <td>-</td>
                             </tr>
                         </table>
@@ -236,7 +272,7 @@
                         <div class="tbl-top">
                             <h3>맵 화면 타이틀</h3>
                             <span>
-                                <a href="#" title="맵" alt=""><i class="fas fa-share-square"></i></a>
+                                <a href="#" title="지도 화면으로 이동" alt=""><i class="fas fa-share-square"></i></a>
                             </span>
                         </div>
                         <table id="calendar2" class="table">
@@ -255,7 +291,7 @@
                         <div class="tbl-top">
                             <h3>일정 화면 타이틀</h3>
                             <span>
-                                <a href="#" title="일정관리" alt=""><i class="fas fa-share-square"></i></a>
+                                <a href="#" title="일정관리로 이동" alt=""><i class="fas fa-share-square"></i></a>
                             </span>
                         </div>
                         <table id="calendar2" class="table">
@@ -281,26 +317,38 @@
                             </span>
                         </div>
                         <table id="commut" class="table">
+                            <!-- style="table-layout: fixed;"> -->
                             <tr>
                                 <td>번호</td>
-                                <td>일자</td>
+                                <td>분류</td>
                                 <td>제목</td>
                                 <td>작성자</td>
+                                <td>첨부파일</td>
                                 <td>조회수</td>
+                                <td>날짜</td>
                             </tr>
                             <tr>
                                 <td>2</td>
-                                <td>20200901</td>
-                                <td>테스트입니다</td>
+                                <td>공지</td>
+                                <td class="left p-lr10" style="text-overflow: ellipsis; overflow: hidden;">
+                                    <a href="#">
+                                        <nobr>게시물 등록 테스트입니다.
+                                        </nobr>
+                                    </a>
+                                </td>
                                 <td>관리자</td>
+                                <td>-</td>
                                 <td>0</td>
+                                <td>2020.09.09</td>
                             </tr>
                             <tr>
                                 <td>1</td>
-                                <td>20200908</td>
-                                <td>공지화면입니다.</td>
+                                <td>공지</td>
+                                <td class="left p-lr10"><a href="#">SFA 게시물 테스트입니다. 공지화면 테스트입니다.</a></td>
                                 <td>관리자</td>
+                                <td>-</td>
                                 <td>0</td>
+                                <td>2020.09.09</td>
                             </tr>
                         </table>
 

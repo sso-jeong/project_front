@@ -1,0 +1,133 @@
+영업관리 :
+거래처 
+create table company_tbl(
+	code int not null,
+	name varchar(30) not null,
+	addr varchar(50) not null,
+	hp varchar(12) not null,
+	type varchar(2) not null,
+	customer varchar(10) ,
+	insert_person varchar(10),
+	regdate datetime,
+	primary key(code)
+);
+품목 
+create table item_tbl(
+	itemcd varchar(10) not null,
+	itemnm varchar(50) not null,
+	type varchar(2) not null,
+	price int not null,
+	insert_person varchar(10),
+	regdate datetime,
+	primary key(itemcd) 
+);
+수주 
+create table order_tbl(
+	ordnum varchar(10) not null,
+	orddate varchar(8) not null,
+	ordperson varchar(10) not null,
+	itemcd varchar(10) not null,
+	comcd int not null, 
+	qty int not null,
+	price int not null,
+	remark varchar(100) not null,
+	insert_person varchar(10),
+	regdate datetime,
+	primary key(ordnum),
+	foreign key (itemcd) references item_tbl(itemcd)	
+);
+판매 
+create table sale_tbl(
+	salenum varchar(10) not null,
+	saledate varchar(8) not null,
+	saleperson varchar(10) not null,
+	ordnum varchar(10) not null,
+	itemcd varchar(10) not null,
+	qty int not null,
+	price int not null,
+	remark varchar(100) not null ,
+	insert_person varchar(10),
+	regdate datetime,
+	primary key(salenum),
+	foreign key(ordnum) references order_tbl(ordnum) 
+);
+재고 테이블 
+create table stock_tbl (
+	stocknum varchar(12) not null,
+	itemcd varchar(50) not null ,  
+	qty int not null , 
+	indt varchar(8),
+	insert_person varchar(10),
+	regdate datetime,
+	primary key(stocknum),
+	foreign key(itemcd) references item_tbl(itemcd)
+);
+
+
+인사 
+사원 
+create table emp_tbl(
+	empid int not null,
+	empdept varchar(5),
+	empgrade varchar(6) not null,
+	empname varchar(14) not null,
+	emppwd varchar(14) not null,
+	gender char(2),
+	empaddr varchar(50) not null default(''),
+	emphp varchar(12) not null default(''),
+	empemail varchar(25) default(''),
+	primary key(empid)
+);
+
+인사
+create table hu_tbl(
+	hunum int not null,
+	empid int not null,
+	hiredate date not null,
+	endday date,
+	salary int,
+	primary key(hunum),
+	foreign key(empid) references emp_tbl(empid)
+);
+
+근태
+create table dl_tbl (
+	dlnum int not null,
+	dldate date not null,
+	empid int not null,
+	ontime time not null,
+	offtime time not null,
+	dlcode varchar(2) not null,
+	dlnm varchar(20) not null,
+	extime time default('00:00'),
+	tottime time not null,
+	primary key(dlnum),
+	foreign key(empid) references emp_tbl(empid)
+);
+
+
+
+시스템 
+공지사항 테이블 
+create table notice_tbl (
+	datnum varchar(20) not null,
+	category varchar(10) not null,
+	title varchar(100) not null,
+	contents text,
+	person varchar(10) not null,
+	attdatnum varchar(30) default(''),
+	insert_person varchar(10),
+ 	regdate datetime,
+	primary key(datnum)
+);
+
+일정관리 테이블
+create table todo_tbl (
+	todonum int auto_increment not null,
+	todo varchar(100),
+	empid int not null,
+	todoyn varchar(1),
+	regdate datetime,
+	primary key(todonum),
+	foreign key(empid) references emp_tbl(empid)
+);
