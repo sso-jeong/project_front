@@ -26,6 +26,16 @@ $(function () {
         $('.menuLink').css('color', '#fff');
     });
 
+    $('.subMenu').mouseover(function () {
+        $(this).parent('li').children('a').addClass("on");
+        $('.topMenuLi>a').not('a.on').css('color', 'rgba(242,247,255,.5)');
+    });
+
+    $('.subMenu').mouseleave(function () {
+        $(this).parent('li').children('a').removeClass("on");
+        $('.menuLink').css('color', '#fff');
+    });
+
 });
 
 // function btnIcon() {
