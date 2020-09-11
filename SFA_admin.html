@@ -26,15 +26,18 @@
             <div class="menu-wrap ">
                 <nav id="topMenu">
                     <ul>
-                        <li class="topMenuLi"><a class="menuLink noto weight700 font20 f6" href="#" title="관리자메뉴"
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font20 f6" href="sfa_notice_manage.html" title="관리자메뉴"
                                 alt="">관리자메뉴</a>
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="sfa_auth.html" title="권한관리" alt="">권한관리</a></li>
-                                <li> <a class="submenuLink" href="sfa_notice_manage.html" title="게시판관리" alt="">게시판관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_notice_manage.html" title="게시판관리" alt="">게시판관리</a>
+                                </li>
 
                             </ul>
                         </li>
-                        <li class="topMenuLi"> <a class="menuLink noto weight700 font20 f6" href="#" title="시스템"
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font20 f6" href="sfa_notice.html" title="시스템메뉴"
                                 alt="">시스템</a>
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="sfa_map.html" title="거래처지도" alt="">거래처지도</a></li>
@@ -42,7 +45,8 @@
                                 <li> <a class="submenuLink" href="sfa_notice.html" title="공지사항" alt="">공지사항</a></li>
                             </ul>
                         </li>
-                        <li class="topMenuLi"> <a class="menuLink noto weight700 font20 f6" href="#" title="인사/급여"
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font20 f6" href="sfa_emp_list.html" title="인사/급여메뉴"
                                 alt="">인사/급여</a>
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="sfa_wage.html" title="급여관리" alt="">급여관리</a></li>
@@ -50,17 +54,22 @@
                                 <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원목록</a></li>
                             </ul>
                         </li>
-                        <li class="topMenuLi"> <a class="menuLink noto weight700 font20 f6" href="#" title="영업"
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font20 f6" href="sfa_item_manage.html" title="영업관리메뉴"
                                 alt="">영업</a>
                             <ul class="subMenu">
-                                <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a></li>
-                                <li> <a class="submenuLink" href="sfa_sale_manage.html" title="판매관리" alt="">판매관리</a></li>
-                                <li> <a class="submenuLink" href="sfa_order_manage.html" title="수주관리" alt="">수주관리</a></li>
-                                <li> <a class="submenuLink" href="sfa_company_manage.html" title="거래처등록" alt="">거래처관리</a></li>
-                                <li> <a class="submenuLink" href="sfa_item_manage.html" title="품목관리" alt="">품목관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_sale_manage.html" title="판매관리" alt="">판매관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_order_manage.html" title="수주관리" alt="">수주관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_company_manage.html" title="거래처등록"
+                                        alt="">거래처관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_item_manage.html" title="품목관리" alt="">품목관리</a>
+                                </li>
                             </ul>
                         </li>
-
                     </ul>
                 </nav>
             </div>
@@ -86,13 +95,14 @@
                     <div class="notice flex flex-justify">
                         <h3 class="font16 m-t10 m-b5 m-lr10">SFA 그룹웨어 알림판</h3>
                         <span class="m-t10 m-b5 m-lr10">
-                            <a href="sfa_notice.html" title="게시판관리로 이동" alt="" class="font16"><i class="fas fa-share-square"></i></a>
+                            <a href="sfa_notice.html" title="게시판관리로 이동" alt="" class="font16"><i
+                                    class="fas fa-share-square"></i></a>
                         </span>
                     </div>
                     <div class="tbl-wrap m-b10 m-lr10">
                         <table id="notice" class="table center" style="table-layout: fixed;">
                             <tr class="weight700 center">
-                                <td class="td-5">번호</td>
+                                <td class="td-5">순번</td>
                                 <td class="td-5">분류</td>
                                 <td>제목</td>
                                 <td class="td-10">작성자</td>
@@ -179,14 +189,16 @@
                     <div class="sale flex flex-justify">
                         <h3 class="font16 m-t10 m-b5 m-lr10">SFA 수주</h3>
                         <span class="m-t10 m-b5 m-lr10">
-                            <a href="sfa_order_manage.html" title="수주관리로 이동" alt="" class="font16"><i class="fas fa-share-square"></i></a>
+                            <a href="sfa_order_manage.html" title="수주관리로 이동" alt="" class="font16"><i
+                                    class="fas fa-share-square"></i></a>
                         </span>
                     </div>
 
                     <div class="tbl-wrap m-b10 m-lr10">
                         <table id="sale" class="table center" style="table-layout: fixed;">
                             <tr class="weight700 center">
-                                <td class="td-5">번호</td>
+                                <td class="td-5">순번</td>
+                                <td class="td-7">수주번호</td>
                                 <td class="td-7">수주일자</td>
                                 <td>거래처명</td>
                                 <td class="td-5">품목코드</td>
@@ -198,75 +210,69 @@
                                 <td class="td-5">비고</td>
                             </tr>
                             <tr class="center">
-                                <td class="td-5">6</td>
-                                <td class="td-7">2020.10.10</td>
-                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">(주)AFS</a></td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">11013</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">관성항법장치</a></td>
-                                <td class="td-5">제품</td>
-                                <td class="td-7">수주담당자</td>
-                                <td class="td-7">10</td>
-                                <td class="td-10">200,000</td>
-                                <td class="td-5">-</td>
-                            </tr>
-                            <tr class="center">
                                 <td class="td-5">5</td>
+                                <td class="td-7">1031</td>
                                 <td class="td-7">2020.10.10</td>
-                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">(주)AFS</a></td>
+                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">(주)D.P.M</a></td>
                                 <td class="td-5"><a href="#" title="재고관리로 이동">11030</a></td>
                                 <td class="left p-lr5"><a href="#" title="재고관리로 이동">위치등 제어기</a></td>
                                 <td class="td-5">부품</td>
                                 <td class="td-7">수주담당자</td>
-                                <td class="td-7">10</td>
-                                <td class="td-10">200,000</td>
+                                <td class="right p-lr5 td-7">10</td>
+                                <td class="right p-lr5 td-10">200,000</td>
                                 <td class="td-5">-</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">4</td>
+                                <td class="td-7">1014</td>
                                 <td class="td-7">2020.10.10</td>
-                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">(주)AFS</a></td>
+                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">(주)신진금속</a></td>
                                 <td class="td-5"><a href="#" title="재고관리로 이동">11013</a></td>
                                 <td class="left p-lr5"><a href="#" title="재고관리로 이동">관성항법장치</a></td>
                                 <td class="td-5">제품</td>
                                 <td class="td-7">수주담당자</td>
-                                <td class="td-7">10</td>
-                                <td class="td-10">200,000</td>
+                                <td class="right p-lr5 td-7">5</td>
+                                <td class="right p-lr5 td-10">100,000</td>
                                 <td class="td-5">-</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">3</td>
+                                <td class="td-7">1018</td>
                                 <td class="td-7">2020.10.10</td>
-                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">(주)AFS</a></td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">11030</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">위치등 제어기</a></td>
+                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">(주)IEN한창</a></td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11017</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">배기밸브</a></td>
                                 <td class="td-5">부품</td>
                                 <td class="td-7">수주담당자</td>
-                                <td class="td-7">10</td>
-                                <td class="td-10">200,000</td>
+                                <td class="right p-lr5 td-7">350</td>
+                                <td class="right p-lr5 td-10">250,000</td>
                                 <td class="td-5">-</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">2</td>
+                                <td class="td-7">1027</td>
                                 <td class="td-7">2020.10.10</td>
-                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">(주)AFS</a></td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">11013</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">관성항법장치</a></td>
+                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">신정애드</a></td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11026</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">LEFT ANTENNA, VOR/ILS RECEIVER</a>
+                                </td>
                                 <td class="td-5">제품</td>
                                 <td class="td-7">수주담당자</td>
-                                <td class="td-7">10</td>
-                                <td class="td-10">200,000</td>
+                                <td class="right p-lr5 td-7">10</td>
+                                <td class="right p-lr5 td-10">450,000</td>
                                 <td class="td-5">-</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">1</td>
+                                <td class="td-7">1014</td>
                                 <td class="td-7">2020.10.10</td>
-                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">(주)AFS</a></td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">11030</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">위치등 제어기</a></td>
-                                <td class="td-5">부품</td>
+                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">신진에스엠</a></td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11013</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">관성항법장치</a></td>
+                                <td class="td-5">제품</td>
                                 <td class="td-7">수주담당자</td>
-                                <td class="td-7">10</td>
-                                <td class="td-10">200,000</td>
+                                <td class="right p-lr5 td-7">100</td>
+                                <td class="right p-lr5 td-10">8,000,000</td>
                                 <td class="td-5">-</td>
                             </tr>
                         </table>
@@ -280,12 +286,13 @@
                     <div class="calendar flex flex-justify">
                         <h3 class="font16 m-t10 m-b5 m-lr10">SFA 일정판</h3>
                         <span class="m-t10 m-b5 m-lr10">
-                            <a href="sfa_schedule.html" title="일정관리로 이동" alt="" class="font16"><i class="fas fa-share-square"></i></a>
+                            <a href="sfa_schedule.html" title="일정관리로 이동" alt="" class="font16"><i
+                                    class="fas fa-share-square"></i></a>
                         </span>
                     </div>
 
                     <div class="tbl-wrap m-b10 m-lr10">
-                        <table id="calendar2" class="table">
+                        <table id="calendar2" class="table weight700">
                             <tr class="center">
                                 <td>일</td>
                                 <td>월</td>
@@ -306,14 +313,16 @@
                     <div class="stock  flex flex-justify">
                         <h3 class="font16 m-t10 m-b5 m-lr10">SFA 현재 재고</h3>
                         <span class="m-t10 m-b5 m-lr10">
-                            <a href="sfa_stock_manage.html" title="재고관리로 이동" alt="" class="font16"><i class="fas fa-share-square"></i></a>
+                            <a href="sfa_stock_manage.html" title="재고관리로 이동" alt="" class="font16"><i
+                                    class="fas fa-share-square"></i></a>
                         </span>
                     </div>
 
                     <div class="tbl-wrap m-b10 m-lr10">
                         <table id="stock" class="table center" style="table-layout: fixed;">
                             <tr class="weight700 center">
-                                <td class="td-5">번호</td>
+                                <td class="td-5">순번</td>
+                                <td class="td-7">재고코드</td>
                                 <td class="td-5">품목코드</td>
                                 <td>품목명</td>
                                 <td class="td-5">품목구분</td>
@@ -324,103 +333,113 @@
                             </tr>
                             <tr class="center">
                                 <td class="td-5">10</td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">품목코드</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">품목명</a></td>
-                                <td class="td-5">품목구분</td>
-                                <td class="td-7">재고수량</td>
-                                <td class="td-7">입고날짜</td>
-                                <td class="td-7">출고날짜</td>
-                                <td class="td-7">담당자명</td>
+                                <td class="td-7">11046-0124</td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11046</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">링조립체,포탑용</a></td>
+                                <td class="td-5">제품</td>
+                                <td class="td-7">348</td>
+                                <td class="td-7">2020.09.03</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">재고담당자</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">9</td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">품목코드</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">품목명</a></td>
-                                <td class="td-5">품목구분</td>
-                                <td class="td-7">재고수량</td>
-                                <td class="td-7">입고날짜</td>
-                                <td class="td-7">출고날짜</td>
-                                <td class="td-7">담당자명</td>
+                                <td class="td-7">11043-0121</td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11043</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">레이돔</a></td>
+                                <td class="td-5">부품</td>
+                                <td class="td-7">1594</td>
+                                <td class="td-7">2020.09.03</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">재고담당자</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">8</td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">품목코드</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">품목명</a></td>
-                                <td class="td-5">품목구분</td>
-                                <td class="td-7">재고수량</td>
-                                <td class="td-7">입고날짜</td>
-                                <td class="td-7">출고날짜</td>
-                                <td class="td-7">담당자명</td>
+                                <td class="td-7">11041-0119</td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11041</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">심</a></td>
+                                <td class="td-5">부품</td>
+                                <td class="td-7">126</td>
+                                <td class="td-7">2020.09.03</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">재고담당자</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">7</td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">품목코드</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">품목명</a></td>
-                                <td class="td-5">품목구분</td>
-                                <td class="td-7">재고수량</td>
-                                <td class="td-7">입고날짜</td>
-                                <td class="td-7">출고날짜</td>
-                                <td class="td-7">담당자명</td>
+                                <td class="td-7">11040-0118</td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11040</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">커플러</a></td>
+                                <td class="td-5">부품</td>
+                                <td class="td-7">9008</td>
+                                <td class="td-7">2020.09.03</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">재고담당자</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">6</td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">품목코드</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">품목명</a></td>
-                                <td class="td-5">품목구분</td>
-                                <td class="td-7">재고수량</td>
-                                <td class="td-7">입고날짜</td>
-                                <td class="td-7">출고날짜</td>
-                                <td class="td-7">담당자명</td>
+                                <td class="td-7">11037-0115</td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11037</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">위상변환기</a></td>
+                                <td class="td-5">제품</td>
+                                <td class="td-7">4933</td>
+                                <td class="td-7">2020.09.03</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">재고담당자</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">5</td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">품목코드</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">품목명</a></td>
-                                <td class="td-5">품목구분</td>
-                                <td class="td-7">재고수량</td>
-                                <td class="td-7">입고날짜</td>
-                                <td class="td-7">출고날짜</td>
-                                <td class="td-7">담당자명</td>
+                                <td class="td-7">11036-0114</td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11036</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">프로펠러, 항공기용</a></td>
+                                <td class="td-5">제품</td>
+                                <td class="td-7">500</td>
+                                <td class="td-7">2020.09.03</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">재고담당자</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">4</td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">품목코드</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">품목명</a></td>
-                                <td class="td-5">품목구분</td>
-                                <td class="td-7">재고수량</td>
-                                <td class="td-7">입고날짜</td>
-                                <td class="td-7">출고날짜</td>
-                                <td class="td-7">담당자명</td>
+                                <td class="td-7">11035-0113</td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11035</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">조종실 일반등</a></td>
+                                <td class="td-5">제품</td>
+                                <td class="td-7">100</td>
+                                <td class="td-7">2020.09.03</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">재고담당자</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">3</td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">품목코드</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">품목명</a></td>
-                                <td class="td-5">품목구분</td>
-                                <td class="td-7">재고수량</td>
-                                <td class="td-7">입고날짜</td>
-                                <td class="td-7">출고날짜</td>
-                                <td class="td-7">담당자명</td>
+                                <td class="td-7">11031-0109</td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11031</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">위치등(후방 1개)</a></td>
+                                <td class="td-5">부품</td>
+                                <td class="td-7">43091</td>
+                                <td class="td-7">2020.09.03</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">재고담당자</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">2</td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">품목코드</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">품목명</a></td>
-                                <td class="td-5">품목구분</td>
-                                <td class="td-7">재고수량</td>
-                                <td class="td-7">입고날짜</td>
-                                <td class="td-7">출고날짜</td>
-                                <td class="td-7">담당자명</td>
+                                <td class="td-7">11019-0124</td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11019</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">캠축 (우)</a></td>
+                                <td class="td-5">부품</td>
+                                <td class="td-7">185901</td>
+                                <td class="td-7">2020.09.03</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">재고담당자</td>
                             </tr>
                             <tr class="center">
                                 <td class="td-5">1</td>
-                                <td class="td-5"><a href="#" title="재고관리로 이동">품목코드</a></td>
-                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">품목명</a></td>
-                                <td class="td-5">품목구분</td>
-                                <td class="td-7">재고수량</td>
-                                <td class="td-7">입고날짜</td>
-                                <td class="td-7">출고날짜</td>
-                                <td class="td-7">담당자명</td>
+                                <td class="td-7">11001-0106</td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11002</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">30mm차륜형대공포용 고저각베어링</a></td>
+                                <td class="td-5">제품</td>
+                                <td class="td-7">14596</td>
+                                <td class="td-7">2020.09.03</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">재고담당자</td>
                             </tr>
 
                         </table>

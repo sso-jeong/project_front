@@ -303,6 +303,10 @@ select {
     text-align: left;
 }
 
+.right {
+    text-align: right;
+}
+
 .center {
     text-align: center;
 }
@@ -328,4 +332,8 @@ select {
     background-color: #3f51b5;
     border: 1px solid transparent;
 
+}
+
+.cursor {
+    cursor: pointer;
 }
