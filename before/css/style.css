@@ -1,0 +1,160 @@
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap');
+
+.login-box {
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    padding: 30px 40px;
+    text-align: center;
+    background-color: #F2F7FF;
+    border: 2px solid #bbd2fa;
+}
+
+.lsp {
+    height: 750px;
+}
+
+.logo-img {
+    width: 250px;
+    height: 250px;
+}
+
+.back {
+    position: absolute;
+    right: 48px;
+    top: 15px;
+    color: #8898aa;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+form {
+    width: 100%;
+}
+
+.pos {
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    height: 45px;
+    vertical-align: top;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border: 2px solid #bbd2fa;
+    background-color: rgba(242, 247, 255, 0.5);
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding-left: 35px;
+    margin-bottom: 30px;
+    z-index: 9999;
+}
+
+/* 회원가입 inputbox 여백 조정 */
+.isp {
+    margin-bottom: 15px;
+}
+
+::placeholder {
+    color: #8898aa;
+
+}
+
+.form-title h4 {
+    color: #8898aa;
+    vertical-align: top;
+    text-align: left;
+    font-size: 15px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.form-icon {
+    position: absolute;
+    top: 53%;
+    left: 13px;
+    transform: translateY(-53%);
+}
+
+.fisp {
+    top: 65%;
+    transform: translateY(-65%);
+}
+
+.form-icon>i {
+    color: #8898aa;
+    vertical-align: top;
+}
+
+.right {
+    position: absolute;
+    top: 55%;
+    transform: translateY(-55%);
+    right: 10px;
+    color: #8898aa;
+}
+
+.btn,
+.btn2 {
+    width: 100%;
+    height: 50px;
+    background-color: #0b409c;
+    color: #fff;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-top: 15px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+    letter-spacing: 1.3px;
+}
+
+.forgot {
+    margin-top: 20px;
+}
+
+.forgot a {
+    color: #8898aa;
+}
+
+.account-top {
+    margin-top: 50px;
+}
+
+.account-top2 {
+    margin-top: 90px;
+}
+
+.account {
+    color: #8898aa;
+}
+
+.signup a {
+    color: #0b409c;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.register {
+    margin-top: 10px;
+}
+
+.red {
+    color: #f00;
+}
+
+.green {
+    color: #00ff00;
+}
+
+.disen {
+    background-color: gray;
+    cursor: none;
+}

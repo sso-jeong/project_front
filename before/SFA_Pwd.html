@@ -7,7 +7,7 @@
     <title>SFA PwdFind</title>
 
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/783ac0c448.js" crossorigin="anonymous"></script>
@@ -18,16 +18,15 @@
 <body>
     <div class="login-box">
 
-        <span class="logo-text">
+        <img src="images/logo.png" />
 
-            <h2> Sale Force Automation </h2>
-        </span>
-        <form name="" method="POST" action="./SFA_login.html" onsubmit="login()" autocomplete="off">
+
+        <form name="" method="POST" action="./SFA_login.html" onsubmit="login()">
 
             <div class="pos">
-                <!-- <span class="form-title">
+                <span class="form-title">
                     <h4>사번</h4>
-                </span> -->
+                </span>
                 <span class="form-icon">
                     <i class="far fa-user-circle"></i>
                 </span>
@@ -36,9 +35,9 @@
             </div>
 
             <div class="pos">
-                <!-- <span class="form-title">
+                <span class="form-title">
                     <h4>이메일</h4>
-                </span> -->
+                </span>
                 <span class="form-icon">
                     <i class="far fa-envelope"></i>
                 </span>
@@ -46,13 +45,14 @@
             </div>
 
             <div class="">
-                <input type="submit" class="btn2" id="btn2" value="비밀번호 찾기"></button>
+                <input type="submit" class="btn2" id="btn2" value="확인"></button>
             </div>
-            <div class="register-line2">
-
+            <div class="register">
+                <div class="account-top2">
                     <span class="account">회원가입 정보가 없습니까? </span>
                     <span class="signup"><a href="./SFA_register.html">회원가입</a></span>
-
+                </div>
+                <div class="clearfix"></div>
             </div>
         </form>
 
