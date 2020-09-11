@@ -15,6 +15,19 @@ $(function () {
         }
     });
 
+    $('.menuLink').mouseover(function(){
+        $(this).addClass("on");
+        $('.topMenuLi>a').not('a.on').css('color','rgba(242,247,255,.5)');
+        
+    });
+
+
+    $('.menuLink').mouseleave(function(){
+        $(this).removeClass("on");
+        $('.menuLink').css('color','#fff');
+    });
+
+
 });
 
 // function btnIcon() {
