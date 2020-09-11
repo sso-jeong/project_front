@@ -12,7 +12,7 @@ $(function login() {
             $("#password").val("");
             return false;
         } else {
-            location.href = "./index.html";
+            location.href = "./SFA_admin.html";
         }
 
         // else if ($("#userid").val().length < 8) {

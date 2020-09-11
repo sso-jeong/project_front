@@ -63,7 +63,6 @@ create table stock_tbl (
 	foreign key(itemcd) references item_tbl(itemcd)
 );
 
-
 인사 
 사원 
 create table emp_tbl(

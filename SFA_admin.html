@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://kit.fontawesome.com/b1cadc3305.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/main-cal.js"></script>
 </head>
 
 <body>
@@ -18,39 +20,37 @@
         <div class="top-wrap flex flex-justify">
             <div class="logo-wrap">
                 <div class="logo">
-                    <h2 class="roboto font24">Sale Force Automation</h2>
+                    <h2 class="roboto font24 f6">Sale Force Automation</h2>
                 </div>
             </div>
             <div class="menu-wrap ">
                 <nav id="topMenu">
                     <ul>
-                        <li class="topMenuLi"><a class="menuLink noto weight700 font20" href="#" title="관리자메뉴"
+                        <li class="topMenuLi"><a class="menuLink noto weight700 font20 f6" href="#" title="관리자메뉴"
                                 alt="">관리자메뉴</a>
                             <ul class="subMenu">
-                                <li> <a class="submenuLink" href="#" title="환경설정" alt="">환경설정</a></li>
-                                <li> <a class="submenuLink" href="#" title="근태관리 권한" alt="">근태관리 권한</a></li>
-                                <li> <a class="submenuLink" href="#" title="인사관리 권한" alt="">인사관리 권한</a></li>
-                                <li> <a class="submenuLink" href="#" title="영업관리 권한" alt="">영업관리 권한</a></li>
+                                <li> <a class="submenuLink" href="#" title="권한관리" alt="">권한관리</a></li>
+                                <li> <a class="submenuLink" href="#" title="게시판관리" alt="">게시판관리</a></li>
 
                             </ul>
                         </li>
-                        <li class="topMenuLi"> <a class="menuLink noto weight700 font20" href="#" title="시스템"
+                        <li class="topMenuLi"> <a class="menuLink noto weight700 font20 f6" href="#" title="시스템"
                                 alt="">시스템</a>
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="#" title="거래처지도" alt="">거래처지도</a></li>
-                                <li> <a class="submenuLink" href="#" title="일정" alt="">일정</a></li>
+                                <li> <a class="submenuLink" href="#" title="일정" alt="">일정관리</a></li>
                                 <li> <a class="submenuLink" href="#" title="공지사항" alt="">공지사항</a></li>
                             </ul>
                         </li>
-                        <li class="topMenuLi"> <a class="menuLink noto weight700 font20" href="#" title="인사/급여"
+                        <li class="topMenuLi"> <a class="menuLink noto weight700 font20 f6" href="#" title="인사/급여"
                                 alt="">인사/급여</a>
                             <ul class="subMenu">
+                                <li> <a class="submenuLink" href="#" title="급여관리" alt="">급여관리</a></li>
                                 <li> <a class="submenuLink" href="#" title="근태관리" alt="">근태관리</a></li>
-                                <li> <a class="submenuLink" href="#" title="인사관리" alt="">인사관리</a></li>
-                                <li> <a class="submenuLink" href="#" title="사원관리" alt="">사원관리</a></li>
+                                <li> <a class="submenuLink" href="#" title="사원목록" alt="">사원목록</a></li>
                             </ul>
                         </li>
-                        <li class="topMenuLi"> <a class="menuLink noto weight700 font20" href="#" title="영업"
+                        <li class="topMenuLi"> <a class="menuLink noto weight700 font20 f6" href="#" title="영업"
                                 alt="">영업</a>
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="#" title="재고관리" alt="">재고관리</a></li>
@@ -66,11 +66,12 @@
             </div>
             <div class="menu-icon-wrap">
                 <div class="icon font24 m-t10 f6">
-                    <span class="">
+                    <span class="map_icon">
                         <a href="#" title="map" class="f6"> <i class="fas fa-map-marked-alt"></i></a>
                     </span>
-                    <span class="dropbtn" onclick="btnIcon()">
-                        <i class="fas fa-user-cog dropbtn"></i>
+                    <span class="login_icon">
+                        <a href="./SFA_login.html" title="login" class="f6"><i class="fas fa-door-closed"></i></a>
+
                     </span>
                 </div>
             </div>
@@ -79,147 +80,204 @@
     </header>
 
     <main>
-        <div class="middle m-tb10 flex flex-justify">
-            <div class="main-wrap1">
+        <div class="middle m-tb10">
+            <div class="main-wrap1  flex flex-justify">
                 <div class="notice-wrap">
                     <div class="notice flex flex-justify">
-                        <h3>공지 화면 타이틀</h3>
-                        <span>
-                            <a href="#" title="공지관리" alt=""><i class="fas fa-share-square"></i></a>
+                        <h3 class="font16 m-t10 m-b5 m-lr10">SFA 그룹웨어 알림판</h3>
+                        <span class="m-t10 m-b5 m-lr10">
+                            <a href="#" title="게시판관리로 이동" alt="" class="font16"><i class="fas fa-share-square"></i></a>
                         </span>
                     </div>
-                    <table id="notice" class="table">
-                        <tr>
-                            <td>번호</td>
-                            <td>분류</td>
-                            <td>제목</td>
-                            <td>작성자</td>
-                            <td>첨부파일</td>
-                            <td>조회수</td>
-                            <td>날짜</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>공지</td>
-                            <td class="left p-lr10" style="text-overflow: ellipsis; overflow: hidden;">
-                                <a href="#">
-                                    <nobr>게시물 등록 테스트입니다.
-                                    </nobr>
-                                </a>
-                            </td>
-                            <td>관리자</td>
-                            <td>-</td>
-                            <td>0</td>
-                            <td>2020.09.09</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>공지</td>
-                            <td class="left p-lr10"><a href="#">SFA 게시물 테스트입니다. 공지화면 테스트입니다.</a></td>
-                            <td>관리자</td>
-                            <td>-</td>
-                            <td>0</td>
-                            <td>2020.09.09</td>
-                        </tr>
-                    </table>
+                    <div class="tbl-wrap m-b10 m-lr10">
+                        <table id="notice" class="table center" style="table-layout: fixed;">
+                            <tr class="weight700 center">
+                                <td class="td-5">번호</td>
+                                <td class="td-5">분류</td>
+                                <td>제목</td>
+                                <td class="td-10">작성자</td>
+                                <td class="td-7">첨부파일</td>
+                                <td class="td-7">조회수</td>
+                                <td class="td-10">날짜</td>
+                            </tr>
+                            <tr class="center">
+                                <td class="td-5">5</td>
+                                <td class="td-5">공지</td>
+                                <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                    <a href="#">
+                                        <nobr>게시물 등록 테스트입니다.
+                                        </nobr>
+                                    </a>
+                                </td>
+                                <td class="td-10">관리자</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">3</td>
+                                <td class="td-10">2020.09.10</td>
+                            </tr>
+                            <tr class="center">
+                                <td class="td-5">4</td>
+                                <td class="td-5">일반</td>
+                                <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                    <a href="#">
+                                        <nobr>일반 게시물 등록 테스트 중 입니다.
+                                        </nobr>
+                                    </a>
+                                </td>
+                                <td class="td-10">일반사용자</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">10</td>
+                                <td class="td-10">2020.09.08</td>
+                            </tr>
+                            <tr class="center">
+                                <td class="td-5">3</td>
+                                <td class="td-5">공지</td>
+                                <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                    <a href="#">
+                                        <nobr>게시물 등록 테스트입니다. 공지가 잘 들어갔는지 테스트 중입니다. 공지 테스트 중입니다. SFA 그룹웨어 알림판입니다.
+                                        </nobr>
+                                    </a>
+                                </td>
+                                <td class="td-7">관리자</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">150</td>
+                                <td class="td-10">2020.09.04</td>
+                            </tr>
+                            <tr class="center">
+                                <td class="td-5">2</td>
+                                <td class="td-5">일반</td>
+                                <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                    <a href="#">
+                                        <nobr>일반 게시물 등록 테스트 중입니다. 작성자는 일반 사용자입니다.
+                                        </nobr>
+                                    </a>
+                                </td>
+                                <td class="td-10">일반사용자</td>
+                                <td class="td-7"><a href=#>Y</a></td>
+                                <td class="td-7">123</td>
+                                <td class="td-10">2020.09.02</td>
+                            </tr>
+                            <tr class="center">
+                                <td class="td-5">1</td>
+                                <td class="td-5">공지</td>
+                                <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                    <a href="#">
+                                        <nobr>게시물 등록 테스트입니다.
+                                        </nobr>
+                                    </a>
+                                </td>
+                                <td class="td-10">관리자</td>
+                                <td class="td-7">-</td>
+                                <td class="td-7">3</td>
+                                <td class="td-10">2020.09.01</td>
+                            </tr>
+
+
+                        </table>
+                    </div>
                 </div>
-                <div class="calendar-wrap">
-                    일정
+                <div class="sale-wrap">
+                    <div class="sale flex flex-justify">
+                        <h3 class="font16 m-t10 m-b5 m-lr10">수주 화면 타이틀</h3>
+                        <span class="m-t10 m-b5 m-lr10">
+                            <a href="#" title="수주관리로 이동" alt="" class="font16"><i class="fas fa-share-square"></i></a>
+                        </span>
+                    </div>
+
+                    <div class="tbl-wrap m-b10 m-lr10">
+                        <table id="sale" class="table center" style="table-layout: fixed;">
+                            <tr class="weight700 center">
+                                <td class="td-5">번호</td>
+                                <td class="td-7">수주일자</td>
+                                <td>거래처명</td>
+                                <td class="td-5">품목코드</td>
+                                <td>품목명</td>
+                                <td class="td-5">품목구분</td>
+                                <td class="td-7">담당자명</td>
+                                <td class="td-7">수량</td>
+                                <td class="td-10">가격</td>
+                                <td class="td-5">비고</td>
+                            </tr>
+                            <tr class="center">
+                                <td class="td-5">6</td>
+                                <td class="td-7">2020.10.10</td>
+                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">(주)AFS</a></td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11013</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">관성항법장치</a></td>
+                                <td class="td-5">제품</td>
+                                <td class="td-7">수주담당자</td>
+                                <td class="td-7">10</td>
+                                <td class="td-10">200,000</td>
+                                <td class="td-5">-</td>
+                            </tr>
+                            <tr class="center">
+                                <td class="td-5">5</td>
+                                <td class="td-7">2020.10.10</td>
+                                <td class="left p-lr5"><a href="#" title="거래처관리로 이동">(주)AFS</a></td>
+                                <td class="td-5"><a href="#" title="재고관리로 이동">11030</a></td>
+                                <td class="left p-lr5"><a href="#" title="재고관리로 이동">위치등 제어기</a></td>
+                                <td class="td-5">부품</td>
+                                <td class="td-7">수주담당자</td>
+                                <td class="td-7">10</td>
+                                <td class="td-10">200,000</td>
+                                <td class="td-5">-</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
+
             </div>
 
-            <div class="main-wrap2">
-                <div class="sale-wrap">
-                    <div class="sale  flex flex-justify">
-                        <h3>수주 화면 타이틀</h3>
-                        <span>
-                            <a href="#" title="수주관리로 이동" alt=""><i class="fas fa-share-square"></i></a>
+            <div class="main-wrap2  flex flex-justify">
+                <div class="calendar-wrap">
+                    <div class="calendar flex flex-justify">
+                        <h3 class="font16 m-t10 m-b5 m-lr10">일정 화면 타이틀</h3>
+                        <span class="m-t10 m-b5 m-lr10">
+                            <a href="#" title="일정관리로 이동" alt="" class="font16"><i class="fas fa-share-square"></i></a>
                         </span>
                     </div>
-                    <table id="sale" class="table">
-                        <tr>
-                            <td>번호</td>
-                            <td>수주일자</td>
-                            <td>거래처명</td>
-                            <td>품목구분</td>
-                            <td>수주품명</td>
-                            <td>담당자</td>
-                            <td>수량</td>
-                            <td>가격</td>
-                            <td>비고</td>
-                            <td>일자</td>
-                            <td>수주담당자명</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>2020.10.01</td>
-                            <td>(주)AFS</td>
-                            <td>완제품</td>
-                            <td>CCD-1000</td>
-                            <td>김그린</td>
-                            <td>5</td>
-                            <td>500,000</td>
-                            <td>-</td>
-                            <td>2020.09.09</td>
-                            <td>홍길동</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>2020.10.01</td>
-                            <td>(주)AFS</td>
-                            <td>완제품</td>
-                            <td>CCD-1000</td>
-                            <td>김그린</td>
-                            <td>5</td>
-                            <td>500,000</td>
-                            <td>-</td>
-                            <td>2020.09.09</td>
-                            <td>홍길동</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>2020.10.01</td>
-                            <td>(주)AFS</td>
-                            <td>완제품</td>
-                            <td>CCD-1000</td>
-                            <td>김그린</td>
-                            <td>5</td>
-                            <td>500,000</td>
-                            <td>-</td>
-                            <td>2020.09.09</td>
-                            <td>홍길동</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>2020.10.01</td>
-                            <td>(주)AFS</td>
-                            <td>완제품</td>
-                            <td>CCD-1000</td>
-                            <td>김그린</td>
-                            <td>5</td>
-                            <td>500,000</td>
-                            <td>-</td>
-                            <td>2020.09.09</td>
-                            <td>홍길동</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>2020.10.01</td>
-                            <td>(주)AFS</td>
-                            <td>완제품</td>
-                            <td>CCD-1000</td>
-                            <td>김그린</td>
-                            <td>5</td>
-                            <td>500,000</td>
-                            <td>-</td>
-                            <td>2020.09.09</td>
-                            <td>홍길동</td>
-                        </tr>
-                    </table>
 
+                    <div class="tbl-wrap m-b10 m-lr10">
+                        <table id="calendar2" class="table">
+                            <tr class="center">
+                                <td>일</td>
+                                <td>월</td>
+                                <td>화</td>
+                                <td>수</td>
+                                <td>목</td>
+                                <td>금</td>
+                                <td>토</td>
+
+                        </table>
+
+                        <div id="calendar" class="cal m-t20">
+                        </div>
+                    </div>
                 </div>
+
                 <div class="stock-wrap">
-                    재고
+                    <div class="stock  flex flex-justify">
+                        <h3 class="font16 m-t10 m-b5 m-lr10">재고 화면 타이틀</h3>
+                        <span class="m-t10 m-b5 m-lr10">
+                            <a href="#" title="재고관리로 이동" alt="" class="font16"><i class="fas fa-share-square"></i></a>
+                        </span>
+                    </div>
+
+                    <div class="tbl-wrap m-b10 m-lr10">
+                        <table id="stock" class="table center" style="table-layout: fixed;">
+                            <tr class="weight700 center">
+                                <td class="td-5">번호</td>
+                                <td class="td-7">품목코드</td>
+                                <td class="td-7">품목명</td>
+                                <td class="td-7">품목구분</td>
+                                <td class="td-5">재고수량</td>
+                                <td class="td-5">입고날짜</td>
+                                <td class="td-7">출고날짜</td>
+                                <td class="td-7">담당자명</td>
+                            </tr>
+
+
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>

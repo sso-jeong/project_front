@@ -2,20 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
 
-body {
+header {
+    background-color: #0C4A60;
+}
+
+.top-wrap {
     padding: 10px 10px;
 }
 
 .logo-wrap {
     width: 10%;
     text-align: center;
-    background-color: tomato;
 }
 
 .menu-wrap {
     width: 80%;
     text-align: center;
-    background-color: bisque;
+}
+
+.map_icon {
+    margin-right: 15px;
 }
 
 #topMenu {
@@ -43,7 +49,9 @@ body {
 }
 
 .submenuLink {
-    background-color: aquamarine;
+    /* background-color: #e1dddb; */
+    /* background-color: rgba(225, 221, 219, 0.9); */
+    background-color: rgba(219, 228, 232, 0.8);
     font-size: 16px;
 }
 
@@ -55,43 +63,86 @@ body {
     right: 0;
 }
 
-.subMenu li {
+.subMenu2 {
+    position: absolute;
+    height: 0px;
+    visibility: hidden;
+    transition: height .2s;
+}
+
+.subMenu li,
+.subMenu2 li {
     display: inline-block;
 }
 
-.topMenuLi:hover .subMenu {
+.topMenuLi:hover .subMenu,
+.topMenuLi:hover .subMenu2 {
     visibility: visible;
     height: auto;
 }
 
-.topMenuLi:hover .menuLink {
-    color: rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid black;
-}
+/* .topMenuLi:hover .menuLink {
+    color: rgba(96, 29, 5, 1);
+} */
 
 .menu-icon-wrap {
     width: 5%;
     text-align: center;
-    background-color: blue;
 }
+
 
 /*******main********/
 .middle {
-    background-color: coral;
+    margin: 10px 10px;
+    background-color: #F5F6F7;
 }
 
-.main-wrap1 {
-    width: 39.5%;
-}
-
+.calendar-wrap,
 .notice-wrap {
-    border: 1px solid aqua;
+    width: 40%;
 }
 
-.main-wrap2 {
-    width: 60%;
+.sale-wrap,
+.notice-wrap,
+.stock-wrap,
+.calendar-wrap {
+    border: 1px solid #0C4A60;
 }
 
-.sale-wrap {
-    border: 1px solid aqua;
+.sale-wrap,
+.stock-wrap {
+    width: 59.5%;
+}
+
+.calendar-wrap,
+.stock-wrap {
+    margin-top: 10px;
+}
+
+.middle tr:first-child,
+.middle table tr:hover {
+    background-color: rgba(219, 228, 232, 0.8);
+}
+
+/*******calendar********/
+#calendar {
+    height: 410px;
+    box-sizing: border-box;
+}
+
+.calendar__day {
+    display: inline-block;
+    vertical-align: bottom;
+    width: calc(97% / 7);
+    height: calc(98% / 5);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.horizontalGutter {
+    margin-right: 0.5%;
+}
+
+.verticalGutter {
+    margin-top: 0.5%;
 }
