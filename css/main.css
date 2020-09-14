@@ -15,6 +15,11 @@ header {
     text-align: center;
 }
 
+.logo-wrap a {
+    vertical-align: middle;
+    line-height: 1.1;
+}
+
 .menu-wrap {
     width: 80%;
     text-align: center;
@@ -23,6 +28,11 @@ header {
 .menu-icon-wrap {
     width: 8%;
     text-align: center;
+}
+
+.icon a{
+    line-height: 55px;
+    vertical-align: middle;
 }
 
 .icon>.admin-icon {
@@ -55,10 +65,8 @@ header {
 }
 
 .submenuLink {
-    /* background-color: #e1dddb; */
-    /* background-color: rgba(225, 221, 219, 0.9); */
     background-color: rgba(219, 228, 232, 0.8);
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .subMenu {
@@ -86,12 +94,6 @@ header {
     visibility: visible;
     height: auto;
 }
-
-/* .topMenuLi:hover .menuLink {
-    color: rgba(96, 29, 5, 1);
-} */
-
-
 
 /*******main********/
 .middle {
