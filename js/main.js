@@ -15,6 +15,16 @@ $(function () {
         }
     });
 
+    $('.price').keyup(function() {
+        var sur = $('.price').val() / 10; 
+        $('.surtax').val(sur);
+    });
+
+    $('.price').focusout(function numberWithCommas(x) {
+        x = $('.price').val();
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    } )
+
     $('.menuLink').mouseover(function () {
         $(this).addClass("on");
         $('.topMenuLi>a').not('a.on').css('color', 'rgba(242,247,255,.5)');
@@ -36,7 +46,11 @@ $(function () {
         $('.menuLink').css('color', '#fff');
     });
 
+    
+
 });
+
+
 
 // function btnIcon() {
 //     document.getElementById("adminDropdown").classList.toggle("show");
