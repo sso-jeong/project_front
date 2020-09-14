@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALE FORCE AUTOMATION SYSTEM</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/b1cadc3305.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="top-wrap flex flex-justify">
+            <div class="logo-wrap">
+                <div class="logo">
+                    <h2><a class="roboto font24 f6" href="SFA_main.html" title="HOME">Sale Force Automation</a></h2>
+                </div>
+            </div>
+            <div class="menu-wrap ">
+                <nav id="topMenu">
+                    <ul>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font20 f6" href="sfa_notice.html" title="시스템메뉴"
+                                alt="">시스템</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_map.html" title="거래처지도" alt="">거래처지도</a></li>
+                                <li> <a class="submenuLink" href="sfa_schedule.html" title="일정" alt="">일정관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_notice.html" title="공지사항" alt="">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font20 f6" href="sfa_emp_list.html" title="인사/급여메뉴"
+                                alt="">인사/급여</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_wage.html" title="급여관리" alt="">급여관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_tna_manage.html" title="근태관리" alt="">근태관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원목록</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font20 f6" href="sfa_item_manage.html" title="영업관리메뉴"
+                                alt="">영업</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_sale_manage.html" title="판매관리" alt="">판매관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_order_manage.html" title="수주관리" alt="">수주관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_company_manage.html" title="거래처등록"
+                                        alt="">거래처관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_item_manage.html" title="품목관리" alt="">품목관리</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font20 f6" href="sfa_com_intro" title="회사소개"
+                                alt="">회사소개</a>
+                            <ul class="subMenu2">
+                                <li> <a class="submenuLink" href="sfa_com_direct.html" title="찾아오시는길" alt="">찾아오시는 길</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_com_intro.html" title="기업소개" alt="">기업소개</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-icon-wrap">
+                <div class="icon font24 m-t10 f6">
+                    <span class="map_icon">
+                        <a href="#" title="map" class="f6"> <i class="fas fa-map-marked-alt"></i></a>
+                    </span>
+                    <span class="login_icon">
+                        <a href="./SFA_login.html" title="login" class="f6"><i class="fas fa-door-closed"></i></a>
+
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="page-wrap m-tb10">
+            <div class="container">
+                <div class="title">
+                    <h3 class="font20 m-t10 m-b5 m-lr10">SFA 그룹웨어 알림판 상세보기</h3>
+                </div>
+                <div class="tbl-wrap board-insert m-b10 m-lr10 font14">
+                    <table>
+                        <tr>
+                            <td class="td-10 center weight700 noto under bg-green">게시글 분류</td>
+                            <td class="td-40 p-lr3">
+                                <span class="btn-red">공지사항</span>
+                            </td>
+                            <td class="td-10 center weight700 noto under bg-green">게시글 상태</td>
+                            <td class="td-40 p-lr3">
+                                공개글
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-10 center weight700 noto under bg-green">게시글 제목</td>
+                            <td colspan="3" class="td-90 p-lr3">
+                                <strong>안녕하세요. SFA에서 공지를 알려드립니다.</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-10 center weight700 noto under bg-green">작성자</td>
+                            <td colspan="3" class="td-90 p-lr3">
+                                관리자
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-10 center weight700 noto under bg-green">게시글 내용</td>
+                            <td colspan="3" class="td-90 p-lr3"
+                                style="padding-top:2px;padding-bottom:2px;height: 300px;">
+                                <strong>
+                                    안녕하세요. 금일 게시판 상세보기 테스트 작업중입니다. 테스트 완료 후 정상적으로 이용할 수 있습니다.
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-10 center weight700 noto under bg-green">첨부파일</td>
+                            <td colspan="3" class="td-90 p-lr3">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td-10 center weight700 noto under bg-green">게시물조회수</td>
+                            <td colspan="3" class="td-90 p-lr3">
+                                10회
+                            </td>
+                        </tr>
+                    </table>
+                    <div class="btn-grp center m-t10 flex flex-justify">
+                        <div class="btn-left">
+                            <button type="button" onClick="location.href='SFA_notice.html'"
+                                class="btn-red">게시글목록</button>
+                        </div>
+                        <div class="btn-right">
+                            <button type="button" class="btn-on"
+                                onclick="location.href='SFA_notice_reply.html'">게시글답글</button>
+                            <button type="button" class="btn-on"
+                                onclick="location.href='SFA_notice_insert.html'">게시글작성</button>
+                            <button type="button" class="btn-on"
+                                onclick="location.href='SFA_notice_modify.html'">게시글수정</button>
+                            <button type="button" class="btn-off">게시글삭제</button>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

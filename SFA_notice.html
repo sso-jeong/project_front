@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALE FORCE AUTOMATION SYSTEM</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/b1cadc3305.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+        tr:first-child {
+            background-color: rgba(219, 228, 232, 0.8);
+        }
+
+        .tr-even:hover {
+            background-color: rgba(219, 228, 232, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-wrap flex flex-justify">
+            <div class="logo-wrap">
+                <div class="logo">
+                    <h2><a class="roboto font24 f6" href="SFA_main.html" title="HOME">Sale Force Automation</a></h2>
+                </div>
+            </div>
+            <div class="menu-wrap ">
+                <nav id="topMenu">
+                    <ul>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font20 f6" href="sfa_notice.html" title="시스템메뉴"
+                                alt="">시스템</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_map.html" title="거래처지도" alt="">거래처지도</a></li>
+                                <li> <a class="submenuLink" href="sfa_schedule.html" title="일정" alt="">일정관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_notice.html" title="공지사항" alt="">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font20 f6" href="sfa_emp_list.html" title="인사/급여메뉴"
+                                alt="">인사/급여</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_wage.html" title="급여관리" alt="">급여관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_tna_manage.html" title="근태관리" alt="">근태관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원목록</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font20 f6" href="sfa_item_manage.html" title="영업관리메뉴"
+                                alt="">영업</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_sale_manage.html" title="판매관리" alt="">판매관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_order_manage.html" title="수주관리" alt="">수주관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_company_manage.html" title="거래처등록"
+                                        alt="">거래처관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_item_manage.html" title="품목관리" alt="">품목관리</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font20 f6" href="sfa_com_intro" title="회사소개"
+                                alt="">회사소개</a>
+                            <ul class="subMenu2">
+                                <li> <a class="submenuLink" href="sfa_com_direct.html" title="찾아오시는길" alt="">찾아오시는 길</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_com_intro.html" title="기업소개" alt="">기업소개</a></li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-icon-wrap">
+                <div class="icon font24 m-t10 f6">
+                    <span class="map_icon">
+                        <a href="#" title="map" class="f6"> <i class="fas fa-map-marked-alt"></i></a>
+                    </span>
+                    <span class="login_icon">
+                        <a href="./SFA_login.html" title="login" class="f6"><i class="fas fa-door-closed"></i></a>
+
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="page-wrap m-tb10">
+            <div class="container">
+                <div class="search-wrap flex flex-justify">
+                    <div class="">
+                        <span class="btn-normal m-tb10 m-lr10">전체게시물 수 123 / PAGE</span>
+                    </div>
+                    <div class="">
+                        <form method="post" action="SAP_notice.html" style="margin:10px 10px">
+                            <select class="" name="searchOpt">
+                                <option value="subject">게시물제목</option>
+                                <option value="writer">작성자</option>
+                                <option value="all">제목+작성자</option>
+                            </select>
+                            <input type="text" name="words" required />
+                            <button type="submit" class="btn-off">게시글검색</button>
+                            <button type="button" class="btn-on"
+                                onClick="location.href='SFA_notice_insert.html'">게시글작성</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="title">
+                    <h3 class="font20 m-t10 m-b5 m-lr10">SFA 그룹웨어 알림판</h3>
+                </div>
+                <div class="tbl-wrap m-b10 m-lr10">
+                    <table class="table center" style="table-layout: fixed;">
+                        <tr class="weight700 center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class=" td-5">번호</td>
+                            <td class="td-5">분류</td>
+                            <td>제목</td>
+                            <td class="td-10">작성자</td>
+                            <td class="td-7">조회수</td>
+                            <td class="td-10">날짜</td>
+                            <td class="td-7">관리</td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>10</td>
+                            <td>공지</td>
+                            <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                <a href="SFA_notice_view.html">
+                                    <nobr>안녕하세요. SFA에서 공지를 알려드립니다.
+                                    </nobr>
+                                </a>
+                            </td>
+                            <td>관리자</td>
+                            <td>3</td>
+                            <td>2020.09.10</td>
+                            <td>
+                                <button type="button" class="s-btn-on"
+                                    onClick="location.href='SFA_notice_modify.html?id=10'">수정</button>
+                                <button type="button" class="s-btn-off">삭제</button>
+                            </td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>9</td>
+                            <td>공지</td>
+                            <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                <a href="SFA_notice_view.html">
+                                    <nobr>게시물 등록 테스트입니다.
+                                    </nobr>
+                                </a>
+                            </td>
+                            <td>관리자</td>
+                            <td>3</td>
+                            <td>2020.09.10</td>
+                            <td>
+                                <button type="button" class="s-btn-on"
+                                    onClick="location.href='SFA_notice_modify.html?id=9'">수정</button>
+                                <button type="button" class="s-btn-off">삭제</button>
+                            </td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>8</td>
+                            <td>공지</td>
+                            <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                <a href="SFA_notice_view.html">
+                                    <nobr>게시물 등록 테스트입니다.
+                                    </nobr>
+                                </a>
+                            </td>
+                            <td>관리자</td>
+                            <td>3</td>
+                            <td>2020.09.10</td>
+                            <td>
+                                <button type="button" class="s-btn-on"
+                                    onClick="location.href='SFA_notice_modify.html?id=8'">수정</button>
+                                <button type="button" class="s-btn-off">삭제</button>
+                            </td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>7</td>
+                            <td>공지</td>
+                            <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                <a href="SFA_notice_view.html">
+                                    <nobr>게시물 등록 테스트입니다.
+                                    </nobr>
+                                </a>
+                            </td>
+                            <td>관리자</td>
+                            <td>8</td>
+                            <td>2020.09.10</td>
+                            <td>
+                                <button type="button" class="s-btn-on"
+                                    onClick="location.href='SFA_notice_modify.html?id=7'">수정</button>
+                                <button type="button" class="s-btn-off">삭제</button>
+                            </td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>6</td>
+                            <td>공지</td>
+                            <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                <a href="SFA_notice_view.html">
+                                    <nobr>게시물 등록 테스트입니다.
+                                    </nobr>
+                                </a>
+                            </td>
+                            <td>관리자</td>
+                            <td>6</td>
+                            <td>2020.09.10</td>
+                            <td>
+                                <button type="button" class="s-btn-on"
+                                    onClick="location.href='SFA_notice_modify.html?id=6'">수정</button>
+                                <button type="button" class="s-btn-off">삭제</button>
+                            </td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>5</td>
+                            <td>공지</td>
+                            <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                <a href="SFA_notice_view.html">
+                                    <nobr>게시물 등록 테스트입니다.
+                                    </nobr>
+                                </a>
+                            </td>
+                            <td>관리자</td>
+                            <td>3</td>
+                            <td>2020.09.10</td>
+                            <td>
+                                <button type="button" class="s-btn-on"
+                                    onClick="location.href='SFA_notice_modify.html?id=5'">수정</button>
+                                <button type="button" class="s-btn-off">삭제</button>
+                            </td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>4</td>
+                            <td>일반</td>
+                            <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                <a href="SFA_notice_view.html">
+                                    <nobr>일반 게시물 등록 테스트 중 입니다.
+                                    </nobr>
+                                </a>
+                            </td>
+                            <td>일반사용자</td>
+                            <td>10</td>
+                            <td>2020.09.08</td>
+                            <td>
+                                <button type="button" class="s-btn-on"
+                                    onClick="location.href='SFA_notice_modify.html?id=4'">수정</button>
+                                <button type="button" class="s-btn-off">삭제</button>
+                            </td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>3</td>
+                            <td>공지</td>
+                            <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                <a href="SFA_notice_view.html">
+                                    <nobr>게시물 등록 테스트입니다. 공지가 잘 들어갔는지 테스트 중입니다. 공지 테스트 중입니다. SFA 그룹웨어 알림판입니다.
+                                    </nobr>
+                                </a>
+                            </td>
+                            <td>관리자</td>
+                            <td>150</td>
+                            <td>2020.09.04</td>
+                            <td>
+                                <button type="button" class="s-btn-on"
+                                    onClick="location.href='grp_board_modify.html?id=3'">수정</button>
+                                <button type="button" class="s-btn-off">삭제</button>
+                            </td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>2</td>
+                            <td>일반</td>
+                            <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                <a href="SFA_notice_view.html">
+                                    <nobr>일반 게시물 등록 테스트 중입니다. 작성자는 일반 사용자입니다.
+                                    </nobr>
+                                </a>
+                            </td>
+                            <td>일반사용자</td>
+                            <td>123</td>
+                            <td>2020.09.02</td>
+                            <td>
+                                <button type="button" class="s-btn-on"
+                                    onClick="location.href='SFA_notice_modify.html?id=2'">수정</button>
+                                <button type="button" class="s-btn-off">삭제</button>
+                            </td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>1</td>
+                            <td>공지</td>
+                            <td class="left p-lr5" style="text-overflow: ellipsis; overflow: hidden;">
+                                <a href="SFA_notice_view.html">
+                                    <nobr>게시물 등록 테스트입니다.
+                                    </nobr>
+                                </a>
+                            </td>
+                            <td>관리자</td>
+                            <td>3</td>
+                            <td>2020.09.01</td>
+                            <td>
+                                <button type="button" class="s-btn-on"
+                                    onClick="location.href='SFA_notice_modify.html?id=1'">수정</button>
+                                <button type="button" class="s-btn-off">삭제</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="page-grp center m-t10">
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-double-left"></i></a>
+                    </span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-left"></i></a>
+                    </span>
+                    <span class="page page-active">
+                        <a href="" class="f6">1</a>
+                    </span>
+                    <span class="page"><a href="">2</a></span>
+                    <span class="page"><a href="">3</a></span>
+                    <span class="page"><a href="">4</a></span>
+                    <span class="page"><a href="">5</a></span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-right"></i></a>
+                    </span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-double-right"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script>
+    $(function () {
+        $("tr:nth-child(n)").addClass("tr-even");
+    })
+</script>
+
+</html>

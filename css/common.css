@@ -75,16 +75,50 @@ body {
     background-color: #eee;
 }
 
+.bg-green {
+    background-color: rgba(219, 228, 232, 0.8);
+}
+
 /* button */
+.btn-normal {
+    display: inline-block;
+    padding: 9.5px 10px;
+    /* 가변 타입 */
+    background-color: #0C4A60;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.btn-cancel {
+    display: inline-block;
+    padding: 9.5px 10px;
+    /* 가변 타입 */
+    background-color: #edeff5;
+    border-radius: 2px;
+    color: #000;
+    font-weight: 700;
+}
+
 .button {
     cursor: pointer;
     font-size: 12px;
 }
 
+.btn-red {
+    display: inline-block;
+    padding: 9.5px 10px;
+    /* 가변 타입 */
+    background-color: #d92550;
+    border-radius: 2px;
+    color: #fff;
+    font-weight: 700;
+}
+
 .btn-count {
     display: inline-block;
     padding: 9.5px 10px;
-    background-color: #3f51b5;
+    background-color: #0C4A60;
     border-radius: 2px;
     color: #fff;
 }
@@ -97,7 +131,7 @@ body {
     text-align: center;
     line-height: 37px;
     border-radius: 2px;
-    background-color: #3f51b5;
+    background-color: #0C4A60;
     border: 1px solid transparent;
     color: #fff;
 }
@@ -122,7 +156,7 @@ body {
     text-align: center;
     line-height: 25px;
     border-radius: 2px;
-    background-color: #3f51b5;
+    background-color: #0C4A60;
     border: 1px solid transparent;
     color: #fff;
 }
@@ -179,12 +213,29 @@ input {
     font-size: 12px;
 }
 
+.input-100 {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 100%;
+    height: 35px;
+    font-size: 12px;
+}
+
 /* select */
 select {
     font-size: 12px;
     border-radius: 2px;
     border: 1px solid #d5d5d5;
     width: 150px;
+    height: 35px;
+}
+
+.sel-100 {
+    font-size: 12px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 100%;
     height: 35px;
 }
 
@@ -262,6 +313,11 @@ select {
     padding-bottom: 20px;
 }
 
+.p-lr3 {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
 .p-lr5 {
     padding-left: 5px;
     padding-right: 5px;
@@ -329,7 +385,7 @@ select {
 }
 
 .page-active {
-    background-color: #3f51b5;
+    background-color: #0C4A60;
     border: 1px solid transparent;
 
 }
