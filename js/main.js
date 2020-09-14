@@ -17,13 +17,10 @@ $(function () {
 
     $('.price').keyup(function() {
         var sur = $('.price').val() / 10; 
-        $('.surtax').val(sur);
+        if($('.surtax')){
+            $('.surtax').val(sur);
+        }
     });
-
-    $('.price').focusout(function numberWithCommas(x) {
-        x = $('.price').val();
-        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    } )
 
     $('.menuLink').mouseover(function () {
         $(this).addClass("on");
