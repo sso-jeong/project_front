@@ -13,9 +13,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/main-cal.js"></script>
+
 </head>
 
-<body>
+<body onload="build();">
     <header>
         <div class="top-wrap flex flex-justify">
             <div class="logo-wrap">
@@ -290,8 +291,17 @@
                         </span>
                     </div>
 
-                    <div class="tbl-wrap m-b10 m-lr10">
-                        <table id="calendar2" class="table weight700">
+                    <div class="cal-wrap m-b10 m-lr10">
+                        <table id="calendar" class="center weight700">
+                            <tr>
+                                <td class="td-15 cursor">
+                                    <label onclick="beforem()" id="before" class="cursor"></label>
+                                </td>
+                                <td colspan="5" id="yearmonth"></td>
+                                <td class="td-15 cursor">
+                                    <label onclick="nextm()" id="next" class="cursor"></label>
+                                </td>
+                            </tr>
                             <tr class="center">
                                 <td>일</td>
                                 <td>월</td>
@@ -300,11 +310,8 @@
                                 <td>목</td>
                                 <td>금</td>
                                 <td>토</td>
-
+                            </tr>
                         </table>
-
-                        <div id="calendar" class="cal m-t20">
-                        </div>
                     </div>
                 </div>
 
@@ -449,5 +456,11 @@
     </main>
 
 </body>
+<script>
+    $(function () {
+        $("tr:nth-child(2n)").addClass("tr-even");
+    })
+</script>
+
 
 </html>

@@ -30,7 +30,7 @@ header {
     text-align: center;
 }
 
-.icon a{
+.icon a {
     line-height: 55px;
     vertical-align: middle;
 }
@@ -123,30 +123,16 @@ header {
     margin-top: 10px;
 }
 
-.middle tr:first-child,
-.middle table tr:hover {
+.tbl-wrap tr:first-child,
+.tbl-wrap table tr:hover {
     background-color: rgba(219, 228, 232, 0.8);
 }
 
 /*******calendar********/
-#calendar {
-    height: 410px;
-    box-sizing: border-box;
+.cal-wrap tr {
+    height: 55px;
 }
 
-.calendar__day {
-    display: inline-block;
-    vertical-align: bottom;
-    width: calc(97% / 7);
-    height: calc(98% / 5);
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.horizontalGutter {
-    margin-right: 0.5%;
-}
-
-.verticalGutter {
-    margin-top: 0.5%;
+.cal-main tr {
+    height: 100px;
 }

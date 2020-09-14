@@ -1,147 +1,69 @@
+var today = new Date(); // 오늘 날짜
+var date = new Date();
+
 // 캘린더 함수
-$(function () {
+function beforem() //이전 달을 today에 값을 저장
+{
+    today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+    build(); //만들기
+}
 
-    const today = new Date();
+function nextm() //다음 달을 today에 저장
+{
+    today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+    build();
+}
 
-    const setCalendarData = (year, month) => {
-        //빈 문자열을 만들어줍니다.
-        let calHtml = "";
+function build() {
+    var nMonth = new Date(today.getFullYear(), today.getMonth(), 1); //현재달의 첫째 날
+    var lastDate = new Date(today.getFullYear(), today.getMonth() + 1, 0); //현재 달의 마지막 날
+    var tbcal = document.getElementById("calendar"); // 테이블 달력을 만들 테이블
+    var yearmonth = document.getElementById("yearmonth"); //  년도와 월 출력할곳
+    yearmonth.innerHTML = today.getFullYear() + "년 " + (today.getMonth() + 1) + "월"; //년도와 월 출력
 
-        //getMonth(): Get the month as a number (0-11)
-        //month 인자는 getMonth로 구한 결과 값에 1을 더한 상태이므로
-        //다시 1을 뺀 값을 Date 객체의 인자로 넘겨줍니다.
-        //그러면 오늘 날짜의 Date 객체가 반환됩니다.
-        const setDate = new Date(year, month - 1, 1);
-
-        //getDate(): Get the day as a number (1-31)
-        //이번 달의 첫째 날을 구합니다.
-        const firstDay = setDate.getDate();
-
-        //getDay(): Get the weekday as a number (0-6)
-        //이번 달의 처음 요일을 구합니다.
-        const firstDayName = setDate.getDay();
-
-        //new Date(today.getFullYear(), today.getMonth(), 0);
-        //Date객체의 day 인자에 0을 넘기면 지난달의 마지막 날이 반환됩니다.
-        //new Date(today.getFullYear(), today.getMonth(), 1);
-        //Date객체의 day 인자에 1을 넘기면 이번달 첫째 날이 반환됩니다.
-        //이번 달의 마지막 날을 구합니다.
-        const lastDay = new Date(
-            today.getFullYear(),
-            today.getMonth() + 1,
-            0
-        ).getDate();
-        //지난 달의 마지막 날을 구합니다.
-        const prevLastDay = new Date(
-            today.getFullYear(),
-            today.getMonth(),
-            0
-        ).getDate();
-
-        //매월 일수가 달라지므로 이번 달 날짜 개수를 세기 위한 변수를 만들고 초기화 합니다.
-        let startDayCount = 1;
-        let lastDayCount = 1;
-
-        //1~5주차를 위해 5번 반복합니다.
-        for (let i = 0; i < 5; i++) {
-            //일요일~토요일을 위해 7번 반복합니다.
-            for (let j = 0; j < 7; j++) {
-                // i == 0: 1주차일 때
-                // j < firstDayName: 이번 달 시작 요일 이전 일 때
-                if (i == 0 && j < firstDayName) {
-                    // 일요일일 때, 토요일일 때, 나머지 요일 일 때
-                    if (j == 0) {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div style= color:#F2F7FF;' class='calendar__day horizontalGutter'><span>${(prevLastDay - (firstDayName - 1) + j)}</span><span></span></div>`;
-                    } else if (j == 6) {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div style= color:#F2F7FF;' class='calendar__day'><span>${(prevLastDay - (firstDayName - 1) + j)}</span><span></span></div>`;
-                    } else {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div style= color:#F2F7FF;' class='calendar__day horizontalGutter'><span>${(prevLastDay - (firstDayName - 1) + j)}</span><span></span></div>`;
-                    }
-                } else if (i == 0 && j == firstDayName) {
-                    if (j == 0) {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div  class='calendar__day horizontalGutter'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
-                    } else if (j == 6) {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div class='calendar__day'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
-                    } else {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div class='calendar__day horizontalGutter'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
-                    }
-                } else if (i == 0 && j > firstDayName) {
-                    if (j == 0) {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div class='calendar__day horizontalGutter'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
-                    } else if (j == 6) {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div style='color:blue;' class='calendar__day'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
-                    } else {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div class='calendar__day horizontalGutter'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
-                    }
-                } else if (i > 0 && startDayCount <= lastDay) {
-                    if (j == 0) {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div style='color:red;' class='calendar__day horizontalGutter verticalGutter'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
-                    } else if (j == 6) {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div style='color:blue;' style='background-color:#BBFFC9;'class='calendar__day verticalGutter'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
-                    } else {
-                        // 스타일링을 위한 클래스 추가
-                        calHtml +=
-                            `<div class='calendar__day horizontalGutter verticalGutter'><span>${startDayCount}</span><span id='${year}${month}${setFixDayCount(startDayCount++)}'></span></div>`;
-                    }
-                }
-                // else if (startDayCount > lastDay) {
-                //     if (j == 0) {
-                //         // 스타일링을 위한 클래스 추가
-                //         calHtml +=
-                //             `<div style='color:rgba(255,255,255,0.5);' class='calendar__day horizontalGutter verticalGutter'><span>${lastDayCount++}</span><span></span></div>`;
-                //     } else if (j == 6) {
-                //         // 스타일링을 위한 클래스 추가
-                //         calHtml +=
-                //             `<div style='color:rgba(0,0,255,0.5);' class='calendar__day verticalGutter'><span>${lastDayCount++}</span><span></span></div>`;
-                //     } else {
-                //         // 스타일링을 위한 클래스 추가
-                //         calHtml +=
-                //             `<div style='color:rgba(255,255,255,0.5);' class='calendar__day horizontalGutter verticalGutter'><span>${lastDayCount++}</span><span></span></div>`;
-                //     }
-                // }
-            }
-        }
-        document
-            .querySelector("#calendar")
-            .insertAdjacentHTML("beforeend", calHtml);
-    };
-
-    const setFixDayCount = number => {
-        //캘린더 하루마다 아이디를 만들어주기 위해 사용
-        let fixNum = "";
-        if (number < 10) {
-            fixNum = "0" + number;
-        } else {
-            fixNum = number;
-        }
-        return fixNum;
-    };
-
-    if (today.getMonth() + 1 < 10) {
-        setCalendarData(today.getFullYear(), "0" + (today.getMonth() + 1));
-    } else {
-        setCalendarData(today.getFullYear(), "" + (today.getMonth() + 1));
+    if (today.getMonth() + 1 == 12) //  눌렀을 때 월이 넘어가는 곳
+    {
+        before.innerHTML = (today.getMonth()) + "월";
+        next.innerHTML = "1월";
+    } else if (today.getMonth() + 1 == 1) //  1월 일 때
+    {
+        before.innerHTML = "12월";
+        next.innerHTML = (today.getMonth() + 2) + "월";
+    } else //   12월 일 때
+    {
+        before.innerHTML = (today.getMonth()) + "월";
+        next.innerHTML = (today.getMonth() + 2) + "월";
     }
-});
+    // 남은 테이블 줄 삭제
+    while (tbcal.rows.length > 2) {
+        tbcal.deleteRow(tbcal.rows.length - 1);
+    }
+    var row = null;
+    row = tbcal.insertRow();
+    var cnt = 0;
+
+    // 1일 시작칸 찾기
+    for (i = 0; i < nMonth.getDay(); i++) {
+        cell = row.insertCell();
+        cnt = cnt + 1;
+    }
+
+    // 달력 출력
+    for (i = 1; i <= lastDate.getDate(); i++) // 1일부터 마지막 일까지
+    {
+        cell = row.insertCell();
+        cell.innerHTML = i;
+        cnt = cnt + 1;
+        if (cnt % 7 == 1) { //일요일 계산
+            cell.innerHTML = "<font color=#FF9090>" + i //일요일에 색
+        }
+        if (cnt % 7 == 0) { // 1주일이 7일 이므로 토요일 계산
+            cell.innerHTML = "<font color=#7ED5E4>" + i //토요일에 색
+            row = calendar.insertRow(); // 줄 추가
+        }
+        if (today.getFullYear() == date.getFullYear() && today.getMonth() == date.getMonth() && i == date
+            .getDate()) {
+            cell.bgColor = "#E0E7EB"; //오늘날짜배경색
+        }
+    }
+}

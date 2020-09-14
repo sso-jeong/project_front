@@ -434,3 +434,7 @@ select {
 .cursor {
     cursor: pointer;
 }
+
+.z-index{
+    z-index: 9999;
+}
