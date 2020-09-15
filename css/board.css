@@ -30,12 +30,20 @@ td {
     width: 10%;
 }
 
+.td-11 {
+    width: 11%;
+}
+
 .td-13 {
     width: 13%;
 }
 
 .td-15 {
     width: 15%;
+}
+
+.td-17 {
+    width: 17%;
 }
 
 .td-20 {
@@ -48,10 +56,6 @@ td {
 
 .td-40 {
     width: 40%;
-}
-
-.td-80 {
-    width: 80%;
 }
 
 .td-90 {

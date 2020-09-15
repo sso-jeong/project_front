@@ -100,56 +100,62 @@
         <div class="page-wrap m-tb10">
             <div class="container">
                 <div class="title">
-                    <h3 class="font16 m-t10 m-b10 m-lr10">수주관리 > 수주 등록</h3>
+                    <h3 class="font16 m-t10 m-b10 m-lr10">업체관리 > 업체 등록</h3>
                 </div>
                 <div class="order-insert m-b10 m-lr10">
                     <form name="" method="post" autocomplete="off">
                         <table>
                             <tr>
-                                <td class="td-7 under center bg-green weight700" >수주번호</td>
+                                <td class="td-7 under center bg-green weight700" >거래처 코드</td>
                                 <td class="td-13 p-lr3">
                                     <input type="text" name="" id="" class="input-100" tabindex="1" autofocus>
                                 </td>
-                                <td class="td-7 under center bg-green weight700" >수주일자</td>
+                                <td class="td-7 under center bg-green weight700" >거래처 이름</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="date" name="" id="" class="input-100" tabindex="2" required>
+                                    <input type="text" name="" id="" class="input-100" tabindex="2" >
                                 </td>
-                                <td class="td-7 under center bg-green weight700" >거래처</td>
+                                <td class="td-7 under center bg-green weight700" >대표자명</td>
                                 <td class="td-13 p-lr3">
                                     <input type="text" name="" id="" class="input-100" tabindex="3" required>
                                 </td>
-                                <td class="td-7 under center bg-green weight700" >프로젝트</td>
+                                <td class="td-7 under center bg-green weight700" >업태</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-100" tabindex="4">
+                                    <select class="sel-100" name="" id="">
+                                        <option>제조업</option>
+                                        <option>운수업</option>
+                                        <option>광업</option>
+                                    </select>
                                 </td>
-                                <td class="td-7 under center bg-green weight700" >수량/규격</td>
+                                <td class="td-7 under center bg-green weight700" >종목</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="number" name="" id="" tabindex="5" style="width: 49%;"required>
-                                    <input type="text" name="" id="" tabindex="6" style="width: 49%;" required>
+                                    <select class="sel-100" name="" id="">
+                                        <option>제조</option>
+                                        <option>도금</option>
+                                        <option>기타</option>
+                                    </select>
                                 </td>
                                 
                             </tr>
 
                             <tr>
-                                <td class="td-7 under center bg-green weight700" >품목코드/품목명</td>
+                                <td class="td-7 under center bg-green weight700" >전화/FAX</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-40" tabindex="7" required>
-                                    <input type="text" name="" id="" class="input-58" tabindex="8" required>
+                                    <input type="text" name="" id="" class="input-58" tabindex="7" required>
+                                    <input type="text" name="" id="" class="input-40" tabindex="8">
                                 </td>
-                                <td class="td-7 under center bg-green weight700" >납기일자</td>
+                                <td class="td-7 under center bg-green weight700" >주소</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="date" name="" id="" class="input-100" tabindex="9">
+                                    <input type="text" name="" id="" class="input-100" tabindex="9">
                                 </td>
                                 
-                                <td class="td-7 under center bg-green weight700" >단가/부가세</td>
+                                <td class="td-7 under center bg-green weight700" >홈페이지</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="number" name="" id="" class="input-64 price" tabindex="10">
-                                    <input type="number" name="" id="" class="input-35 surtax" readonly>
+                                    <input type="number" name="" id="" class="input-100" tabindex="10">
                                 </td>
                                 <td class="td-7 under center bg-green weight700">담당자/연락처</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-58" tabindex="11">
-                                    <input type="text" name="" id="" class="input-40" tabindex="12">
+                                    <input type="text" name="" id="" class="input-40" tabindex="11">
+                                    <input type="text" name="" id="" class="input-58" tabindex="12">
                                 </td>
                                 <td class="td-7 under center bg-green weight700" >비고</td>
                                 <td class="td-13 p-lr3">
@@ -167,20 +173,21 @@
                 </div>
                 
                 <div class="title">
-                    <h3 class="font16 m-t10 m-b10 m-lr10">수주관리 > 수주 목록</h3>
+                    <h3 class="font16 m-t10 m-b10 m-lr10">업체관리 > 업체 목록</h3>
                 </div>
 
                 <div class="search-wrap flex flex-justify">
                     <div class="">
-                        <span class="btn-normal m-b10 m-lr10">전체수주건 수 10 / PAGE</span>
+                        <span class="btn-normal m-b10 m-lr10">전체 업체 수 10 / PAGE</span>
                     </div>
                     <div class="form-wrap">
                         <form method="post" action="" style="margin:0 10px;" autocomplete="off">
                             <select class="" name="searchOpt">
-                                <option value="ordnum">수주번호</option>
-                                <option value="orddt">수주일자</option>
-                                <option value="comnm">거래처명</option>
-                                <option value="itemnm">품목명</option>
+                                <option value="ordnum">거래처코드</option>
+                                <option value="orddt">거래처명</option>
+                                <option value="comnm">업태</option>
+                                <option value="itemnm">종목</option>
+                                <option value="itemnm">주소</option>
                             </select>
                             <input type="text" name="words" required />
                             <button type="submit" class="btn-on">검색</button>
@@ -194,176 +201,186 @@
                             <td class="td-3">
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
-                            <td class="td-5">순번</td>
-                            <td class="td-7">수주번호</td>
-                            <td class="td-7">수주일자</td>
-                            <td class="td-13">거래처명</td>
-                            <td class="td-7">품목코드</td>
-                            <td>품목명</td>
-                            <td class="td-5">품목구분</td>
-                            <td class="td-7">담당자명</td>
-                            <td class="td-5">수량</td>
-                            <td class="td-7">가격</td>
+                            <td class="td-3">순번</td>
+                            <td class="td-5">거래처 코드</td>
+                            <td>거래처 명</td>
+                            <td class="td-7">대표자명</td>
+                            <td class="td-5">업태</td>
+                            <td class="td-5">종목</td>
+                            <td class="td-10">전화/FAX</td>
+                            <td class="td-17">주소</td>
+                            <td class="td-10">홈페이지</td>
+                            <td class="td-10">담당자/연락처</td>
                             <td class="td-13">비고</td>
                         </tr>
+
                         <tr class="center font14">
                             <td class="td-3">
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
-                            <td class="td-5">10</td>
-                            <td class="td-7">1031</td>
-                            <td class="td-7">2020.10.01</td>
-                            <td class="td-13">(주)DPM</td>
-                            <td class="td-7">11030</td>
-                            <td>위치등 제어기</td>
-                            <td class="td-5">부품</td>
-                            <td class="td-7">수주담당자</td>
-                            <td class="td-5">100</td>
-                            <td class="td-7">1,000</td>
-                            <td class="td-13">-</td>
-                        </tr>
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-5">9</td>
-                            <td class="td-7">1014</td>
-                            <td class="td-7">2020.10.01</td>
-                            <td class="td-13">(주)신진금속</td>
-                            <td class="td-7">11013</td>
-                            <td>관성항법장치</td>
-                            <td class="td-5">제품</td>
-                            <td class="td-7">수주담당자</td>
-                            <td class="td-5">10</td>
-                            <td class="td-7">21,000</td>
-                            <td class="td-13">-</td>
-                        </tr>
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-5">8</td>
-                            <td class="td-7">1018</td>
-                            <td class="td-7">2020.10.01</td>
-                            <td class="td-13">(주)IEN한창</td>
-                            <td class="td-7">11017</td>
-                            <td>위치등 제어기</td>
-                            <td class="td-5">부품</td>
-                            <td class="td-7">수주담당자</td>
-                            <td class="td-5">100</td>
-                            <td class="td-7">1,000</td>
-                            <td class="td-13">-</td>
-                        </tr>
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-5">7</td>
-                            <td class="td-7">1027</td>
-                            <td class="td-7">2020.10.01</td>
-                            <td class="td-13">신정애드</td>
-                            <td class="td-7">11026</td>
-                            <td>LEFT ANTENNA</td>
-                            <td class="td-5">제품</td>
-                            <td class="td-7">수주담당자</td>
-                            <td class="td-5">1</td>
-                            <td class="td-7">100,000</td>
-                            <td class="td-13">-</td>
-                        </tr>
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-5">6</td>
-                            <td class="td-7">1014</td>
-                            <td class="td-7">2020.10.01</td>
-                            <td class="td-13">센진에스엠</td>
-                            <td class="td-7">11013</td>
-                            <td>관성항법장치</td>
-                            <td class="td-5">제품</td>
-                            <td class="td-7">수주담당자</td>
-                            <td class="td-5">15</td>
-                            <td class="td-7">1,000</td>
-                            <td class="td-13">-</td>
-                        </tr>
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-5">5</td>
-                            <td class="td-7">1031</td>
-                            <td class="td-7">2020.10.01</td>
-                            <td class="td-13">(주)DPM</td>
-                            <td class="td-7">11030</td>
-                            <td>위치등 제어기</td>
-                            <td class="td-5">부품</td>
-                            <td class="td-7">수주담당자</td>
-                            <td class="td-5">100</td>
-                            <td class="td-7">1,000</td>
-                            <td class="td-13">-</td>
-                        </tr>
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
+                            <td class="td-3">10</td>
                             <td class="td-5">4</td>
-                            <td class="td-7">1014</td>
-                            <td class="td-7">2020.10.01</td>
-                            <td class="td-13">(주)신진금속</td>
-                            <td class="td-7">11013</td>
-                            <td>관성항법장치</td>
-                            <td class="td-5">제품</td>
-                            <td class="td-7">수주담당자</td>
+                            <td>(재)부산테크노파크</td>
+                            <td class="td-7">박승완</td>
+                            <td class="td-7">제조업</td>
+                            <td class="td-7">제조</td>
+                            <td class="td-10">051-720-8926/720-8927</td>
+                            <td class="td-17">부산광역시 기장군 일광면 횡계길 7 (해양생물산업육성센터)</td>
+                            <td class="td-10">www.btp.or.kr</td>
+                            <td class="td-10">김승완/010-7789-4456</td>
+                            <td class="td-13">-</td>
+                        </tr>
+
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">9</td>
                             <td class="td-5">10</td>
-                            <td class="td-7">21,000</td>
+                            <td>(주) 송림드리움</td>
+                            <td class="td-7">박태정</td>
+                            <td class="td-7">제조업</td>
+                            <td class="td-7">제조</td>
+                            <td class="td-10">051-862-8170/860-8171</td>
+                            <td class="td-17">부산광역시 연제구 과정로287번길 52 (연산동) (총 2 필지)</td>
+                            <td class="td-10">-</td>
+                            <td class="td-10">김태정/010-6589-1254</td>
                             <td class="td-13">-</td>
                         </tr>
+
                         <tr class="center font14">
                             <td class="td-3">
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
-                            <td class="td-5">3</td>
-                            <td class="td-7">1018</td>
-                            <td class="td-7">2020.10.01</td>
-                            <td class="td-13">(주)IEN한창</td>
-                            <td class="td-7">11017</td>
-                            <td>위치등 제어기</td>
-                            <td class="td-5">부품</td>
-                            <td class="td-7">수주담당자</td>
-                            <td class="td-5">100</td>
-                            <td class="td-7">1,000</td>
+                            <td class="td-3">8</td>
+                            <td class="td-5">30</td>
+                            <td>신정사업사</td>
+                            <td class="td-7">김효준</td>
+                            <td class="td-7">제조업</td>
+                            <td class="td-7">도금</td>
+                            <td class="td-10">051-324-5039/324-5040</td>
+                            <td class="td-17">부산광역시 사하구 다대로300번길 15 (장림동)</td>
+                            <td class="td-10">-</td>
+                            <td class="td-10">이준효/010-4569-7896</td>
                             <td class="td-13">-</td>
                         </tr>
+
                         <tr class="center font14">
                             <td class="td-3">
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
-                            <td class="td-5">2</td>
-                            <td class="td-7">1027</td>
-                            <td class="td-7">2020.10.01</td>
-                            <td class="td-13">신정애드</td>
-                            <td class="td-7">11026</td>
-                            <td>LEFT ANTENNA</td>
-                            <td class="td-5">제품</td>
-                            <td class="td-7">수주담당자</td>
-                            <td class="td-5">1</td>
-                            <td class="td-7">100,000</td>
+                            <td class="td-3">7</td>
+                            <td class="td-5">32</td>
+                            <td>신정테크</td>
+                            <td class="td-7">강동현</td>
+                            <td class="td-7">제조업</td>
+                            <td class="td-7">도금</td>
+                            <td class="td-10">051-415-4429/415-4430</td>
+                            <td class="td-17">부산광역시 영도구 대평로20번길 13 (대평동1가)</td>
+                            <td class="td-10">-</td>
+                            <td class="td-10">김현동/010-1234-5698</td>
                             <td class="td-13">-</td>
                         </tr>
+
                         <tr class="center font14">
                             <td class="td-3">
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
-                            <td class="td-5">1</td>
-                            <td class="td-7">1014</td>
-                            <td class="td-7">2020.10.01</td>
-                            <td class="td-13">센진에스엠</td>
-                            <td class="td-7">11013</td>
-                            <td>관성항법장치</td>
-                            <td class="td-5">제품</td>
-                            <td class="td-7">수주담당자</td>
-                            <td class="td-5">15</td>
-                            <td class="td-7">1,000</td>
+                            <td class="td-3">6</td>
+                            <td class="td-5">28</td>
+                            <td>신일테크</td>
+                            <td class="td-7">이선용</td>
+                            <td class="td-7">제조업</td>
+                            <td class="td-7">제조</td>
+                            <td class="td-10">051-324-5039/324-5040</td>
+                            <td class="td-17">부산광역시 사상구 강변대로456번길 38 (엄궁동, 신일테크)</td>
+                            <td class="td-10">www.shiniltech.co.kr</td>
+                            <td class="td-10">박용선/010-7854-3652</td>
+                            <td class="td-13">-</td>
+                        </tr>               
+
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">5</td>
+                            <td class="td-5">4</td>
+                            <td>(재)부산테크노파크</td>
+                            <td class="td-7">박승완</td>
+                            <td class="td-7">제조업</td>
+                            <td class="td-7">제조</td>
+                            <td class="td-10">051-720-8926/720-8927</td>
+                            <td class="td-17">부산광역시 기장군 일광면 횡계길 7 (해양생물산업육성센터)</td>
+                            <td class="td-10">www.btp.or.kr</td>
+                            <td class="td-10">김승완/010-7789-4456</td>
+                            <td class="td-13">-</td>
+                        </tr>
+
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">4</td>
+                            <td class="td-5">10</td>
+                            <td>(주) 송림드리움</td>
+                            <td class="td-7">박태정</td>
+                            <td class="td-7">제조업</td>
+                            <td class="td-7">제조</td>
+                            <td class="td-10">051-862-8170/860-8171</td>
+                            <td class="td-17">부산광역시 연제구 과정로287번길 52 (연산동) (총 2 필지)</td>
+                            <td class="td-10">-</td>
+                            <td class="td-10">김태정/010-6589-1254</td>
+                            <td class="td-13">-</td>
+                        </tr>
+
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">3</td>
+                            <td class="td-5">30</td>
+                            <td>신정사업사</td>
+                            <td class="td-7">김효준</td>
+                            <td class="td-7">제조업</td>
+                            <td class="td-7">도금</td>
+                            <td class="td-10">051-324-5039/324-5040</td>
+                            <td class="td-17">부산광역시 사하구 다대로300번길 15 (장림동)</td>
+                            <td class="td-10">-</td>
+                            <td class="td-10">이준효/010-4569-7896</td>
+                            <td class="td-13">-</td>
+                        </tr>
+
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">2</td>
+                            <td class="td-5">32</td>
+                            <td>신정테크</td>
+                            <td class="td-7">강동현</td>
+                            <td class="td-7">제조업</td>
+                            <td class="td-7">도금</td>
+                            <td class="td-10">051-415-4429/415-4430</td>
+                            <td class="td-17">부산광역시 영도구 대평로20번길 13 (대평동1가)</td>
+                            <td class="td-10">-</td>
+                            <td class="td-10">김현동/010-1234-5698</td>
+                            <td class="td-13">-</td>
+                        </tr>
+
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">1</td>
+                            <td class="td-5">28</td>
+                            <td>신일테크</td>
+                            <td class="td-7">이선용</td>
+                            <td class="td-7">제조업</td>
+                            <td class="td-7">제조</td>
+                            <td class="td-10">051-324-5039/324-5040</td>
+                            <td class="td-17">부산광역시 사상구 강변대로456번길 38 (엄궁동, 신일테크)</td>
+                            <td class="td-10">www.shiniltech.co.kr</td>
+                            <td class="td-10">박용선/010-7854-3652</td>
                             <td class="td-13">-</td>
                         </tr>
                         

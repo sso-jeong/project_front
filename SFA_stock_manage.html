@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALE FORCE AUTOMATION SYSTEM</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/b1cadc3305.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+        .item-left {
+            width: 11%;
+            max-width: 192px;
+        }
+
+        .photo-area {
+            width: 100%;
+        }
+
+        .photo-area img {
+            width: 100%;
+            height: 100px;
+            display: inline-block;
+        }
+
+        .item-right {
+            width: 88.7%;
+            max-width: 1728px;
+        }
+
+        .item-list tr:first-child {
+            background-color: rgba(219, 228, 232, 0.8);
+        }
+
+        .item-list .tr-even:hover {
+            background-color: rgba(219, 228, 232, 0.8);
+        }
+
+        .stock-left {
+            width: 100%;
+        }
+
+        .stock-right {
+            width: 34.5%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-wrap flex flex-justify">
+            <div class="logo-wrap">
+                <h2><a class="roboto font24 f6" href="SFA_main.html" title="HOME">Sale Force Automation</a></h2>
+            </div>
+            <div class="menu-wrap ">
+                <nav id="topMenu">
+                    <ul>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_notice.html" title="시스템메뉴"
+                                alt="">시스템</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_map.html" title="거래처지도" alt="">거래처지도</a></li>
+                                <li> <a class="submenuLink" href="sfa_schedule.html" title="일정" alt="">일정관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_notice.html" title="공지사항" alt="">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_emp_list.html" title="인사/급여메뉴"
+                                alt="">인사/급여</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_wage.html" title="급여관리" alt="">급여관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_tna_manage.html" title="근태관리" alt="">근태관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원목록</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_item_manage.html" title="영업관리메뉴"
+                                alt="">영업</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_sale_manage.html" title="판매관리" alt="">판매관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_order_manage.html" title="수주관리" alt="">수주관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_company_manage.html" title="거래처등록"
+                                        alt="">거래처관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_item_manage.html" title="품목관리" alt="">품목관리</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_com_intro.html" title="회사소개"
+                                alt="">회사소개</a>
+                            <ul class="subMenu2">
+                                <li> <a class="submenuLink" href="sfa_com_direct.html" title="찾아오시는길" alt="">찾아오시는 길</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_com_intro.html" title="기업소개" alt="">기업소개</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-icon-wrap">
+                <div class="icon font24 f6">
+                    <span class="map_icon">
+                        <a href="#" title="map" class="f6"> <i class="fas fa-map-marked-alt"></i></a>
+                    </span>
+                    <span class="admin-icon">
+                        <a href=" ./SFA_admin.html" title="admin" class="f6"><i class="fas fa-user-cog"></i></a>
+                    </span>
+                    <span class="login_icon">
+                        <a href="./SFA_login.html" title="login" class="f6"><i class="fas fa-door-closed"></i></a>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="page-wrap m-tb10">
+            <div class="container">
+                <div class="title">
+                    <h3 class="font16 m-t10 m-b10 m-lr10">재고관리 > 재고 등록</h3>
+                </div>
+                <div class="item-insert m-b10 m-lr10">
+                    <form name="" method="post" autocomplete="off">
+                        <div class="member-info flex flex-justify">
+                            <div class="item-left">
+                                <div class="photo-area">
+                                    <img src="images/dome.jpg" alt="" />
+                                </div>
+                            </div>
+                            <div class="item-right">
+                                <table>
+                                    <tr style="height: 50px;">
+                                        <td class="td-7 under center bg-green weight700">품목코드</td>
+                                        <td class="td-13 p-lr3">
+                                            <input type="text" name="" id="" class="input-100" tabindex="1" autofocus>
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">품목명</td>
+                                        <td class="td-13 p-lr3">
+                                            <input type="text" name="" id="" class="input-100" tabindex="2" required>
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">입고일자</td>
+                                        <td class="td-13 p-lr3">
+                                            <input type="date" name="" id="" class="input-100 indt" tabindex="3">
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">출고일자</td>
+                                        <td class="td-13 p-lr3">
+                                            <input type="date" name="" id="" class="input-100 outdt" disabled="true"
+                                                tabindex="4">
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">규격</td>
+                                        <td class="td-13 p-lr3">
+                                            <input type="text" name="" id="" class="input-100" tabindex="7">
+                                        </td>
+
+                                    </tr>
+
+                                    <tr style="height: 50px;">
+                                        <td class="td-7 under center bg-green weight700">유형</td>
+                                        <td class="td-13 p-lr3">
+                                            <select name="" id="" class="sel-100 type" tabindex="6" onchange="change()"
+                                                required>
+                                                <option>생산입고</option>
+                                                <option>반품입고</option>
+                                                <option>판매출고</option>
+                                            </select>
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">수량</td>
+                                        <td class="td-13 p-lr3">
+                                            <input type="number" name="" id="" class="input-100 price" tabindex="5">
+                                        </td>
+
+
+
+                                        <td class="td-7 under center bg-green weight700">적요</td>
+                                        <td class="td-13 p-lr3" colspan="5">
+                                            <input type="text" name="" id="" class="input-100" tabindex="8">
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-justify">
+                            <div></div>
+                            <button type="submit" class="btn-on center m-t10">등록</button>
+                        </div>
+
+                    </form>
+                    <hr style="border: solid 1px #0C4A60; margin: 20px 0;">
+                </div>
+                <div class="stock-main flex flex-justify">
+                    <div class="stock-left">
+                        <div class="title">
+                            <h3 class="font16 m-t10 m-b10 m-lr10">재고관리 > 재고 목록</h3>
+                        </div>
+                        <div class="search-wrap flex flex-justify">
+                            <div class="">
+                                <span class="btn-normal m-b10 m-lr10">전체품목 수 10 / PAGE</span>
+                            </div>
+                            <div class="form-wrap">
+                                <form method="post" action="" style="margin:0 10px;" autocomplete="off">
+                                    <select class="" name="searchOpt">
+                                        <option value="ordnum">품목코드</option>
+                                        <option value="orddt">품목명</option>
+                                    </select>
+                                    <input type="text" name="words" required />
+                                    <button type="submit" class="btn-on">검색</button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="item-list m-b10 m-lr10">
+                            <table class="list center" style="table-layout: fixed;">
+                                <tr class="weight700 center font14">
+                                    <td class="td-5">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">순번</td>
+                                    <td class="td-10">품목코드</td>
+                                    <td>품목명</td>
+                                    <td class="td-20">규격</td>
+                                    <td class="td-15">수량</td>
+
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">10</td>
+                                    <td class="td-7">11002</td>
+                                    <td>30mm차륜형대공포용 고저각베어링</td>
+                                    <td class="td-5">30mm</td>
+                                    <td class="td-7">242,890</td>
+
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">9</td>
+                                    <td class="td-7">11004</td>
+                                    <td>1대역 스파이럴안테나</td>
+                                    <td class="td-5">스파이럴</td>
+                                    <td class="td-7">703</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">8</td>
+                                    <td class="td-7">11021</td>
+                                    <td>GASKET,VOR/ILS ANTENNA</td>
+                                    <td class="td-5">ANTENNA</td>
+                                    <td class="td-7">19,996</td>
+                                </tr>
+
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">7</td>
+                                    <td class="td-7">11036</td>
+                                    <td>프로펠러</td>
+                                    <td class="td-5">프로펠러</td>
+                                    <td class="td-7">1,115,217</td>
+                                </tr>
+
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">6</td>
+                                    <td class="td-7">11036</td>
+                                    <td>프로펠러</td>
+                                    <td class="td-5">프로펠러</td>
+                                    <td class="td-7">1,115,217</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">5</td>
+                                    <td class="td-7">11002</td>
+                                    <td>30mm차륜형대공포용 고저각베어링</td>
+                                    <td class="td-5">30mm</td>
+                                    <td class="td-7">242,890</td>
+
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">4</td>
+                                    <td class="td-7">11004</td>
+                                    <td>1대역 스파이럴안테나</td>
+                                    <td class="td-5">스파이럴</td>
+                                    <td class="td-7">703</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">3</td>
+                                    <td class="td-7">11021</td>
+                                    <td>GASKET,VOR/ILS ANTENNA</td>
+                                    <td class="td-5">ANTENNA</td>
+                                    <td class="td-7">19,996</td>
+                                </tr>
+
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">2</td>
+                                    <td class="td-7">11036</td>
+                                    <td>프로펠러</td>
+                                    <td class="td-5">프로펠러</td>
+                                    <td class="td-7">1,115,217</td>
+                                </tr>
+
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">1</td>
+                                    <td class="td-7">11036</td>
+                                    <td>프로펠러</td>
+                                    <td class="td-5">프로펠러</td>
+                                    <td class="td-7">1,115,217</td>
+                                </tr>
+
+                            </table>
+                        </div>
+                        <div class="page-grp center m-t10">
+                            <span class="page">
+                                <a href=""><i class="fas fa-angle-double-left"></i></a>
+                            </span>
+                            <span class="page">
+                                <a href=""><i class="fas fa-angle-left"></i></a>
+                            </span>
+                            <span class="page page-active">
+                                <a href="" class="f6">1</a>
+                            </span>
+                            <span class="page"><a href="">2</a></span>
+                            <span class="page"><a href="">3</a></span>
+                            <span class="page"><a href="">4</a></span>
+                            <span class="page"><a href="">5</a></span>
+                            <span class="page">
+                                <a href=""><i class="fas fa-angle-right"></i></a>
+                            </span>
+                            <span class="page">
+                                <a href=""><i class="fas fa-angle-double-right"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="stock-right" style="display: none;">
+                        <div class="title">
+                            <h3 class="font16 m-t10 m-b10 m-lr10">재고관리 > 재고 현황</h3>
+                        </div>
+                        <div class="">
+                            <span class="btn-normal m-b10 m-lr10" style="visibility: hidden;">여백맞추기용도</span>
+                        </div>
+                        <div class="item-list m-b10 m-lr10">
+                            <table class="list center" style="table-layout: fixed;">
+                                <tr class="weight700 center font14">
+
+                                    <td class="td-5">순번</td>
+                                    <td class="td-10">유형</td>
+                                    <td class="td-20">입고일자</td>
+                                    <td class="td-20">출고일자</td>
+                                    <td class="td-20">수량</td>
+                                    <td>적요</td>
+
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-5">1</td>
+                                    <td class="td-7">생산입고</td>
+                                    <td>2020-09-10</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-7">242,890</td>
+                                    <td> -</td>
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="page-grp center m-t10">
+                            <span class="page">
+                                <a href=""><i class="fas fa-angle-double-left"></i></a>
+                            </span>
+                            <span class="page">
+                                <a href=""><i class="fas fa-angle-left"></i></a>
+                            </span>
+                            <span class="page page-active">
+                                <a href="" class="f6">1</a>
+                            </span>
+                            <span class="page"><a href="">2</a></span>
+                            <span class="page"><a href="">3</a></span>
+                            <span class="page"><a href="">4</a></span>
+                            <span class="page"><a href="">5</a></span>
+                            <span class="page">
+                                <a href=""><i class="fas fa-angle-right"></i></a>
+                            </span>
+                            <span class="page">
+                                <a href=""><i class="fas fa-angle-double-right"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+</body>
+<script>
+    $(function () {
+        $("tr:nth-child(n)").addClass("tr-even");
+    })
+</script>
+
+</html>

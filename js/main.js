@@ -15,12 +15,36 @@ $(function () {
         }
     });
 
-    $('.price').keyup(function() {
-        var sur = $('.price').val() / 10; 
-        if($('.surtax')){
-            $('.surtax').val(sur);
+    // $('.price').keyup(function() {
+    //     var sur = $('.price').val() / 10; 
+    //     if($('.surtax')){
+    //         $('.surtax').val(sur);
+    //     }
+    // });
+
+    $('.stock-left table').click(function () {
+        $('.stock-left table').toggleClass('on');
+
+        if($(this).hasClass("on")) {
+            $('.stock-left').css('width', '65%');
+            $('.stock-right').css('display', 'block');
+
+        } else {
+            $('.stock-left').css('width', '100%');
+            $('.stock-right').css('display', 'none');
         }
     });
+
+    $('.list tr').click(function() {
+        $(this).toggleClass('on off');
+
+        if($(this).hasClass("on")){
+            $(this).css('background-color','rgba(219, 228, 232, 0.8)');
+        } else {
+            $(this).css('background-color','#f5f6f7');
+        }
+    });
+
 
     $('.menuLink').mouseover(function () {
         $(this).addClass("on");
@@ -43,9 +67,25 @@ $(function () {
         $('.menuLink').css('color', '#fff');
     });
 
-    
+
 
 });
+
+function change() {
+    var type = $('.type').val();
+
+    if ((type) == "생산입고" || type == "반품입고") {
+        $('.outdt').attr('disabled', true);
+        $('.indt').attr('disabled', false);
+
+    }
+    else if (type == "판매출고") {
+        $('.indt').attr('disabled', true);
+        $('.outdt').attr('disabled', false);
+
+    }
+}
+
 
 
 

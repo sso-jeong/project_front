@@ -217,6 +217,14 @@ input:focus {
     border: 1px solid #0C4A60;  
 }
 
+.input-27 {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 26.5%;
+    height: 35px;
+    font-size: 12px;
+}
 
 .input-35 {
     padding: 5px;
@@ -227,11 +235,29 @@ input:focus {
     font-size: 12px;
 }
 
+.input-38 {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 38%;
+    height: 35px;
+    font-size: 12px;
+}
+
 .input-40 {
     padding: 5px;
     border-radius: 2px;
     border: 1px solid #d5d5d5;
     width: 40%;
+    height: 35px;
+    font-size: 12px;
+}
+
+.input-50 {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 50%;
     height: 35px;
     font-size: 12px;
 }
@@ -295,6 +321,10 @@ select {
 
 .m-t20 {
     margin-top: 20px;
+}
+
+.m-t45 {
+    margin-top: 45px;
 }
 
 .m-b5 {
@@ -433,8 +463,4 @@ select {
 
 .cursor {
     cursor: pointer;
-}
-
-.z-index{
-    z-index: 9999;
 }
