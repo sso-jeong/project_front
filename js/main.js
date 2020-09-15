@@ -35,14 +35,15 @@ $(function () {
         }
     });
 
-    $('.list tr').click(function() {
-        $(this).toggleClass('on off');
+    $('.stock-left .list tr').click(function() {
+        $(this).toggleClass('on');
 
         if($(this).hasClass("on")){
             $(this).css('background-color','rgba(219, 228, 232, 0.8)');
-        } else {
-            $(this).css('background-color','#f5f6f7');
+        } else {       
+            $(this).css('background-color','');
         }
+        
     });
 
 
@@ -74,6 +75,9 @@ $(function () {
 function change() {
     var type = $('.type').val();
 
+    var nm = $('.tna option:selected').text();
+    $('#vacnm').val(nm);
+
     if ((type) == "생산입고" || type == "반품입고") {
         $('.outdt').attr('disabled', true);
         $('.indt').attr('disabled', false);
@@ -84,6 +88,8 @@ function change() {
         $('.outdt').attr('disabled', false);
 
     }
+
+
 }
 
 

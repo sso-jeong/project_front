@@ -110,50 +110,57 @@
                                 <td class="td-13 p-lr3">
                                     <input type="text" name="" id="" class="input-100" tabindex="1" autofocus>
                                 </td>
+
+                                <td class="td-7 under center bg-green weight700" >품목코드/품목명</td>
+                                <td class="td-13 p-lr3">
+                                    <input type="text" name="" id="" class="input-40" tabindex="2" required>
+                                    <input type="text" name="" id="" class="input-58" tabindex="3" required>
+                                </td>
+
                                 <td class="td-7 under center bg-green weight700" >수주일자</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="date" name="" id="" class="input-100" tabindex="2" required>
+                                    <input type="date" name="" id="" class="input-100" tabindex="4" required>
                                 </td>
                                 <td class="td-7 under center bg-green weight700" >수량/규격</td>
                                 <td class="td-13 p-lr3">
                                     <input type="number" name="" id="" tabindex="5" style="width: 49%;"required>
-                                    <input type="text" name="" id="" tabindex="6" style="width: 49%;" required>
+                                    <input type="text" name="" id="" tabindex="6" style="width: 49%;" >
                                 </td>
-                                <td class="td-7 under center bg-green weight700" >거래처</td>
-                                <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-100" tabindex="3" required>
-                                </td>
+
+                                
+                                
                                 <td class="td-7 under center bg-green weight700" >프로젝트</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-100" tabindex="4">
+                                    <input type="text" name="" id="" class="input-100" tabindex="7">
                                 </td>
                                 
                                 
                             </tr>
 
                             <tr>
-                                <td class="td-7 under center bg-green weight700" >품목코드/품목명</td>
+                                <td class="td-7 under center bg-green weight700" >거래처</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-40" tabindex="7" required>
-                                    <input type="text" name="" id="" class="input-58" tabindex="8" required>
+                                    <input type="text" name="" id="" class="input-100" tabindex="8" required>
                                 </td>
+
+                                <td class="td-7 under center bg-green weight700">담당자/연락처</td>
+                                <td class="td-13 p-lr3">
+                                    <input type="text" name="" id="" class="input-40" tabindex="9">
+                                    <input type="tel" name="" id="" class="input-58" tabindex="10" pattern="\d{3}-\d{3,4}-\d{4}" placeholder="000-000(0)-0000">
+                                </td>
+                                
                                 <td class="td-7 under center bg-green weight700" >납기일자</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="date" name="" id="" class="input-100" tabindex="9">
+                                    <input type="date" name="" id="" class="input-100" tabindex="11">
                                 </td>
                                 
                                 <td class="td-7 under center bg-green weight700" >단가/공급가액/부가세</td>
                                 <td class="td-15 p-lr3">
-                                    <input type="number" name="" id="" class="input-35 unitprice" tabindex="10">
-                                    <input type="number" name="" id="" class="input-35 provision" tabindex="11">
+                                    <input type="number" name="" id="" class="input-35 unitprice" tabindex="12">
+                                    <input type="number" name="" id="" class="input-35 provision" tabindex="13">
                                     <input type="number" name="" id="" class="input-27 surtax" readonly>
                                 </td>
-                                                        
-                                <td class="td-7 under center bg-green weight700">담당자/연락처</td>
-                                <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-58" tabindex="12">
-                                    <input type="text" name="" id="" class="input-40" tabindex="13">
-                                </td>
+                
 
                                 <td class="td-7 under center bg-green weight700" >비고</td>
                                 <td class="td-11 p-lr3">
@@ -187,7 +194,7 @@
                                 <option value="comnm">거래처명</option>
                                 <option value="itemnm">품목명</option>
                             </select>
-                            <input type="text" name="words" required />
+                            <input type="text" name="words" tabindex="15" required />
                             <button type="submit" class="btn-on">검색</button>
                         </form>
                     </div>
@@ -211,7 +218,7 @@
                             <td class="td-7">단가</td>
                             <td class="td-7">공급가액</td>
                             <td class="td-7">부가세</td>
-                            <td class="td-13">비고</td>
+                            <td class="td-5">비고</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -220,16 +227,16 @@
                             <td class="td-5">10</td>
                             <td class="td-5">1031</td>
                             <td class="td-7">2020.10.01</td>
-                            <td class="td-13">(주)DPM</td>
+                            <td class="td-13 left p-lr5">(주)DPM</td>
                             <td class="td-7">11030</td>
-                            <td>위치등 제어기</td>
+                            <td class="left p-lr5">위치등 제어기</td>
                             <td class="td-5">부품</td>
                             <td class="td-7">수주담당자</td>
-                            <td class="td-5">100</td>
-                            <td class="td-7">1,000</td>
-                            <td class="td-7">100,000</td>
-                            <td class="td-7">10,000</td>
-                            <td class="td-13">-</td>
+                            <td class="td-5 right p-lr5">100</td>
+                            <td class="td-7 right p-lr5">1,000</td>
+                            <td class="td-7 right p-lr5">100,000</td>
+                            <td class="td-7 right p-lr5">10,000</td>
+                            <td class="td-13 left p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -238,16 +245,16 @@
                             <td class="td-5">9</td>
                             <td class="td-5">1014</td>
                             <td class="td-7">2020.10.01</td>
-                            <td class="td-13">(주)신진금속</td>
+                            <td class="td-13 left p-lr5">(주)신진금속</td>
                             <td class="td-7">11013</td>
-                            <td>관성항법장치</td>
+                            <td class="left p-lr5">관성항법장치</td>
                             <td class="td-5">제품</td>
                             <td class="td-7">수주담당자</td>
-                            <td class="td-5">10</td>
-                            <td class="td-7">21,000</td>
-                            <td class="td-7">210,000</td>
-                            <td class="td-7">21,000</td>
-                            <td class="td-13">-</td>
+                            <td class="td-5 right p-lr5">10</td>
+                            <td class="td-7 right p-lr5">21,000</td>
+                            <td class="td-7 right p-lr5">210,000</td>
+                            <td class="td-7 right p-lr5">21,000</td>
+                            <td class="td-13 left p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -256,16 +263,16 @@
                             <td class="td-5">8</td>
                             <td class="td-5">1018</td>
                             <td class="td-7">2020.10.01</td>
-                            <td class="td-13">(주)IEN한창</td>
+                            <td class="td-13 left p-lr5">(주)IEN한창</td>
                             <td class="td-7">11017</td>
-                            <td>위치등 제어기</td>
+                            <td class="left p-lr5">위치등 제어기</td>
                             <td class="td-5">부품</td>
                             <td class="td-7">수주담당자</td>
-                            <td class="td-5">100</td>
-                            <td class="td-7">1,000</td>
-                            <td class="td-7">100,000</td>
-                            <td class="td-7">10,000</td>
-                            <td class="td-13">-</td>
+                            <td class="td-5 right p-lr5">100</td>
+                            <td class="td-7 right p-lr5">1,000</td>
+                            <td class="td-7 right p-lr5">100,000</td>
+                            <td class="td-7 right p-lr5">10,000</td>
+                            <td class="td-13 left p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -274,16 +281,16 @@
                             <td class="td-5">7</td>
                             <td class="td-5">1027</td>
                             <td class="td-7">2020.10.01</td>
-                            <td class="td-13">신정애드</td>
+                            <td class="td-13 left p-lr5">신정애드</td>
                             <td class="td-7">11026</td>
-                            <td>LEFT ANTENNA</td>
+                            <td class="left p-lr5">LEFT ANTENNA</td>
                             <td class="td-5">제품</td>
                             <td class="td-7">수주담당자</td>
-                            <td class="td-5">1</td>
-                            <td class="td-7">100,000</td>
-                            <td class="td-7">100,000</td>
-                            <td class="td-7">10,000</td>
-                            <td class="td-13">-</td>
+                            <td class="td-5 right p-lr5">1</td>
+                            <td class="td-7 right p-lr5">100,000</td>
+                            <td class="td-7 right p-lr5">100,000</td>
+                            <td class="td-7 right p-lr5">10,000</td>
+                            <td class="td-13 left p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -292,106 +299,107 @@
                             <td class="td-5">6</td>
                             <td class="td-5">1014</td>
                             <td class="td-7">2020.10.01</td>
-                            <td class="td-13">센진에스엠</td>
+                            <td class="td-13 left p-lr5">센진에스엠</td>
                             <td class="td-7">11013</td>
-                            <td>관성항법장치</td>
+                            <td class="left p-lr5">관성항법장치</td>
                             <td class="td-5">제품</td>
                             <td class="td-7">수주담당자</td>
-                            <td class="td-5">15</td>
-                            <td class="td-7">1,000</td>
-                            <td class="td-7">15,000</td>
-                            <td class="td-7">1,500</td>
-                            <td class="td-13">-</td>
+                            <td class="td-5 right p-lr5">15</td>
+                            <td class="td-7 right p-lr5">1,000</td>
+                            <td class="td-7 right p-lr5">15,000</td>
+                            <td class="td-7 right p-lr5">1,500</td>
+                            <td class="td-13 left p-lr5">-</td>
                         </tr>
+                        
                         <tr class="center font14">
                             <td class="td-3">
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
-                            <td class="td-5">10</td>
+                            <td class="td-5">5</td>
                             <td class="td-5">1031</td>
                             <td class="td-7">2020.10.01</td>
-                            <td class="td-13">(주)DPM</td>
+                            <td class="td-13 left p-lr5">(주)DPM</td>
                             <td class="td-7">11030</td>
-                            <td>위치등 제어기</td>
+                            <td class="left p-lr5">위치등 제어기</td>
                             <td class="td-5">부품</td>
                             <td class="td-7">수주담당자</td>
-                            <td class="td-5">100</td>
-                            <td class="td-7">1,000</td>
-                            <td class="td-7">100,000</td>
-                            <td class="td-7">10,000</td>
-                            <td class="td-13">-</td>
+                            <td class="td-5 right p-lr5">100</td>
+                            <td class="td-7 right p-lr5">1,000</td>
+                            <td class="td-7 right p-lr5">100,000</td>
+                            <td class="td-7 right p-lr5">10,000</td>
+                            <td class="td-13 left p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
-                            <td class="td-5">9</td>
+                            <td class="td-5">4</td>
                             <td class="td-5">1014</td>
                             <td class="td-7">2020.10.01</td>
-                            <td class="td-13">(주)신진금속</td>
+                            <td class="td-13 left p-lr5">(주)신진금속</td>
                             <td class="td-7">11013</td>
-                            <td>관성항법장치</td>
+                            <td class="left p-lr5">관성항법장치</td>
                             <td class="td-5">제품</td>
                             <td class="td-7">수주담당자</td>
-                            <td class="td-5">10</td>
-                            <td class="td-7">21,000</td>
-                            <td class="td-7">210,000</td>
-                            <td class="td-7">21,000</td>
-                            <td class="td-13">-</td>
+                            <td class="td-5 right p-lr5">10</td>
+                            <td class="td-7 right p-lr5">21,000</td>
+                            <td class="td-7 right p-lr5">210,000</td>
+                            <td class="td-7 right p-lr5">21,000</td>
+                            <td class="td-13 left p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
-                            <td class="td-5">8</td>
+                            <td class="td-5">3</td>
                             <td class="td-5">1018</td>
                             <td class="td-7">2020.10.01</td>
-                            <td class="td-13">(주)IEN한창</td>
+                            <td class="td-13 left p-lr5">(주)IEN한창</td>
                             <td class="td-7">11017</td>
-                            <td>위치등 제어기</td>
+                            <td class="left p-lr5">위치등 제어기</td>
                             <td class="td-5">부품</td>
                             <td class="td-7">수주담당자</td>
-                            <td class="td-5">100</td>
-                            <td class="td-7">1,000</td>
-                            <td class="td-7">100,000</td>
-                            <td class="td-7">10,000</td>
-                            <td class="td-13">-</td>
+                            <td class="td-5 right p-lr5">100</td>
+                            <td class="td-7 right p-lr5">1,000</td>
+                            <td class="td-7 right p-lr5">100,000</td>
+                            <td class="td-7 right p-lr5">10,000</td>
+                            <td class="td-13 left p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
-                            <td class="td-5">7</td>
+                            <td class="td-5">2</td>
                             <td class="td-5">1027</td>
                             <td class="td-7">2020.10.01</td>
-                            <td class="td-13">신정애드</td>
+                            <td class="td-13 left p-lr5">신정애드</td>
                             <td class="td-7">11026</td>
-                            <td>LEFT ANTENNA</td>
+                            <td class="left p-lr5">LEFT ANTENNA</td>
                             <td class="td-5">제품</td>
                             <td class="td-7">수주담당자</td>
-                            <td class="td-5">1</td>
-                            <td class="td-7">100,000</td>
-                            <td class="td-7">100,000</td>
-                            <td class="td-7">10,000</td>
-                            <td class="td-13">-</td>
+                            <td class="td-5 right p-lr5">1</td>
+                            <td class="td-7 right p-lr5">100,000</td>
+                            <td class="td-7 right p-lr5">100,000</td>
+                            <td class="td-7 right p-lr5">10,000</td>
+                            <td class="td-13 left p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
-                            <td class="td-5">6</td>
+                            <td class="td-5">1</td>
                             <td class="td-5">1014</td>
                             <td class="td-7">2020.10.01</td>
-                            <td class="td-13">센진에스엠</td>
+                            <td class="td-13 left p-lr5">센진에스엠</td>
                             <td class="td-7">11013</td>
-                            <td>관성항법장치</td>
+                            <td class="left p-lr5">관성항법장치</td>
                             <td class="td-5">제품</td>
                             <td class="td-7">수주담당자</td>
-                            <td class="td-5">15</td>
-                            <td class="td-7">1,000</td>
-                            <td class="td-7">15,000</td>
-                            <td class="td-7">1,500</td>
-                            <td class="td-13">-</td>
+                            <td class="td-5 right p-lr5">15</td>
+                            <td class="td-7 right p-lr5">1,000</td>
+                            <td class="td-7 right p-lr5">15,000</td>
+                            <td class="td-7 right p-lr5">1,500</td>
+                            <td class="td-13 left p-lr5">-</td>
                         </tr>
 
                     </table>
