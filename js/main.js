@@ -46,6 +46,39 @@ $(function () {
         
     });
 
+    $(".tna-list tr").click(function () {
+
+        var str = "";
+        var tdArr = new Array();
+
+        var tr = $(this);
+        var td = tr.children();
+
+        td.each(function(i){
+            tdArr.push(td.eq(i).text());
+        });
+
+        var type = td.eq(9).text();
+
+        if(type != '내근'){
+            $('.tna-left table .tna').toggleClass('on');
+
+            if($(this).children().hasClass("on")) {
+                $('.tna-left').css('width', '65%');
+                $('.tna-right').css('display', 'block');
+                $(this).css('background-color','rgba(219, 228, 232, 0.8)');
+    
+            } else {
+                $('.tna-left').css('width', '100%');
+                $('.tna-right').css('display', 'none');
+                $(this).css('background-color','');
+            }
+        } else{
+            alert("내근 외 기록이 없습니다.");
+        }
+
+    });
+
 
     $('.menuLink').mouseover(function () {
         $(this).addClass("on");
