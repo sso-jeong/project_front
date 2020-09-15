@@ -280,6 +280,33 @@ input:focus {
     font-size: 12px;
 }
 
+.input-49 {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 49%;
+    height: 35px;
+    font-size: 12px;
+}
+
+.input-73 {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 73%;
+    height: 35px;
+    font-size: 12px;
+}
+
+.input-75 {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 75%;
+    height: 35px;
+    font-size: 12px;
+}
+
 .input-100 {
     padding: 5px;
     border-radius: 2px;
@@ -295,6 +322,32 @@ select {
     border-radius: 2px;
     border: 1px solid #d5d5d5;
     width: 150px;
+    height: 35px;
+}
+
+.sel-25 {
+    font-size: 12px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 25%;
+    height: 35px;
+}
+
+.sel-50 {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 49%;
+    height: 35px;
+    font-size: 12px;
+}
+
+
+.sel-55 {
+    font-size: 12px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 55%;
     height: 35px;
 }
 

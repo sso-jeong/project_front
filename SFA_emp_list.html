@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALE FORCE AUTOMATION SYSTEM</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/b1cadc3305.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+        .emp-list tr:first-child {
+            background-color: rgba(219, 228, 232, 0.8);
+        }
+
+        .emp-list .tr-even:hover {
+            background-color: rgba(219, 228, 232, 0.8);
+        }
+
+        .photo-area {
+            width: 120px;
+            height: 160px;
+        }
+
+        .photo-area img {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-wrap flex flex-justify">
+            <div class="logo-wrap">
+                <h2><a class="roboto font24 f6" href="SFA_main.html" title="HOME">Sale Force Automation</a></h2>
+            </div>
+            <div class="menu-wrap ">
+                <nav id="topMenu">
+                    <ul>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_notice.html" title="시스템메뉴"
+                                alt="">시스템</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_map.html" title="거래처지도" alt="">거래처지도</a></li>
+                                <li> <a class="submenuLink" href="sfa_schedule.html" title="일정" alt="">일정관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_notice.html" title="공지사항" alt="">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_emp_list.html" title="인사/급여메뉴"
+                                alt="">인사/급여</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_wage.html" title="급여관리" alt="">급여관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_tna_manage.html" title="근태관리" alt="">근태관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원목록</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_item_manage.html" title="영업관리메뉴"
+                                alt="">영업</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_sale_manage.html" title="판매관리" alt="">판매관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_order_manage.html" title="수주관리" alt="">수주관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_company_manage.html" title="거래처등록"
+                                        alt="">거래처관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_item_manage.html" title="품목관리" alt="">품목관리</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_com_intro.html" title="회사소개"
+                                alt="">회사소개</a>
+                            <ul class="subMenu2">
+                                <li> <a class="submenuLink" href="sfa_com_direct.html" title="찾아오시는길" alt="">찾아오시는 길</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_com_intro.html" title="기업소개" alt="">기업소개</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-icon-wrap">
+                <div class="icon font24 f6">
+                    <span class="map_icon">
+                        <a href="#" title="map" class="f6"> <i class="fas fa-map-marked-alt"></i></a>
+                    </span>
+                    <span class="admin-icon">
+                        <a href=" ./SFA_admin.html" title="admin" class="f6"><i class="fas fa-user-cog"></i></a>
+                    </span>
+                    <span class="login_icon">
+                        <a href="./SFA_login.html" title="login" class="f6"><i class="fas fa-door-closed"></i></a>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="page-wrap m-tb10">
+            <div class="container">
+                <div class="title">
+                    <h3 class="font16 m-t10 m-b10 m-lr10">사원관리 > 사원 등록</h3>
+                </div>
+                <div class="emp-insert m-b10 m-lr10">
+                    <form name="" method="post" autocomplete="off">
+                        <div class="emp-info flex flex-justify">
+                            <div class="emp-left">
+                                <div class="photo-area" style="padding-right: 10px;">
+                                    <img src="images/emp001.jpg" alt="" />
+                                </div>
+                                <div class="photo-btn center m-t5">
+                                    <button class="s-btn-on">수정</button>
+                                    <button class="s-btn-off">삭제</button>
+                                </div>
+                            </div>
+                            <div class="emp-right" style="width:94%;">
+                                <table>
+                                    <tr>
+                                        <td class="td-7 under center bg-green weight700">사원번호</td>
+                                        <td class="td-5 p-lr3">
+                                            <input type="hidden" name="" id="" class="input-100">
+                                        </td>
+                                        <td class="td-7 under center bg-green weight700">사원명/성별</td>
+                                        <td class="td-13 p-lr3">
+                                            <input type="text" name="" id="" class="input-73" tabindex="1" autofocus
+                                                required>
+                                            <select name="" class="sel-25" id="" tabindex="2">
+                                                <option value="">남자</option>
+                                                <option value="">여자</option>
+                                            </select>
+                                        </td>
+                                        <td class="td-7 under center bg-green weight700">생년월일</td>
+                                        <td class="td-13 p-lr3">
+                                            <input type="text" name="" id="" class="input-73" tabindex="3" required>
+                                            <select name="" class="sel-25" id="" tabindex="4">
+                                                <option value="">앙력</option>
+                                                <option value="">음력</option>
+                                            </select>
+                                        </td>
+                                        <td class="td-7 under center bg-green weight700">주민등록번호</td>
+                                        <td class="td-13 p-lr3">
+                                            <input type="text" name="" id="" class="input-100" tabindex="5" required>
+                                        </td>
+                                        <td class="td-7 under center bg-green weight700">채용형태</td>
+                                        <td class="p-lr3">
+                                            <select name="" class="sel-100" id="">
+                                                <option value="">공개채용</option>
+                                                <option value="">특별채용</option>
+                                                <option value="">수시채용</option>
+                                            </select>
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">병역구분</td>
+                                        <td class="p-lr3">
+                                            <select name="" class="sel-100" id="">
+                                                <option value="">병역필</option>
+                                                <option value="">병역미필</option>
+                                                <option value="">병역무관</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="td-7 under center bg-green weight700">부서코드</td>
+                                        <td class="p-lr3">
+                                            <input type="hidden" name="" id="" class="input-100">
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">부서명/직급</td>
+                                        <td class="p-lr3">
+                                            <select name="" class="sel-50" id="" tabindex="6">
+                                                <option value="">인사총무부</option>
+                                                <option value="">영업부</option>
+                                            </select>
+                                            <select name="" class="sel-50" id="" tabindex="7">
+                                                <option value="">관리자</option>
+                                                <option value="">이사</option>
+                                                <option value="">처장</option>
+                                                <option value="">차장</option>
+                                                <option value="">부장</option>
+                                                <option value="">과장</option>
+                                                <option value="">대리</option>
+                                                <option value="">사원</option>
+                                            </select>
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">주소</td>
+                                        <td class="p-lr3" colspan="3">
+                                            <input type="text" name="" id="" tabindex="8" class="input-100" required>
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">장애여부</td>
+                                        <td class="p-lr3">
+                                            <select name="" class="sel-100" id="">
+                                                <option value="">대상</option>
+                                                <option value="">비대상</option>
+                                            </select>
+                                        </td>
+                                        <td class="td-7 under center bg-green weight700">보훈대상</td>
+                                        <td class="p-lr3">
+                                            <select name="" class="sel-100" id="">
+                                                <option value="">대상</option>
+                                                <option value="">비대상</option>
+                                            </select>
+                                        </td>
+
+                                    </tr>
+                                    <tr>
+                                        <td class="td-7 under center bg-green weight700">H.P</td>
+                                        <td class="td-7 p-lr3">
+                                            <input type="tel" name="" id="" class="input-100" tabindex="9"
+                                                pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}" required>
+                                        </td>
+                                        <td class="td-7 under center bg-green weight700">내선번호</td>
+                                        <td class="td-7 p-lr3">
+                                            <input type="tel" name="" id="" tabindex="10" class="input-100"
+                                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                                        </td>
+                                        <td class="td-7 under center bg-green weight700">이메일</td>
+                                        <td class="p-lr3">
+                                            <input type="email" name="" id="" tabindex="11" class="input-100" required>
+                                        </td>
+                                        <td class="td-7 under center bg-green weight700">계좌번호</td>
+                                        <td class="p-lr3">
+                                            <input type="text" name="" id="" tabindex="12" class="input-100" required>
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">종교</td>
+                                        <td class="p-lr3">
+                                            <select name="" class="sel-100" id="">
+                                                <option value="">무교</option>
+                                                <option value="">불교</option>
+                                                <option value="">기독교</option>
+                                                <option value="">천주교</option>
+                                            </select>
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">결혼여부</td>
+                                        <td class="p-lr3">
+                                            <select name="" class="sel-100" id="">
+                                                <option value="">미혼</option>
+                                                <option value="">기혼</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="td-7 under center bg-green weight700">희망직무</td>
+                                        <td class="p-lr3">
+                                            <input type="text" name="" id="" class="input-100" required>
+                                        </td>
+                                        <td class="td-7 under center bg-green weight700">보유자격</td>
+                                        <td class="p-lr3">
+                                            <input type="text" name="" id="" class="input-100" required>
+                                        </td>
+                                        <td class="td-7 under center bg-green weight700">취미</td>
+                                        <td class="p-lr3">
+                                            <input type="text" name="" id="" class="input-100" required>
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">특기</td>
+                                        <td class="p-lr3">
+                                            <input type="text" name="" id="" class="input-100" required>
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">어학/상벌사항</td>
+                                        <td class="p-lr3" colspan="3">
+                                            <input type="text" name="" id="" class="input-49" required>
+                                            <input type="text" name="" id="" class="input-49" required>
+                                        </td>
+
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="flex flex-justify">
+                            <div></div>
+                            <button type="submit" class="btn-on center m-t10">등록</button>
+                        </div>
+
+
+                    </form>
+
+                    <hr style="border: solid 1px #0C4A60; margin: 20px 0;">
+                </div>
+
+                <div class="title">
+                    <h3 class="font16 m-t10 m-b10 m-lr10">사원관리 > 사원 목록</h3>
+                </div>
+
+                <div class="search-wrap flex flex-justify">
+                    <div class="">
+                        <span class="btn-normal m-b10 m-lr10">전체 사원목록 10 / PAGE</span>
+                    </div>
+                    <div class="form-wrap">
+                        <form method="post" action="" style="margin:0 10px;" autocomplete="off">
+                            <select class="" name="searchOpt">
+                                <option value="empid">사번</option>
+                                <option value="empdept">부서명</option>
+                            </select>
+                            <input type="text" name="words" required />
+                            <button type="submit" class="btn-on">검색</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="emp-list m-b10 m-lr10">
+                    <table class="list center" style="table-layout: fixed;">
+                        <tr class="weight700 center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">순번</td>
+                            <td class="td-5">사번</td>
+                            <td class="td-5">사원명</td>
+                            <td class="td-7">생년월일</td>
+                            <td class="td-7">주민등록번호</td>
+                            <td class="td-5">부서코드</td>
+                            <td class="td-7">부서명</td>
+                            <td class="td-7">직위/직급명</td>
+                            <td class="td-3">성별</td>
+                            <td>주소</td>
+                            <td class="td-5">H.P</td>
+                            <td class="td-5">내선번호</td>
+                            <td class="td-7">E-mail</td>
+                            <td class="td-7">계좌번호</td>
+                            <td class="td-7">입사일자</td>
+                        </tr>
+                        <tr>
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>10</td>
+                            <td>2002</td>
+                            <td>서정근</td>
+                            <td>1953.04.05</td>
+                            <td>530405-1104055</td>
+                            <td>100</td>
+                            <td>인사총무부</td>
+                            <td>관리자</td>
+                            <td>남자</td>
+                            <td>부산광역시 강서구 녹산산업북로313번길 62 (송정동)</td>
+                            <td>010-5831-0059</td>
+                            <td>070-500-1000</td>
+                            <td>sjg0059@sfa.ac.kr</td>
+                            <td>111-11-1111111</td>
+                            <td>1988.03.02</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>9</td>
+                            <td>2000</td>
+                            <td>서민환</td>
+                            <td>1963.04.05</td>
+                            <td>630405-1001425</td>
+                            <td>100</td>
+                            <td>인사총무부</td>
+                            <td>이사</td>
+                            <td>남자</td>
+                            <td>부산광역시 기장군 정관면 산단1로 66-89 (영진산업)</td>
+                            <td>010-5831-0059</td>
+                            <td>070-500-1000</td>
+                            <td>smh@sfa.ac.kr</td>
+                            <td>22-2222-2222</td>
+                            <td>1988.03.02</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>8</td>
+                            <td>2001</td>
+                            <td>김두형</td>
+                            <td>1965.04.05</td>
+                            <td>650405-1111111</td>
+                            <td>100</td>
+                            <td>인사총무부</td>
+                            <td>차장</td>
+                            <td>남자</td>
+                            <td>부산광역시 기장군 정관면 산단1로 66-89 (영진산업)</td>
+                            <td>010-5831-0059</td>
+                            <td>070-500-1000</td>
+                            <td>kdh@sfa.ac.kr</td>
+                            <td>222-22-222222</td>
+                            <td>1990.03.02</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>7</td>
+                            <td>2004</td>
+                            <td>이주희</td>
+                            <td>1968.12.05</td>
+                            <td>681205-2904055</td>
+                            <td>100</td>
+                            <td>인사총무부</td>
+                            <td>차장</td>
+                            <td>여자</td>
+                            <td>부산광역시 사상구 학감대로192번길 69 (학장동)</td>
+                            <td>010-2904-0059</td>
+                            <td>070-500-1000</td>
+                            <td>ljhee@sfa.ac.kr</td>
+                            <td>333-33-33333</td>
+                            <td>1988.03.02</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>6</td>
+                            <td>2008</td>
+                            <td>정숙정</td>
+                            <td>1969.07.15</td>
+                            <td>690718-2075655</td>
+                            <td>100</td>
+                            <td>인사총무부</td>
+                            <td>차장</td>
+                            <td>여자</td>
+                            <td>부산광역시 기장군 정관면 산단3로 55</td>
+                            <td>010-6907-0059</td>
+                            <td>070-500-1000</td>
+                            <td>jeong@sfa.ac.kr</td>
+                            <td>444-44-4444444</td>
+                            <td>1988.03.02</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>5</td>
+                            <td>2020</td>
+                            <td>남현수</td>
+                            <td>1970.01.05</td>
+                            <td>700105-1701059</td>
+                            <td>100</td>
+                            <td>인사총무부</td>
+                            <td>차장</td>
+                            <td>남자</td>
+                            <td>부산광역시 강서구 녹산산단382로60번길 32 (송정동)</td>
+                            <td>010-7001-0059</td>
+                            <td>070-500-1000</td>
+                            <td>nam@sfa.ac.kr</td>
+                            <td>555-55-5555555</td>
+                            <td>1988.03.02</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>4</td>
+                            <td>2021</td>
+                            <td>권세남</td>
+                            <td>1967.04.05</td>
+                            <td>670405-1104055</td>
+                            <td>100</td>
+                            <td>인사총무부</td>
+                            <td>처장</td>
+                            <td>남자</td>
+                            <td>부산광역시 강서구 대저중앙로 360-1 (대저1동)</td>
+                            <td>010-1967-0059</td>
+                            <td>070-500-1000</td>
+                            <td>nam6704@sfa.ac.kr</td>
+                            <td>666-66-6666666</td>
+                            <td>1988.03.02</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>3</td>
+                            <td>2036</td>
+                            <td>김영린</td>
+                            <td>1970.04.05</td>
+                            <td>700405-2104055</td>
+                            <td>100</td>
+                            <td>인사총무부</td>
+                            <td>부장</td>
+                            <td>여자</td>
+                            <td>부산광역시 사상구 학감대로222번길 34 (감전동)</td>
+                            <td>010-7004-0059</td>
+                            <td>070-500-1000</td>
+                            <td>kim7004@sfa.ac.kr</td>
+                            <td>777-77-7777777</td>
+                            <td>1988.03.02</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>2</td>
+                            <td>2012</td>
+                            <td>김태임</td>
+                            <td>1980.04.05</td>
+                            <td>800405-2045712</td>
+                            <td>100</td>
+                            <td>영업부</td>
+                            <td>과장</td>
+                            <td>여자</td>
+                            <td>부산광역시 강서구 녹산산단261로87번길 19 (송정동)</td>
+                            <td>010-1980-0059</td>
+                            <td>070-500-1000</td>
+                            <td>tea8004@sfa.ac.kr</td>
+                            <td>888-88-8888888</td>
+                            <td>1988.03.02</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>1</td>
+                            <td>2038</td>
+                            <td>이명규</td>
+                            <td>1953.06.05</td>
+                            <td>530605-1906054</td>
+                            <td>100</td>
+                            <td>영업부</td>
+                            <td>과장</td>
+                            <td>남자</td>
+                            <td>부산광역시 강서구 낙동북로125번길 92-1 (강동동)</td>
+                            <td>010-9530-0059</td>
+                            <td>070-500-1000</td>
+                            <td>lee0605@sfa.ac.kr</td>
+                            <td>999-99-9999999</td>
+                            <td>1988.03.02</td>
+                        </tr>
+
+
+
+                    </table>
+                </div>
+                <div class="page-grp center m-t10">
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-double-left"></i></a>
+                    </span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-left"></i></a>
+                    </span>
+                    <span class="page page-active">
+                        <a href="" class="f6">1</a>
+                    </span>
+                    <span class="page"><a href="">2</a></span>
+                    <span class="page"><a href="">3</a></span>
+                    <span class="page"><a href="">4</a></span>
+                    <span class="page"><a href="">5</a></span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-right"></i></a>
+                    </span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-double-right"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script>
+    $(function () {
+        $("tr:nth-child(n)").addClass("tr-even");
+    })
+</script>
+
+</html>
