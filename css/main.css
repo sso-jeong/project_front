@@ -12,22 +12,24 @@ header {
 
 .logo-wrap {
     width: 10%;
+    vertical-align: middle;
     text-align: center;
 }
 
 .logo-wrap a {
-    vertical-align: middle;
-    line-height: 1.1;
+    line-height: 2px;
 }
 
 .menu-wrap {
-    width: 80%;
+    width: 84%;
     text-align: center;
+    /* background-color: aqua; */
 }
 
 .menu-icon-wrap {
-    width: 8%;
+    width: 5%;
     text-align: center;
+    /* background-color: blueviolet; */
 }
 
 .icon a {
@@ -36,7 +38,6 @@ header {
 }
 
 .icon>.admin-icon {
-    margin-left: 15px;
     margin-right: 15px;
 }
 
@@ -61,7 +62,7 @@ header {
 .menuLink,
 .submenuLink {
     display: block;
-    width: 150px;
+    width: 120px;
 }
 
 .submenuLink {

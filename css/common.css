@@ -33,6 +33,10 @@ body {
     font-size: 20px;
 }
 
+.font22 {
+    font-size: 22px;
+}
+
 .font24 {
     font-size: 24px;
 }
@@ -285,6 +289,24 @@ input:focus {
     border-radius: 2px;
     border: 1px solid #d5d5d5;
     width: 49%;
+    height: 35px;
+    font-size: 12px;
+}
+
+.input-24 {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 24%;
+    height: 35px;
+    font-size: 12px;
+}
+
+.input-74 {
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid #d5d5d5;
+    width: 74%;
     height: 35px;
     font-size: 12px;
 }

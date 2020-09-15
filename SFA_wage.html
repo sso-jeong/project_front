@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALE FORCE AUTOMATION SYSTEM</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/b1cadc3305.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+        .emp-list tr:first-child {
+            background-color: rgba(219, 228, 232, 0.8);
+        }
+
+        .emp-list .tr-even:hover {
+            background-color: rgba(219, 228, 232, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-wrap flex flex-justify">
+            <div class="logo-wrap" style="padding-top: 8px;">
+                <h2><a class="roboto font24 f6" href="SFA_main.html" title="HOME">SALE FORCE</a></h2>
+                <a class="roboto font22 f6" href="SFA_main.html" title="HOME">AUTOMATION</a>
+            </div>
+            <div class="menu-wrap ">
+                <nav id="topMenu">
+                    <ul>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_notice.html" title="시스템메뉴"
+                                alt="">시스템</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_schedule.html" title="일정" alt="">일정관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_notice.html" title="공지사항" alt="">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_emp_list.html" title="인사/급여메뉴"
+                                alt="">인사/급여</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_wage.html" title="급여관리" alt="">급여관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_tna_manage.html" title="근태관리" alt="">근태관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원목록</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_item_manage.html" title="영업관리메뉴"
+                                alt="">영업</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_sale_manage.html" title="판매관리" alt="">판매관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_order_manage.html" title="수주관리" alt="">수주관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_company_manage.html" title="거래처등록"
+                                        alt="">거래처관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_item_manage.html" title="품목관리" alt="">품목관리</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_com_intro.html" title="회사소개"
+                                alt="">회사소개</a>
+                            <ul class="subMenu2">
+                                <li> <a class="submenuLink" href="sfa_com_direct.html" title="찾아오시는길" alt="">찾아오시는 길</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_com_intro.html" title="기업소개" alt="">기업소개</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-icon-wrap">
+                <div class="icon font24 f6">
+                    <!-- <span class="map_icon">
+                        <a href="#" title="map" class="f6"> <i class="fas fa-map-marked-alt"></i></a>
+                    </span> -->
+                    <span class="admin-icon">
+                        <a href=" ./SFA_admin.html" title="admin" class="f6"><i class="fas fa-user-cog"></i></a>
+                    </span>
+                    <span class="login_icon">
+                        <a href="./SFA_login.html" title="login" class="f6"><i class="fas fa-door-closed"></i></a>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="page-wrap m-tb10">
+            <div class="container">
+                <div class="title">
+                    <h3 class="font16 m-t10 m-b10 m-lr10">인사급여 > 급여계산/대장</h3>
+                </div>
+                <div class="wage-insert m-b10 m-lr10">
+                    <form name="" method="post" autocomplete="off">
+                        <div class="wage">
+                            <table>
+                                <tr>
+                                    <td class="td-7 under center bg-green weight700">급여구분</td>
+                                    <td class="td-5 p-lr3">
+                                        정기급여
+                                    </td>
+                                    <td class="td-7 under center bg-green weight700">급상여종류 및 형태</td>
+                                    <td class="td-13 p-lr3">
+                                        <select name="" class="sel-50" id="" tabindex="1">
+                                            <option value="">급여</option>
+                                            <option value="">상여</option>
+                                            <option value="">특별상여</option>
+                                            <option value="">연월차</option>
+                                            <option value="">그외</option>
+                                        </select>
+                                        <select name="" class="sel-50" id="" tabindex="2">
+                                            <option value="">월급직</option>
+                                            <option value="">일반직</option>
+                                            <option value="">시간직</option>
+                                        </select>
+                                    </td>
+                                    </td>
+                                    <td class="td-7 under center bg-green weight700">지급구분/지급명</td>
+                                    <td class="td-15 p-lr3">
+                                        <input type="month" name="" id="" class="input-49" tabindex="7" required>
+                                        <input type="text" name="" id="" class="input-49" tabindex="8" required>
+                                    </td>
+                                    <td class="td-7 under center bg-green weight700">적용기간</td>
+                                    <td class="p-lr3">
+                                        <input type="date" name="" id="" class="input-49" tabindex="9" required>
+                                        <input type="date" name="" id="" class="input-49" tabindex="10" required>
+                                    </td>
+                                    <td class="td-7 under center bg-green weight700">지급일</td>
+                                    <td class="td-7 p-lr3">
+                                        <input type="date" name="" id="" class="input-100" tabindex="11" required>
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="td-7 under center bg-green weight700">부서코드</td>
+                                    <td class="p-lr3">
+                                        <input type="hidden" name="" id="" class="input-100">
+                                    </td>
+
+                                    <td class="td-7 under center bg-green weight700">부서명/직급</td>
+                                    <td class="p-lr3">
+                                        <select name="" class="sel-50" id="" tabindex="3">
+                                            <option value="">인사총무부</option>
+                                            <option value="">영업부</option>
+                                        </select>
+                                        <select name="" class="sel-50" id="" tabindex="4">
+                                            <option value="">관리자</option>
+                                            <option value="">이사</option>
+                                            <option value="">처장</option>
+                                            <option value="">차장</option>
+                                            <option value="">부장</option>
+                                            <option value="">과장</option>
+                                            <option value="">대리</option>
+                                            <option value="">사원</option>
+                                        </select>
+                                    </td>
+
+                                    <td class="td-7 under center bg-green weight700">사원코드/사원명</td>
+                                    <td class="p-lr3">
+                                        <input type="text" name="" id="" tabindex="5" class="input-49" required>
+                                        <input type="text" name="" id="" class="input-49" tabindex="6" required>
+                                    </td>
+
+                                    <td class="td-7 under center bg-green weight700">근태기간</td>
+                                    <td class="p-lr3">
+                                        <input type="date" name="" id="" class="input-49">
+                                        <input type="date" name="" id="" class="input-49">
+                                    </td>
+
+                                    <td class="td-7 under center bg-green weight700">지급총액</td>
+                                    <td class="p-lr3">
+                                        <input type="text" name="" id="" class="input-100" tabindex="12" required>
+
+                                    </td>
+
+
+
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="flex flex-justify">
+                            <div></div>
+                            <button type="submit" class="btn-on center m-t10">등록</button>
+                        </div>
+
+
+                    </form>
+
+                    <hr style="border: solid 1px #0C4A60; margin-top: 10px;">
+                </div>
+
+                <div class="title">
+                    <h3 class="font16 m-t10 m-b10 m-lr10">인사급여 > 사원별급여조회</h3>
+                </div>
+
+                <div class="search-wrap flex flex-justify">
+                    <div class="">
+                        <span class="btn-normal m-b10 m-lr10">전체 급여지급목록 10 / PAGE</span>
+                    </div>
+                    <div class="form-wrap">
+                        <form method="post" action="" style="margin:0 10px;" autocomplete="off">
+                            <select class="" name="searchOpt">
+                                <option value="empid">사번</option>
+                                <option value="wage-month">근속월</option>
+                            </select>
+                            <input type="text" name="words" required />
+                            <button type="submit" class="btn-on">검색</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="emp-list m-b10 m-lr10">
+                    <table class="list center" style="table-layout: fixed;">
+                        <tr class="weight700 center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">순번</td>
+                            <td class="td-5">귀속연월</td>
+                            <td class="td-5">급여구분</td>
+                            <td class="td-5">사원코드</td>
+                            <td class="td-5">사원명</td>
+                            <td class="">프로젝트</td>
+                            <td class="">근태명</td>
+                            <td class="">근태일자</td>
+                            <td class="td-5">야근수당</td>
+                            <td class="td-5">주말근무수당</td>
+                            <td class="td-5">연차수당</td>
+                            <td class="td-5">기타수당</td>
+                            <td class="">계좌번호</td>
+                            <td class="">지급총액</td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">8</td>
+                            <td class="td-5">2020-08</td>
+                            <td class="td-5">정기급여</td>
+                            <td class="td-5">2038</td>
+                            <td class="td-5">이명규</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="">999-99-9999999</td>
+                            <td class="right p-lr5">5,000,000</td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">7</td>
+                            <td class="td-5">2020-07</td>
+                            <td class="td-5">정기급여</td>
+                            <td class="td-5">2038</td>
+                            <td class="td-5">이명규</td>
+                            <td class="">SFA 재고관리 유지보수</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="right p-lr5">100,000</td>
+                            <td class="right p-lr5">200,000</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="">999-99-9999999</td>
+                            <td class="right p-lr5">5,300,000</td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">6</td>
+                            <td class="td-5">2020-06</td>
+                            <td class="td-5">정기급여</td>
+                            <td class="td-5">2038</td>
+                            <td class="td-5">이명규</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="">999-99-9999999</td>
+                            <td class="right p-lr5">5,000,000</td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">5</td>
+                            <td class="td-5">2020-05</td>
+                            <td class="td-5">정기급여</td>
+                            <td class="td-5">2038</td>
+                            <td class="td-5">이명규</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="">999-99-9999999</td>
+                            <td class="right p-lr5">5,000,000</td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">4</td>
+                            <td class="td-5">2020-04</td>
+                            <td class="td-5">정기급여</td>
+                            <td class="td-5">2038</td>
+                            <td class="td-5">이명규</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="">999-99-9999999</td>
+                            <td class="right p-lr5">5,000,000</td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">3</td>
+                            <td class="td-5">2020-03</td>
+                            <td class="td-5">정기급여</td>
+                            <td class="td-5">2038</td>
+                            <td class="td-5">이명규</td>
+                            <td class="">SFA 거래처 수주 집중 관리</td>
+                            <td class="">외근</td>
+                            <td class="">2020-03-14</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">100,000</td>
+                            <td class="">999-99-9999999</td>
+                            <td class="right p-lr5">5,100,000</td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">2</td>
+                            <td class="td-5">2020-02</td>
+                            <td class="td-5">정기급여</td>
+                            <td class="td-5">2038</td>
+                            <td class="td-5">이명규</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="">999-99-9999999</td>
+                            <td class="right p-lr5">5,000,000</td>
+                        </tr>
+                        <tr class="center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-3">1</td>
+                            <td class="td-5">2020-01</td>
+                            <td class="td-5">정기급여</td>
+                            <td class="td-5">2038</td>
+                            <td class="td-5">이명규</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="right p-lr5">-</td>
+                            <td class="">999-99-9999999</td>
+                            <td class="right p-lr5">5,000,000</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="page-grp center m-t10">
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-double-left"></i></a>
+                    </span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-left"></i></a>
+                    </span>
+                    <span class="page page-active">
+                        <a href="" class="f6">1</a>
+                    </span>
+                    <span class="page"><a href="">2</a></span>
+                    <span class="page"><a href="">3</a></span>
+                    <span class="page"><a href="">4</a></span>
+                    <span class="page"><a href="">5</a></span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-right"></i></a>
+                    </span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-double-right"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script>
+    $(function () {
+        $("tr:nth-child(n)").addClass("tr-even");
+    })
+</script>
+
+</html>

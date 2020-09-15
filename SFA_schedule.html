@@ -9,17 +9,27 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/board.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+
+    <link rel="stylesheet" href="calendar/core/main.css">
+    <link rel="stylesheet" href="calendar/daygrid/main.css">
+
     <script src="https://kit.fontawesome.com/b1cadc3305.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/main-cal.js"></script>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+
 </head>
 
 <body onload="build();">
     <header>
         <div class="top-wrap flex flex-justify">
-            <div class="logo-wrap">
-                <h2><a class="roboto font24 f6" href="SFA_main.html" title="HOME">Sale Force Automation</a></h2>
+            <div class="logo-wrap" style="padding-top: 8px;">
+                <h2><a class="roboto font24 f6" href="SFA_main.html" title="HOME">SALE FORCE</a></h2>
+                <a class="roboto font22 f6" href="SFA_main.html" title="HOME">AUTOMATION</a>
             </div>
             <div class="menu-wrap ">
                 <nav id="topMenu">
@@ -28,7 +38,6 @@
                             <a class="menuLink noto weight700 font16 f6" href="sfa_notice.html" title="시스템메뉴"
                                 alt="">시스템</a>
                             <ul class="subMenu">
-                                <li> <a class="submenuLink" href="sfa_map.html" title="거래처지도" alt="">거래처지도</a></li>
                                 <li> <a class="submenuLink" href="sfa_schedule.html" title="일정" alt="">일정관리</a></li>
                                 <li> <a class="submenuLink" href="sfa_notice.html" title="공지사항" alt="">공지사항</a></li>
                             </ul>
@@ -73,9 +82,9 @@
             </div>
             <div class="menu-icon-wrap">
                 <div class="icon font24 f6">
-                    <span class="map_icon">
+                    <!-- <span class="map_icon">
                         <a href="#" title="map" class="f6"> <i class="fas fa-map-marked-alt"></i></a>
-                    </span>
+                    </span> -->
                     <span class="admin-icon">
                         <a href=" ./SFA_admin.html" title="admin" class="f6"><i class="fas fa-user-cog"></i></a>
                     </span>
@@ -94,32 +103,94 @@
                 <div class="title">
                     <h3 class="font20 m-t10 m-b5 m-lr10">SFA 일정</h3>
                 </div>
-                <div class="cal-main m-b10 m-lr10">
-                    <table id="calendar" class="center weight700">
-                        <tr>
-                            <td class="td-15 cursor">
-                                <label onclick="beforem()" id="before" class="cursor"></label>
-                            </td>
-                            <td colspan="5" id="yearmonth"></td>
-                            <td class="td-15 cursor">
-                                <label onclick="nextm()" id="next" class="cursor"></label>
-                            </td>
-                        </tr>
-                        <tr class="center">
-                            <td>일</td>
-                            <td>월</td>
-                            <td>화</td>
-                            <td>수</td>
-                            <td>목</td>
-                            <td>금</td>
-                            <td>토</td>
-                        </tr>
-                    </table>
+                <div class="calendar-insert m-lr10">
+                    <form method="POST" action="SFA_schedule.html">
+                        <table class="center weight700">
+                            <tr>
+                                <td class="td-10 noto under bg-green weight700 center">시작일자</td>
+                                <td class="td-10 p-lr3">
+                                    <input type="text" autocomplete="off" id="startDate" class="input-75" />
+                                    <i class="fal fa-calendar-alt font16"></i>
+                                </td>
+                                <td class="td-10 noto under bg-green weight700 center">종료일자</td>
+                                <td class="td-10 p-lr3">
+                                    <input type="text" autocomplete="off" id="endDate" class="input-75" />
+                                    <i class="fal fa-calendar-alt font16"></i></td>
+                                <td class="td-10 noto under bg-green weight700 center">일정내용</td>
+                                <td class="p-lr3">
+                                    <input type="text" autocomplete="off" id="" class="input-100" /></td>
+                            </tr>
+                        </table>
+                        <div class="btn-grp center m-t10">
+                            <button type="submit" class="btn-on">일정등록</button>
+                            <button type="reset" class="btn-off">등록취소</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="calendar-bottom m-tb10 m-lr10">
+                    <div class="page-content">
+                        <div id="calendar" class="calendar"></div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </main>
 
 </body>
+<script src="calendar/core/main.js"></script>
+<script src="calendar/core/locales/ko.js"></script>
+<script src="calendar/interaction/main.js"></script>
+<script src="calendar/daygrid/main.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            plugins: ['interaction', 'dayGrid'],
+            header: {
+                left: 'prevYear,prev,next,nextYear today',
+                center: 'title',
+                right: 'dayGridMonth,dayGridWeek,dayGridDay'
+            },
+            navLinks: true,
+            editable: true,
+            eventLimit: true,
+            locales: "ko",
+            events: [{
+                    title: 'Long Event',
+                    start: '2020-05-07',
+                    end: '2020-05-10'
+                },
+                {
+                    title: 'Repeating Event',
+                    start: '2020-05-12',
+                    color: '#257e4a'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2020-05-28'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2020-09-15'
+                }
+            ]
+        });
+
+        calendar.render();
+    });
+</script>
+
+<!-- calendar event-->
+<script>
+    $(function () {
+        $("#startDate, #endDate").datepicker({
+            dateFormat: 'yy-mm-dd'
+        });
+    });
+</script>
 
 </html>
