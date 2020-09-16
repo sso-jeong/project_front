@@ -22,10 +22,29 @@ $(function () {
     //     }
     // });
 
+    // 데이터 클릭시 수정,삭제 버튼 
+    $('.list tr').click(function () {
+        $('.up').css('display', 'inline-block');
+        $('.del').css('display', 'inline-block');
+        $('.new').css('display', 'inline-block');
+        $('.insert').css('display', 'none');
+        $('.reset').css('display', 'none');
+    });
+
+    $('.new').click(function() {
+        $('.up').css('display', 'none');
+        $('.del').css('display', 'none');
+        $('.new').css('display', 'none');
+        $('.insert').css('display', 'inline-block');
+        $('.reset').css('display', 'inline-block');
+    });
+
+
+    // 재고관리 이중테이블
     $('.stock-left table').click(function () {
         $('.stock-left table').toggleClass('on');
 
-        if($(this).hasClass("on")) {
+        if ($(this).hasClass("on")) {
             $('.stock-left').css('width', '65%');
             $('.stock-right').css('display', 'block');
 
@@ -35,16 +54,17 @@ $(function () {
         }
     });
 
-    $('.stock-left .list tr').click(function() {
+    $('.stock-left .list tr').click(function () {
         $(this).toggleClass('on');
 
-        if($(this).hasClass("on")){
-            $(this).css('background-color','rgba(219, 228, 232, 0.8)');
-        } else {       
-            $(this).css('background-color','');
+        if ($(this).hasClass("on")) {
+            $(this).css('background-color', 'rgba(219, 228, 232, 0.8)');
+        } else {
+            $(this).css('background-color', '');
         }
-        
+
     });
+    // 근태관리 이중테이블
 
     $(".tna-list tr").click(function () {
 
@@ -54,31 +74,32 @@ $(function () {
         var tr = $(this);
         var td = tr.children();
 
-        td.each(function(i){
+        td.each(function (i) {
             tdArr.push(td.eq(i).text());
         });
 
         var type = td.eq(9).text();
 
-        if(type != '내근'){
+        if (type != '내근') {
             $('.tna-left table .tna').toggleClass('on');
 
-            if($(this).children().hasClass("on")) {
+            if ($(this).children().hasClass("on")) {
                 $('.tna-left').css('width', '65%');
                 $('.tna-right').css('display', 'block');
-                $(this).css('background-color','rgba(219, 228, 232, 0.8)');
-    
+                $(this).css('background-color', 'rgba(219, 228, 232, 0.8)');
+
             } else {
                 $('.tna-left').css('width', '100%');
                 $('.tna-right').css('display', 'none');
-                $(this).css('background-color','');
+                $(this).css('background-color', '');
             }
-        } else{
+        } else {
             alert("내근 외 기록이 없습니다.");
         }
 
     });
 
+    //상단메뉴바 흐림 효과 
 
     $('.menuLink').mouseover(function () {
         $(this).addClass("on");
@@ -105,6 +126,7 @@ $(function () {
 
 });
 
+//select box 값 변경 이벤트
 function change() {
     var type = $('.type').val();
 
@@ -121,12 +143,7 @@ function change() {
         $('.outdt').attr('disabled', false);
 
     }
-
-
 }
-
-
-
 
 // function btnIcon() {
 //     document.getElementById("adminDropdown").classList.toggle("show");

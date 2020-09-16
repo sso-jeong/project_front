@@ -13,7 +13,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <style>
-        .item-left {
+        .stockin-left {
             width: 11%;
             max-width: 192px;
         }
@@ -28,16 +28,16 @@
             display: inline-block;
         }
 
-        .item-right {
+        .stockin-right {
             width: 89%;
             max-width: 1728px;
         }
 
-        .item-list tr:first-child {
+        .stock-list tr:first-child {
             background-color: rgba(219, 228, 232, 0.8);
         }
 
-        .item-list .tr-even:hover {
+        .stock-list .tr-even:hover {
             background-color: rgba(219, 228, 232, 0.8);
         }
 
@@ -128,17 +128,17 @@
         <div class="page-wrap m-tb10">
             <div class="container">
                 <div class="title">
-                    <h3 class="font16 m-t10 m-b10 m-lr10">재고관리 > 재고 등록</h3>
+                    <h3 class="noto font16 m-t10 m-b10 m-lr10">재고관리 > 재고 등록</h3>
                 </div>
-                <div class="item-insert m-b10 m-lr10">
+                <div class="stock-insert m-b10 m-lr10">
                     <form name="" method="post" autocomplete="off">
                         <div class="member-info flex flex-justify">
-                            <div class="item-left">
+                            <div class="stockin-left">
                                 <div class="photo-area">
                                     <img src="images/dome.jpg" alt="" />
                                 </div>
                             </div>
-                            <div class="item-right">
+                            <div class="stockin-right">
                                 <table>
                                     <tr style="height: 50px;">
                                         <td class="td-7 under center bg-green weight700">품목코드</td>
@@ -198,8 +198,15 @@
                         </div>
 
                         <div class="flex flex-justify">
-                            <div></div>
-                            <button type="submit" class="btn-on center m-t10">등록</button>
+                            <div>
+                                <button type="reset" class="btn-on center m-t10 m-l5 new" style="display: none;">신규등록</button>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn-on center m-t10 m-l5 insert">등록</button>
+                                <button type="submit" class="btn-on center m-t10 m-l5 up" style="display: none;">수정</button>
+                                <button type="reset" class="btn-off center m-t10 m-l5 reset">리셋</button>
+                                <button type="submit" class="btn-off center m-t10 m-l5 del" style="display: none;">삭제</button>
+                            </div>  
                         </div>
 
                     </form>
@@ -208,7 +215,7 @@
                 <div class="stock-main flex flex-justify">
                     <div class="stock-left">
                         <div class="title">
-                            <h3 class="font16 m-t10 m-b10 m-lr10">재고관리 > 재고 목록</h3>
+                            <h3 class="noto font16 m-b10 m-lr10">재고관리 > 재고 목록</h3>
                         </div>
                         <div class="search-wrap flex flex-justify">
                             <div class="">
@@ -226,17 +233,18 @@
                             </div>
                         </div>
 
-                        <div class="item-list m-b10 m-lr10">
+                        <div class="stock-list m-b10 m-lr10">
                             <table class="list center" style="table-layout: fixed;">
                                 <tr class="weight700 center font14">
                                     <td class="td-5">
                                         <input type="checkbox" style="width: 20px;height: 20px;" />
                                     </td>
                                     <td class="td-5">순번</td>
+                                    <td class="td-10">재고코드</td>
                                     <td class="td-10">품목코드</td>
                                     <td>품목명</td>
                                     <td class="td-20">규격</td>
-                                    <td class="td-15">수량</td>
+                                    <td class="td-15">잔량</td>
 
                                 </tr>
                                 <tr class="font14">
@@ -244,6 +252,7 @@
                                         <input type="checkbox" style="width: 20px;height: 20px;" />
                                     </td>
                                     <td class="td-5">10</td>
+                                    <td>11002-0124</td>
                                     <td class="td-7">11002</td>
                                     <td class="left p-lr5">30mm차륜형대공포용 고저각베어링</td>
                                     <td class="td-5 left p-lr5">30mm</td>
@@ -255,6 +264,7 @@
                                         <input type="checkbox" style="width: 20px;height: 20px;" />
                                     </td>
                                     <td class="td-5">9</td>
+                                    <td>11004-0124</td>
                                     <td class="td-7">11004</td>
                                     <td class="left p-lr5">1대역 스파이럴안테나</td>
                                     <td class="td-5 left p-lr5">스파이럴</td>
@@ -265,6 +275,7 @@
                                         <input type="checkbox" style="width: 20px;height: 20px;" />
                                     </td>
                                     <td class="td-5">8</td>
+                                    <td>11021-0124</td>
                                     <td class="td-7">11021</td>
                                     <td class="left p-lr5">GASKET,VOR/ILS ANTENNA</td>
                                     <td class="td-5 left p-lr5">ANTENNA</td>
@@ -276,6 +287,7 @@
                                         <input type="checkbox" style="width: 20px;height: 20px;" />
                                     </td>
                                     <td class="td-5">7</td>
+                                    <td>11036-0115</td>
                                     <td class="td-7">11036</td>
                                     <td class="left p-lr5">프로펠러</td>
                                     <td class="td-5 left p-lr5">프로펠러</td>
@@ -287,16 +299,18 @@
                                         <input type="checkbox" style="width: 20px;height: 20px;" />
                                     </td>
                                     <td class="td-5">6</td>
+                                    <td>11036-0114</td>
                                     <td class="td-7">11036</td>
                                     <td class="left p-lr5">프로펠러</td>
                                     <td class="td-5 left p-lr5">프로펠러</td>
                                     <td class="td-7 right p-lr5">1,115,217</td>
                                 </tr>
-                                <tr class="center font14">
+                                <tr class="font14">
                                     <td class="td-3">
                                         <input type="checkbox" style="width: 20px;height: 20px;" />
                                     </td>
                                     <td class="td-5">5</td>
+                                    <td>11002-0124</td>
                                     <td class="td-7">11002</td>
                                     <td class="left p-lr5">30mm차륜형대공포용 고저각베어링</td>
                                     <td class="td-5 left p-lr5">30mm</td>
@@ -308,6 +322,7 @@
                                         <input type="checkbox" style="width: 20px;height: 20px;" />
                                     </td>
                                     <td class="td-5">4</td>
+                                    <td>11004-0124</td>
                                     <td class="td-7">11004</td>
                                     <td class="left p-lr5">1대역 스파이럴안테나</td>
                                     <td class="td-5 left p-lr5">스파이럴</td>
@@ -318,6 +333,7 @@
                                         <input type="checkbox" style="width: 20px;height: 20px;" />
                                     </td>
                                     <td class="td-5">3</td>
+                                    <td>11021-0124</td>
                                     <td class="td-7">11021</td>
                                     <td class="left p-lr5">GASKET,VOR/ILS ANTENNA</td>
                                     <td class="td-5 left p-lr5">ANTENNA</td>
@@ -329,6 +345,7 @@
                                         <input type="checkbox" style="width: 20px;height: 20px;" />
                                     </td>
                                     <td class="td-5">2</td>
+                                    <td>11036-0115</td>
                                     <td class="td-7">11036</td>
                                     <td class="left p-lr5">프로펠러</td>
                                     <td class="td-5 left p-lr5">프로펠러</td>
@@ -340,11 +357,13 @@
                                         <input type="checkbox" style="width: 20px;height: 20px;" />
                                     </td>
                                     <td class="td-5">1</td>
+                                    <td>11036-0114</td>
                                     <td class="td-7">11036</td>
                                     <td class="left p-lr5">프로펠러</td>
                                     <td class="td-5 left p-lr5">프로펠러</td>
                                     <td class="td-7 right p-lr5">1,115,217</td>
                                 </tr>
+                                
 
                             </table>
                         </div>
@@ -372,12 +391,12 @@
                     </div>
                     <div class="stock-right" style="display: none;">
                         <div class="title">
-                            <h3 class="font16 m-t10 m-b10 m-lr10">재고관리 > 재고 현황</h3>
+                            <h3 class="noto font16 m-b10 m-lr10">재고관리 > 재고 현황</h3>
                         </div>
                         <div class="">
                             <span class="btn-normal m-b10 m-lr10" style="visibility: hidden;">여백맞추기용도</span>
                         </div>
-                        <div class="item-list m-b10 m-lr10">
+                        <div class="stock-list m-b10 m-lr10">
                             <table class="list center" style="table-layout: fixed;">
                                 <tr class="weight700 center font14">
 

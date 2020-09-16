@@ -433,6 +433,10 @@ select {
     margin-bottom: 30px;
 }
 
+.m-l5 {
+    margin-left: 5px;
+}
+
 .m-lr10 {
     margin-left: 10px;
     margin-right: 10px;

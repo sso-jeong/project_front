@@ -100,7 +100,7 @@
         <div class="page-wrap m-tb10">
             <div class="container">
                 <div class="title">
-                    <h3 class="font16 m-t10 m-b10 m-lr10">수주관리 > 수주 등록</h3>
+                    <h3 class="noto font16 m-t10 m-b10 m-lr10">수주관리 > 수주 등록</h3>
                 </div>
                 <div class="order-insert m-b10 m-lr10">
                     <form name="" method="post" autocomplete="off">
@@ -170,8 +170,15 @@
                             </tr>
                         </table>
                         <div class="flex flex-justify">
-                            <div></div>
-                            <button type="submit" class="btn-on center m-t10">등록</button>
+                            <div>
+                                <button type="reset" class="btn-on center m-t10 m-l5 new" style="display: none;">신규등록</button>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn-on center m-t10 m-l5 insert">등록</button>
+                                <button type="submit" class="btn-on center m-t10 m-l5 up" style="display: none;">수정</button>
+                                <button type="reset" class="btn-off center m-t10 m-l5 reset">리셋</button>
+                                <button type="submit" class="btn-off center m-t10 m-l5 del" style="display: none;">삭제</button>
+                            </div>  
                         </div>
                         
                     </form>
@@ -179,7 +186,7 @@
                 </div>
                 
                 <div class="title">
-                    <h3 class="font16 m-t10 m-b10 m-lr10">수주관리 > 수주 목록</h3>
+                    <h3 class="noto font16 m-t10 m-b10 m-lr10">수주관리 > 수주 목록</h3>
                 </div>
 
                 <div class="search-wrap flex flex-justify">
