@@ -128,20 +128,24 @@ $(function () {
 
 //select box 값 변경 이벤트
 function change() {
-    var type = $('.type').val();
+    //부서코드 자동
+    var dptcd = $('.dptnm').val();
+    $('.dptcd').val(dptcd);
 
+    //휴가명 자동
     var nm = $('.tna option:selected').text();
     $('#vacnm').val(nm);
+
+    //입고일자, 출고일자 자동선택.
+    var type = $('.type').val();
 
     if ((type) == "생산입고" || type == "반품입고") {
         $('.outdt').attr('disabled', true);
         $('.indt').attr('disabled', false);
-
     }
     else if (type == "판매출고") {
         $('.indt').attr('disabled', true);
         $('.outdt').attr('disabled', false);
-
     }
 }
 

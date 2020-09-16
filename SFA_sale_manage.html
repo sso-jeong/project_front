@@ -47,7 +47,7 @@
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="sfa_wage.html" title="급여관리" alt="">급여관리</a></li>
                                 <li> <a class="submenuLink" href="sfa_tna_manage.html" title="근태관리" alt="">근태관리</a></li>
-                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원목록</a></li>
+                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원관리</a></li>
                             </ul>
                         </li>
                         <li class="topMenuLi">
@@ -117,14 +117,16 @@
                                     <input type="text" name="" id="" class="input-58" tabindex="2" required>
                                 </td>
 
-                                <td class="td-7 under center bg-green weight700">판매일자</td>
-                                <td class="td-13 p-lr3">
-                                    <input type="date" name="" id="" class="input-100" tabindex="3" required>
-                                </td>
+                                
                                 <td class="td-7 under center bg-green weight700">수량/단가</td>
                                 <td class="td-13 p-lr3">
                                     <input type="number" name="" id="" tabindex="4" style="width: 49%;" required>
                                     <input type="number" name="" id="" tabindex="5" style="width: 49%;">
+                                </td>
+
+                                <td class="td-7 under center bg-green weight700">판매일자</td>
+                                <td class="td-13 p-lr3">
+                                    <input type="date" name="" id="" class="input-100" tabindex="3" required>
                                 </td>
 
                                 <td class="td-7 under center bg-green weight700">규격</td>
@@ -135,22 +137,16 @@
                             </tr>
 
                             <tr>
-                                <td class="td-7 under center bg-green weight700">거래처</td>
+                                <td class="td-7 under center bg-green weight700">프로젝트/담당자</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-100" tabindex="7" required>
+                                    <input type="text" name="" id="" style="width: 63%;" tabindex="7" required>
+                                    <input type="text" name="" id="" class="input-35" tabindex="8" required>
                                 </td>
 
-                                <td class="td-7 under center bg-green weight700">담당자/연락처</td>
+                                <td class="td-7 under center bg-green weight700">거래처코드/거래처명</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-40" tabindex="8">
-                                    <input type="tel" name="" id="" class="input-58" tabindex="9"
-                                        pattern="\d{3}-\d{3,4}-\d{4}" placeholder="000-000(0)-0000">
-                                </td>
-
-                                <td class="td-7 under center bg-green weight700">프로젝트</td>
-                                <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-100" tabindex="10">
-                                </td>
+                                    <input type="text" name="" id="" class="input-40" tabindex="9" required>
+                                    <input type="text" name="" id="" class="input-58" tabindex="10" required>
 
                                 <td class="td-7 under center bg-green weight700">공급가액/부가세</td>
                                 <td class="td-15 p-lr3">
@@ -159,7 +155,7 @@
                                 </td>
 
                                 <td class="td-7 under center bg-green weight700">비고</td>
-                                <td class="td-11 p-lr3">
+                                <td class="td-11 p-lr3" colspan="3">
                                     <input type="text" name="" id="" class="input-100" tabindex="12">
                                 </td>
                             </tr>
