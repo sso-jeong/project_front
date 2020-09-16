@@ -55,8 +55,8 @@
     <header>
         <div class="top-wrap flex flex-justify">
             <div class="logo-wrap" style="padding-top: 8px;">
-                <h2><a class="roboto font24 f6" href="SFA_main.html" title="HOME">SALE FORCE</a></h2>
-                <a class="roboto font22 f6" href="SFA_main.html" title="HOME">AUTOMATION</a>
+                <h2><a class="roboto font22 f6" href="SFA_main.html" title="HOME">SALE FORCE</a></h2>
+                <a class="roboto font20 f6" href="SFA_main.html" title="HOME">AUTOMATION</a>
             </div>
             <div class="menu-wrap ">
                 <nav id="topMenu">
@@ -80,7 +80,7 @@
                         </li>
                         <li class="topMenuLi">
                             <a class="menuLink noto weight700 font16 f6" href="sfa_item_manage.html" title="영업관리메뉴"
-                                alt="">영업</a>
+                                alt="">영업관리</a>
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a>
                                 </li>
@@ -94,7 +94,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="topMenuLi">
+                        <!-- <li class="topMenuLi">
                             <a class="menuLink noto weight700 font16 f6" href="sfa_com_intro.html" title="회사소개"
                                 alt="">회사소개</a>
                             <ul class="subMenu2">
@@ -103,7 +103,7 @@
                                 <li> <a class="submenuLink" href="sfa_com_intro.html" title="기업소개" alt="">기업소개</a></li>
 
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
             </div>
@@ -128,7 +128,7 @@
         <div class="page-wrap m-tb10">
             <div class="container">
                 <div class="title">
-                    <h3 class="noto font16 m-t10 m-b10 m-lr10">재고관리 > 재고 등록</h3>
+                    <p class="noto font16 weight500 m-t10 m-b10 m-lr10">재고관리 > 재고 등록</p>
                 </div>
                 <div class="stock-insert m-b10 m-lr10">
                     <form name="" method="post" autocomplete="off">
@@ -141,6 +141,10 @@
                             <div class="stockin-right">
                                 <table>
                                     <tr style="height: 50px;">
+                                        <td class="td-7 under center bg-green weight700">재고코드</td>
+                                        <td class="td-13 p-lr3">
+                                            <input type="text" name="" id="" class="input-100" disabled="true">
+                                        </td>
                                         <td class="td-7 under center bg-green weight700">품목코드</td>
                                         <td class="td-13 p-lr3">
                                             <input type="text" name="" id="" class="input-100" tabindex="1" autofocus>
@@ -153,18 +157,13 @@
 
                                         <td class="td-7 under center bg-green weight700">입고일자</td>
                                         <td class="td-13 p-lr3">
-                                            <input type="date" name="" id="" class="input-100 indt" tabindex="3">
+                                            <input type="date" name="" id="" class="input-100 indt" tabindex="4">
                                         </td>
 
                                         <td class="td-7 under center bg-green weight700">출고일자</td>
                                         <td class="td-13 p-lr3">
                                             <input type="date" name="" id="" class="input-100 outdt" disabled="true"
-                                                tabindex="4">
-                                        </td>
-
-                                        <td class="td-7 under center bg-green weight700">규격</td>
-                                        <td class="td-13 p-lr3">
-                                            <input type="text" name="" id="" class="input-100" tabindex="5">
+                                                tabindex="5">
                                         </td>
 
                                     </tr>
@@ -172,12 +171,17 @@
                                     <tr style="height: 50px;">
                                         <td class="td-7 under center bg-green weight700">유형</td>
                                         <td class="td-13 p-lr3">
-                                            <select name="" id="" class="sel-100 type" tabindex="6" onchange="change()"
+                                            <select name="" id="" class="sel-100 type" tabindex="3" onchange="change()"
                                                 required>
                                                 <option>생산입고</option>
                                                 <option>반품입고</option>
                                                 <option>판매출고</option>
                                             </select>
+                                        </td>
+
+                                        <td class="td-7 under center bg-green weight700">규격</td>
+                                        <td class="td-13 p-lr3">
+                                            <input type="text" name="" id="" class="input-100" tabindex="6">
                                         </td>
 
                                         <td class="td-7 under center bg-green weight700">수량</td>
@@ -188,7 +192,7 @@
 
 
                                         <td class="td-7 under center bg-green weight700">적요</td>
-                                        <td class="td-13 p-lr3" colspan="5">
+                                        <td class="td-13 p-lr3" colspan="3">
                                             <input type="text" name="" id="" class="input-100" tabindex="8">
                                         </td>
 
@@ -199,14 +203,17 @@
 
                         <div class="flex flex-justify">
                             <div>
-                                <button type="reset" class="btn-on center m-t10 m-l5 new" style="display: none;">신규등록</button>
+                                <button type="reset" class="btn-on center m-t10 m-l5 new"
+                                    style="display: none;">신규등록</button>
                             </div>
                             <div>
                                 <button type="submit" class="btn-on center m-t10 m-l5 insert">등록</button>
-                                <button type="submit" class="btn-on center m-t10 m-l5 up" style="display: none;">수정</button>
+                                <button type="submit" class="btn-on center m-t10 m-l5 up"
+                                    style="display: none;">수정</button>
                                 <button type="reset" class="btn-off center m-t10 m-l5 reset">리셋</button>
-                                <button type="submit" class="btn-off center m-t10 m-l5 del" style="display: none;">삭제</button>
-                            </div>  
+                                <button type="submit" class="btn-off center m-t10 m-l5 del"
+                                    style="display: none;">삭제</button>
+                            </div>
                         </div>
 
                     </form>
@@ -215,7 +222,7 @@
                 <div class="stock-main flex flex-justify">
                     <div class="stock-left">
                         <div class="title">
-                            <h3 class="noto font16 m-b10 m-lr10">재고관리 > 재고 목록</h3>
+                            <p class="noto font16 weight500 m-b10 m-lr10">재고관리 > 재고 목록</p>
                         </div>
                         <div class="search-wrap flex flex-justify">
                             <div class="">
@@ -363,7 +370,7 @@
                                     <td class="td-5 left p-lr5">프로펠러</td>
                                     <td class="td-7 right p-lr5">1,115,217</td>
                                 </tr>
-                                
+
 
                             </table>
                         </div>
@@ -391,7 +398,7 @@
                     </div>
                     <div class="stock-right" style="display: none;">
                         <div class="title">
-                            <h3 class="noto font16 m-b10 m-lr10">재고관리 > 재고 현황</h3>
+                            <p class="noto font16 weight500 m-b10 m-lr10">재고관리 > 재고 현황</p>
                         </div>
                         <div class="">
                             <span class="btn-normal m-b10 m-lr10" style="visibility: hidden;">여백맞추기용도</span>
@@ -400,7 +407,7 @@
                             <table class="list center" style="table-layout: fixed;">
                                 <tr class="weight700 center font14">
 
-                                    <td class="td-5">순번</td>
+                                    <td class="td-7">순번</td>
                                     <td class="td-10">유형</td>
                                     <td class="td-20">입고일자</td>
                                     <td class="td-20">출고일자</td>

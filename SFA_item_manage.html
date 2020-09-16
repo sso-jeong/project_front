@@ -47,8 +47,8 @@
     <header>
         <div class="top-wrap flex flex-justify">
             <div class="logo-wrap" style="padding-top: 8px;">
-                <h2><a class="roboto font24 f6" href="SFA_main.html" title="HOME">SALE FORCE</a></h2>
-                <a class="roboto font22 f6" href="SFA_main.html" title="HOME">AUTOMATION</a>
+                <h2><a class="roboto font22 f6" href="SFA_main.html" title="HOME">SALE FORCE</a></h2>
+                <a class="roboto font20 f6" href="SFA_main.html" title="HOME">AUTOMATION</a>
             </div>
             <div class="menu-wrap ">
                 <nav id="topMenu">
@@ -72,7 +72,7 @@
                         </li>
                         <li class="topMenuLi">
                             <a class="menuLink noto weight700 font16 f6" href="sfa_item_manage.html" title="영업관리메뉴"
-                                alt="">영업</a>
+                                alt="">영업관리</a>
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a>
                                 </li>
@@ -86,7 +86,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="topMenuLi">
+                        <!-- <li class="topMenuLi">
                             <a class="menuLink noto weight700 font16 f6" href="sfa_com_intro.html" title="회사소개"
                                 alt="">회사소개</a>
                             <ul class="subMenu2">
@@ -95,7 +95,7 @@
                                 <li> <a class="submenuLink" href="sfa_com_intro.html" title="기업소개" alt="">기업소개</a></li>
 
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
             </div>
@@ -120,7 +120,7 @@
         <div class="page-wrap m-tb10">
             <div class="container">
                 <div class="title">
-                    <h3 class="noto font16 m-t10 m-b10 m-lr10">품목관리 > 품목 등록</h3>
+                    <p class="noto font16 weight500 m-t10 m-b10 m-lr10">품목관리 > 품목 등록</p>
                 </div>
                 <div class="item-insert m-b10 m-lr10">
                     <form name="" method="post" autocomplete="off">
@@ -135,34 +135,29 @@
                                     <tr style="height: 50px;">
                                         <td class="td-7 under center bg-green weight700">품목코드</td>
                                         <td class="td-13 p-lr3">
-                                            <input type="text" name="" id="" class="input-100" tabindex="1" autofocus>
+                                            <input type="text" name="" id="" class="input-100" disabled="true">
                                         </td>
 
                                         <td class="td-7 under center bg-green weight700">품목명</td>
                                         <td class="td-13 p-lr3">
-                                            <input type="text" name="" id="" class="input-100" tabindex="2" required>
+                                            <input type="text" name="" id="" class="input-100" tabindex="1" autofocus required>
                                         </td>
-
-
 
                                         <td class="td-7 under center bg-green weight700">출고단가</td>
                                         <td class="td-13 p-lr3">
-                                            <input type="number" name="" id="" class="input-100 price" tabindex="3">
+                                            <input type="number" name="" id="" class="input-100 price" tabindex="2">
                                         </td>
 
                                         <td class="td-7 under center bg-green weight700">규격</td>
                                         <td class="td-13 p-lr3">
-                                            <input type="text" name="" id="" class="input-100" tabindex="4">
+                                            <input type="text" name="" id="" class="input-100" tabindex="3">
                                         </td>
-
-
                                     </tr>
 
                                     <tr style="height: 50px;">
-
                                         <td class="td-7 under center bg-green weight700">그룹명</td>
                                         <td class="td-13 p-lr3">
-                                            <select tabindex="5" required class="sel-100" name="" id="" required>
+                                            <select tabindex="4" class="sel-100" name="" id="" required>
                                                 <option>고무 및 플라스틱제품</option>
                                                 <option>기계부품</option>
                                                 <option>금속제품</option>
@@ -172,16 +167,16 @@
 
                                         <td class="td-7 under center bg-green weight700">품목구분</td>
                                         <td class="td-13 p-lr3">
-                                            <select tabindex="6" required class="sel-100" name="" id="" required>
+                                            <select tabindex="5" class="sel-100" name="" id="" required>
                                                 <option>제품</option>
                                                 <option>반제품</option>
                                                 <option>상품</option>
                                             </select>
                                         </td>
 
-                                        <td class="td-7 under center bg-green weight700">적요</td>
+                                        <td class="td-7 under center bg-green weight700">비고</td>
                                         <td class="td-13 p-lr3" colspan="3">
-                                            <input type="text" name="" id="" class="input-100" tabindex="7">
+                                            <input type="text" name="" id="" class="input-100" tabindex="6" required>
                                         </td>
 
                                     </tr>
@@ -191,14 +186,17 @@
 
                         <div class="flex flex-justify">
                             <div>
-                                <button type="reset" class="btn-on center m-t10 m-l5 new" style="display: none;">신규등록</button>
+                                <button type="reset" class="btn-on center m-t10 m-l5 new"
+                                    style="display: none;">신규등록</button>
                             </div>
                             <div>
                                 <button type="submit" class="btn-on center m-t10 m-l5 insert">등록</button>
-                                <button type="submit" class="btn-on center m-t10 m-l5 up" style="display: none;">수정</button>
+                                <button type="submit" class="btn-on center m-t10 m-l5 up"
+                                    style="display: none;">수정</button>
                                 <button type="reset" class="btn-off center m-t10 m-l5 reset">리셋</button>
-                                <button type="submit" class="btn-off center m-t10 m-l5 del" style="display: none;">삭제</button>
-                            </div>  
+                                <button type="submit" class="btn-off center m-t10 m-l5 del"
+                                    style="display: none;">삭제</button>
+                            </div>
                         </div>
 
                     </form>
@@ -206,7 +204,7 @@
                 </div>
 
                 <div class="title">
-                    <h3 class="noto font16 m-t10 m-b10 m-lr10">품목관리 > 품목 목록</h3>
+                    <p class="noto font16 weight500 m-t10 m-b10 m-lr10">품목관리 > 품목 목록</p>
                 </div>
 
                 <div class="search-wrap flex flex-justify">
@@ -238,9 +236,9 @@
                             <td>품목명</td>
                             <td class="td-13">그룹명</td>
                             <td class="td-7">품목구분</td>
-                            <td class="td-5">규격</td>
-                            <td class="td-7">출고단가</td>
-                            <td>적요</td>
+                            <td class="td-7">규격</td>
+                            <td class="td-7">출고단가(원)</td>
+                            <td class="td-20">비고</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">

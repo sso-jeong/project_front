@@ -102,16 +102,33 @@ header {
     background-color: #F5F6F7;
 }
 
-.calendar-wrap,
-.notice-wrap {
-    width: 40%;
+.tna-wrap {
+    width: 20%;
+}
+
+.main-notice-wrap,
+.file-wrap {
+    width: 39.5%;
+}
+
+.main-sale-wrap {
+    margin-top: 10px;
 }
 
 .sale-wrap,
 .notice-wrap,
 .stock-wrap,
-.calendar-wrap {
+.calendar-wrap,
+.main-notice-wrap,
+.file-wrap,
+.tna-wrap,
+.main-sale-wrap {
     border: 1px solid #0C4A60;
+}
+
+.calendar-wrap,
+.notice-wrap {
+    width: 40%;
 }
 
 .sale-wrap,

@@ -398,6 +398,10 @@ select {
     margin-top: 20px;
 }
 
+.m-t30 {
+    margin-top: 30px;
+}
+
 .m-t45 {
     margin-top: 45px;
 }
@@ -476,6 +480,11 @@ select {
 .p-lr10 {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.p-lr18 {
+    padding-left: 18px;
+    padding-right: 18px;
 }
 
 .p-lr20 {

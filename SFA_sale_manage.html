@@ -27,8 +27,8 @@
     <header>
         <div class="top-wrap flex flex-justify">
             <div class="logo-wrap" style="padding-top: 8px;">
-                <h2><a class="roboto font24 f6" href="SFA_main.html" title="HOME">SALE FORCE</a></h2>
-                <a class="roboto font22 f6" href="SFA_main.html" title="HOME">AUTOMATION</a>
+                <h2><a class="roboto font22 f6" href="SFA_main.html" title="HOME">SALE FORCE</a></h2>
+                <a class="roboto font20 f6" href="SFA_main.html" title="HOME">AUTOMATION</a>
             </div>
             <div class="menu-wrap ">
                 <nav id="topMenu">
@@ -52,7 +52,7 @@
                         </li>
                         <li class="topMenuLi">
                             <a class="menuLink noto weight700 font16 f6" href="sfa_item_manage.html" title="영업관리메뉴"
-                                alt="">영업</a>
+                                alt="">영업관리</a>
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a>
                                 </li>
@@ -66,7 +66,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="topMenuLi">
+                        <!-- <li class="topMenuLi">
                             <a class="menuLink noto weight700 font16 f6" href="sfa_com_intro.html" title="회사소개"
                                 alt="">회사소개</a>
                             <ul class="subMenu2">
@@ -75,7 +75,7 @@
                                 <li> <a class="submenuLink" href="sfa_com_intro.html" title="기업소개" alt="">기업소개</a></li>
 
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </nav>
             </div>
@@ -100,87 +100,91 @@
         <div class="page-wrap m-tb10">
             <div class="container">
                 <div class="title">
-                    <h3 class="noto font16 m-t10 m-b10 m-lr10">판매관리 > 판매 등록</h3>
+                    <p class="noto font16 weight500 m-t10 m-b10 m-lr10">판매관리 > 판매 등록</p>
                 </div>
                 <div class="sale-insert m-b10 m-lr10">
                     <form name="" method="post" autocomplete="off">
                         <table>
                             <tr>
-                                <td class="td-7 under center bg-green weight700" >판매번호</td>
+                                <td class="td-7 under center bg-green weight700">판매번호</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-100" tabindex="1" autofocus>
+                                    <input type="text" name="" id="" class="input-100" disabled="true">
                                 </td>
 
-                                <td class="td-7 under center bg-green weight700" >품목코드/품목명</td>
+                                <td class="td-7 under center bg-green weight700">품목코드/품목명</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-40" tabindex="2" required>
-                                    <input type="text" name="" id="" class="input-58" tabindex="3" required>
+                                    <input type="text" name="" id="" class="input-40" tabindex="1" autofocus required>
+                                    <input type="text" name="" id="" class="input-58" tabindex="2" required>
                                 </td>
 
-                                <td class="td-7 under center bg-green weight700" >판매일자</td>
+                                <td class="td-7 under center bg-green weight700">판매일자</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="date" name="" id="" class="input-100" tabindex="4" required>
+                                    <input type="date" name="" id="" class="input-100" tabindex="3" required>
                                 </td>
-                                <td class="td-7 under center bg-green weight700" >수량/단가</td>
+                                <td class="td-7 under center bg-green weight700">수량/단가</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="number" name="" id="" tabindex="5" style="width: 49%;"required>
-                                    <input type="number" name="" id="" tabindex="6" style="width: 49%;" >
+                                    <input type="number" name="" id="" tabindex="4" style="width: 49%;" required>
+                                    <input type="number" name="" id="" tabindex="5" style="width: 49%;">
                                 </td>
 
-                                <td class="td-7 under center bg-green weight700" >규격</td>
+                                <td class="td-7 under center bg-green weight700">규격</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-100" tabindex="7">
+                                    <input type="text" name="" id="" class="input-100" tabindex="6">
                                 </td>
-                                
+
                             </tr>
 
                             <tr>
-                                <td class="td-7 under center bg-green weight700" >거래처</td>
+                                <td class="td-7 under center bg-green weight700">거래처</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-100" tabindex="8" required>
+                                    <input type="text" name="" id="" class="input-100" tabindex="7" required>
                                 </td>
 
                                 <td class="td-7 under center bg-green weight700">담당자/연락처</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-40" tabindex="9">
-                                    <input type="tel" name="" id="" class="input-58" tabindex="10" pattern="\d{3}-\d{3,4}-\d{4}" placeholder="000-000(0)-0000">
+                                    <input type="text" name="" id="" class="input-40" tabindex="8">
+                                    <input type="tel" name="" id="" class="input-58" tabindex="9"
+                                        pattern="\d{3}-\d{3,4}-\d{4}" placeholder="000-000(0)-0000">
                                 </td>
-                                
-                                <td class="td-7 under center bg-green weight700" >프로젝트</td>
+
+                                <td class="td-7 under center bg-green weight700">프로젝트</td>
                                 <td class="td-13 p-lr3">
-                                    <input type="text" name="" id="" class="input-100" tabindex="7">
+                                    <input type="text" name="" id="" class="input-100" tabindex="10">
                                 </td>
-                                
-                                <td class="td-7 under center bg-green weight700" >공급가액/부가세</td>
+
+                                <td class="td-7 under center bg-green weight700">공급가액/부가세</td>
                                 <td class="td-15 p-lr3">
-                                    <input type="number" name="" id="" class="input-49 provision" tabindex="13">
+                                    <input type="number" name="" id="" class="input-49 provision" tabindex="11">
                                     <input type="number" name="" id="" class="input-49 surtax" readonly>
                                 </td>
 
-                                <td class="td-7 under center bg-green weight700" >비고</td>
+                                <td class="td-7 under center bg-green weight700">비고</td>
                                 <td class="td-11 p-lr3">
-                                    <input type="text" name="" id="" class="input-100" tabindex="14">
+                                    <input type="text" name="" id="" class="input-100" tabindex="12">
                                 </td>
                             </tr>
                         </table>
                         <div class="flex flex-justify">
                             <div>
-                                <button type="reset" class="btn-on center m-t10 m-l5 new" style="display: none;">신규등록</button>
+                                <button type="reset" class="btn-on center m-t10 m-l5 new"
+                                    style="display: none;">신규등록</button>
                             </div>
                             <div>
                                 <button type="submit" class="btn-on center m-t10 m-l5 insert">등록</button>
-                                <button type="submit" class="btn-on center m-t10 m-l5 up" style="display: none;">수정</button>
+                                <button type="submit" class="btn-on center m-t10 m-l5 up"
+                                    style="display: none;">수정</button>
                                 <button type="reset" class="btn-off center m-t10 m-l5 reset">리셋</button>
-                                <button type="submit" class="btn-off center m-t10 m-l5 del" style="display: none;">삭제</button>
-                            </div>  
+                                <button type="submit" class="btn-off center m-t10 m-l5 del"
+                                    style="display: none;">삭제</button>
+                            </div>
                         </div>
-                        
+
                     </form>
                     <hr style="border: solid 1px #0C4A60; margin-top: 10px;">
                 </div>
-                
+
                 <div class="title">
-                    <h3 class="noto font16 m-t10 m-b10 m-lr10">판매관리 > 판매 목록</h3>
+                    <p class="noto font16 weight500 m-t10 m-b10 m-lr10">판매관리 > 판매 목록</p>
                 </div>
 
                 <div class="search-wrap flex flex-justify">
@@ -237,7 +241,7 @@
                             <td class="td-7 right p-lr5">1,000</td>
                             <td class="td-7 right p-lr5">100,000</td>
                             <td class="td-7 right p-lr5">10,000</td>
-                            <td class="td-13 left p-lr5">-</td>
+                            <td class="td-13 center p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -255,7 +259,7 @@
                             <td class="td-7 right p-lr5">21,000</td>
                             <td class="td-7 right p-lr5">210,000</td>
                             <td class="td-7 right p-lr5">21,000</td>
-                            <td class="td-13 left p-lr5">-</td>
+                            <td class="td-13 center p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -273,7 +277,7 @@
                             <td class="td-7 right p-lr5">1,000</td>
                             <td class="td-7 right p-lr5">100,000</td>
                             <td class="td-7 right p-lr5">10,000</td>
-                            <td class="td-13 left p-lr5">-</td>
+                            <td class="td-13 center p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -291,7 +295,7 @@
                             <td class="td-7 right p-lr5">100,000</td>
                             <td class="td-7 right p-lr5">100,000</td>
                             <td class="td-7 right p-lr5">10,000</td>
-                            <td class="td-13 left p-lr5">-</td>
+                            <td class="td-13 center p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -309,9 +313,9 @@
                             <td class="td-7 right p-lr5">1,000</td>
                             <td class="td-7 right p-lr5">15,000</td>
                             <td class="td-7 right p-lr5">1,500</td>
-                            <td class="td-13 left p-lr5">-</td>
+                            <td class="td-13 center p-lr5">-</td>
                         </tr>
-                        
+
                         <tr class="center font14">
                             <td class="td-3">
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
@@ -328,7 +332,7 @@
                             <td class="td-7 right p-lr5">1,000</td>
                             <td class="td-7 right p-lr5">100,000</td>
                             <td class="td-7 right p-lr5">10,000</td>
-                            <td class="td-13 left p-lr5">-</td>
+                            <td class="td-13 center p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -346,7 +350,7 @@
                             <td class="td-7 right p-lr5">21,000</td>
                             <td class="td-7 right p-lr5">210,000</td>
                             <td class="td-7 right p-lr5">21,000</td>
-                            <td class="td-13 left p-lr5">-</td>
+                            <td class="td-13 center p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -364,7 +368,7 @@
                             <td class="td-7 right p-lr5">1,000</td>
                             <td class="td-7 right p-lr5">100,000</td>
                             <td class="td-7 right p-lr5">10,000</td>
-                            <td class="td-13 left p-lr5">-</td>
+                            <td class="td-13 center p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -382,7 +386,7 @@
                             <td class="td-7 right p-lr5">100,000</td>
                             <td class="td-7 right p-lr5">100,000</td>
                             <td class="td-7 right p-lr5">10,000</td>
-                            <td class="td-13 left p-lr5">-</td>
+                            <td class="td-13 center p-lr5">-</td>
                         </tr>
                         <tr class="center font14">
                             <td class="td-3">
@@ -400,7 +404,7 @@
                             <td class="td-7 right p-lr5">1,000</td>
                             <td class="td-7 right p-lr5">15,000</td>
                             <td class="td-7 right p-lr5">1,500</td>
-                            <td class="td-13 left p-lr5">-</td>
+                            <td class="td-13 center p-lr5">-</td>
                         </tr>
                     </table>
                 </div>
