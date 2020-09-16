@@ -21,13 +21,13 @@ header {
 }
 
 .menu-wrap {
-    width: 84%;
+    width: 80%;
     text-align: center;
     /* background-color: aqua; */
 }
 
 .menu-icon-wrap {
-    width: 5%;
+    width: 8%;
     text-align: center;
     /* background-color: blueviolet; */
 }
@@ -38,7 +38,8 @@ header {
 }
 
 .icon>.admin-icon {
-    margin-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #topMenu {

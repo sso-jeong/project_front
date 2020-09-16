@@ -60,12 +60,23 @@
                             </ul>
                         </li>
                         <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="#" title="결재관리" alt="">결재관리</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="#"
+                                        onclick="window.open('SFA_approval_select.html','name','resizable=no width=600 height=500 top=250 left=630');return false"
+                                        title="결재양식" alt="">결재양식</a></li>
+                                <li> <a class="submenuLink" href="SFA_approve.html" title="대기문서" alt="">대기문서</a></li>
+                                <li> <a class="submenuLink" href="#" title="문서등록" alt="">문서등록</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
                             <a class="menuLink noto weight700 font16 f6" href="sfa_emp_list.html" title="인사/급여메뉴"
                                 alt="">인사/급여</a>
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="sfa_wage.html" title="급여관리" alt="">급여관리</a></li>
                                 <li> <a class="submenuLink" href="sfa_tna_manage.html" title="근태관리" alt="">근태관리</a></li>
-                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원목록</a></li>
+                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원관리</a></li>
                             </ul>
                         </li>
                         <li class="topMenuLi">
@@ -98,10 +109,10 @@
                 </nav>
             </div>
             <div class="menu-icon-wrap">
-                <div class="icon font24 f6">
-                    <!-- <span class="map_icon">
-                        <a href="#" title="map" class="f6"> <i class="fas fa-map-marked-alt"></i></a>
-                    </span> -->
+                <div class="icon font20 f6">
+                    <span class="sig_icon">
+                        <a href="#" title="approve" class="f6"> <i class="fas fa-file-signature"></i></a>
+                    </span>
                     <span class="admin-icon">
                         <a href=" ./SFA_admin.html" title="admin" class="f6"><i class="fas fa-user-cog"></i></a>
                     </span>
@@ -110,7 +121,6 @@
                     </span>
                 </div>
             </div>
-
         </div>
     </header>
 
@@ -198,7 +208,7 @@
                     <div class="file m-lr10 flex flex-justify">
                         <h3 class="noto font16 m-t10 m-b5">결재 대기 문서</h3>
                         <span class="m-t10 m-b5">
-                            <a href="#" title="결재 대기 문서로 이동" alt="" class="font16"><i
+                            <a href="SFA_approve.html" title="결재 대기 문서로 이동" alt="" class="font16"><i
                                     class="fas fa-share-square"></i></a>
                         </span>
                     </div>
@@ -418,5 +428,19 @@
     </main>
 
 </body>
+<!-- <script>
+    $(function () {
+        window.open({
+            var popupWidth = 200;
+            var popupHeight = 300;
+
+            var popupX = (window.screen.width / 2) - (popupWidth / 2);
+            // 만들 팝업창 width 크기의 1/2 만큼 보정값으로 빼주었음
+
+            var popupY = (window.screen.height / 2) - (popupHeight / 2);
+            // 만들 팝업창 height 크기의 1/2 만큼 보정값으로 빼주었음
+        });
+    });
+</script> -->
 
 </html>
