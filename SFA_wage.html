@@ -107,39 +107,43 @@
                         <div class="wage">
                             <table>
                                 <tr>
-                                    <td class="td-7 under center bg-green weight700">급여구분</td>
+                                    <td class="td-7 under center bg-green weight700">급여코드</td>
                                     <td class="td-5 p-lr3">
-                                        정기급여
+                                        <input type="text" name="" id="" class="input-100" disabled="true">
                                     </td>
-                                    <td class="td-7 under center bg-green weight700">급상여종류 및 형태</td>
+
+                                    <td class="td-7 under center bg-green weight700">급여구분/급상여종류</td>
                                     <td class="td-13 p-lr3">
-                                        <select name="" class="sel-50" id="" tabindex="1">
+                                        <input type="text" name="" id="" class="input-49 center" value="정기급여"
+                                            disabled="true">
+                                        <select name="" class="sel-50" id="" tabindex="1" autofocus>
                                             <option value="">급여</option>
                                             <option value="">상여</option>
                                             <option value="">특별상여</option>
                                             <option value="">연월차</option>
                                             <option value="">그외</option>
                                         </select>
+                                    </td>
+
+                                    <td class="td-7 under center bg-green weight700">급여형태/지급명</td>
+                                    <td class="td-15 p-lr3">
                                         <select name="" class="sel-50" id="" tabindex="2">
                                             <option value="">월급직</option>
                                             <option value="">일반직</option>
                                             <option value="">시간직</option>
                                         </select>
+                                        <input type="text" name="" id="" class="input-49" tabindex="3" required>
                                     </td>
-                                    </td>
-                                    <td class="td-7 under center bg-green weight700">지급구분/지급명</td>
-                                    <td class="td-15 p-lr3">
-                                        <input type="month" name="" id="" class="input-49" tabindex="7" required>
-                                        <input type="text" name="" id="" class="input-49" tabindex="8" required>
-                                    </td>
+
                                     <td class="td-7 under center bg-green weight700">적용기간</td>
                                     <td class="p-lr3">
-                                        <input type="date" name="" id="" class="input-49" tabindex="9" required>
-                                        <input type="date" name="" id="" class="input-49" tabindex="10" required>
+                                        <input type="date" name="" id="" class="input-49" tabindex="7" required>
+                                        <input type="date" name="" id="" class="input-49" tabindex="8" required>
                                     </td>
+
                                     <td class="td-7 under center bg-green weight700">지급일</td>
                                     <td class="td-7 p-lr3">
-                                        <input type="date" name="" id="" class="input-100" tabindex="11" required>
+                                        <input type="date" name="" id="" class="input-100" tabindex="9" required>
 
                                     </td>
                                 </tr>
@@ -147,16 +151,16 @@
                                 <tr>
                                     <td class="td-7 under center bg-green weight700">부서코드</td>
                                     <td class="p-lr3">
-                                        <input type="hidden" name="" id="" class="input-100">
+                                        <input type="text" name="" id="" class="input-100">
                                     </td>
 
                                     <td class="td-7 under center bg-green weight700">부서명/직급</td>
                                     <td class="p-lr3">
-                                        <select name="" class="sel-50" id="" tabindex="3">
+                                        <select name="" class="sel-50" id="" tabindex="4">
                                             <option value="">인사총무부</option>
                                             <option value="">영업부</option>
                                         </select>
-                                        <select name="" class="sel-50" id="" tabindex="4">
+                                        <select name="" class="sel-50" id="" tabindex="5">
                                             <option value="">관리자</option>
                                             <option value="">이사</option>
                                             <option value="">처장</option>
@@ -182,7 +186,7 @@
 
                                     <td class="td-7 under center bg-green weight700">지급총액</td>
                                     <td class="p-lr3">
-                                        <input type="text" name="" id="" class="input-100" tabindex="12" required>
+                                        <input type="text" name="" id="" class="input-100" tabindex="10" required>
 
                                     </td>
 
@@ -239,6 +243,7 @@
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
                             <td class="td-3">순번</td>
+                            <td class="td-5">급여코드</td>
                             <td class="td-5">귀속연월</td>
                             <td class="td-5">급여구분</td>
                             <td class="td-5">사원코드</td>
@@ -258,6 +263,7 @@
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
                             <td class="td-3">8</td>
+                            <td class="td-5">2020-008</td>
                             <td class="td-5">2020-08</td>
                             <td class="td-5">정기급여</td>
                             <td class="td-5">2038</td>
@@ -277,6 +283,7 @@
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
                             <td class="td-3">7</td>
+                            <td class="td-5">2020-007</td>
                             <td class="td-5">2020-07</td>
                             <td class="td-5">정기급여</td>
                             <td class="td-5">2038</td>
@@ -296,6 +303,7 @@
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
                             <td class="td-3">6</td>
+                            <td class="td-5">2020-006</td>
                             <td class="td-5">2020-06</td>
                             <td class="td-5">정기급여</td>
                             <td class="td-5">2038</td>
@@ -315,6 +323,7 @@
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
                             <td class="td-3">5</td>
+                            <td class="td-5">2020-005</td>
                             <td class="td-5">2020-05</td>
                             <td class="td-5">정기급여</td>
                             <td class="td-5">2038</td>
@@ -334,6 +343,7 @@
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
                             <td class="td-3">4</td>
+                            <td class="td-5">2020-004</td>
                             <td class="td-5">2020-04</td>
                             <td class="td-5">정기급여</td>
                             <td class="td-5">2038</td>
@@ -353,6 +363,7 @@
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
                             <td class="td-3">3</td>
+                            <td class="td-5">2020-003</td>
                             <td class="td-5">2020-03</td>
                             <td class="td-5">정기급여</td>
                             <td class="td-5">2038</td>
@@ -372,6 +383,7 @@
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
                             <td class="td-3">2</td>
+                            <td class="td-5">2020-002</td>
                             <td class="td-5">2020-02</td>
                             <td class="td-5">정기급여</td>
                             <td class="td-5">2038</td>
@@ -391,6 +403,7 @@
                                 <input type="checkbox" style="width: 20px;height: 20px;" />
                             </td>
                             <td class="td-3">1</td>
+                            <td class="td-5">2020-001</td>
                             <td class="td-5">2020-01</td>
                             <td class="td-5">정기급여</td>
                             <td class="td-5">2038</td>

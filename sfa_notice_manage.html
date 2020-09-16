@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALE FORCE AUTOMATION SYSTEM</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/b1cadc3305.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+        .company-list tr:first-child {
+            background-color: rgba(219, 228, 232, 0.8);
+        }
+
+        .company-list .tr-even:hover {
+            background-color: rgba(219, 228, 232, 0.8);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="top-wrap flex flex-justify">
+            <div class="logo-wrap" style="padding-top: 8px;">
+                <h2><a class="roboto font22 f6" href="SFA_main.html" title="HOME">SALE FORCE</a></h2>
+                <a class="roboto font20 f6" href="SFA_main.html" title="HOME">AUTOMATION</a>
+            </div>
+            <div class="menu-wrap ">
+                <nav id="topMenu">
+                    <ul>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_notice_manage.html" title="관리자메뉴"
+                                alt="">관리자메뉴</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_auth.html" title="권한관리" alt="">권한관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_notice_manage.html" title="게시판관리" alt="">게시판관리</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_notice.html" title="시스템메뉴"
+                                alt="">시스템</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_schedule.html" title="일정" alt="">일정관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_notice.html" title="공지사항" alt="">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_emp_list.html" title="인사/급여메뉴"
+                                alt="">인사/급여</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_wage.html" title="급여관리" alt="">급여관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_tna_manage.html" title="근태관리" alt="">근태관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원목록</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_item_manage.html" title="영업관리메뉴"
+                                alt="">영업관리</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_sale_manage.html" title="판매관리" alt="">판매관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_order_manage.html" title="수주관리" alt="">수주관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_company_manage.html" title="거래처등록"
+                                        alt="">거래처관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_item_manage.html" title="품목관리" alt="">품목관리</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-icon-wrap">
+                <div class="icon font24 f6">
+                    <!-- <span class="map_icon">
+                        <a href="#" title="map" class="f6"> <i class="fas fa-map-marked-alt"></i></a>
+                    </span> -->
+                    <span class="admin-icon">
+                        <a href=" ./SFA_admin.html" title="admin" class="f6"><i class="fas fa-user-cog"></i></a>
+                    </span>
+                    <span class="login_icon">
+                        <a href="./SFA_login.html" title="login" class="f6"><i class="fas fa-door-closed"></i></a>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="page-wrap m-tb10">
+            <div class="container">
+                <div class="title">
+                    <p class="noto font16 weight500 m-t10 m-b10 m-lr10">관리자메뉴 > 게시판 관리</p>
+                </div>
+                <div class="notice-manage m-b10 m-lr10">
+                    <form name="" method="post" autocomplete="off">
+                        <table>
+                            <tr>
+                                <td class="td-7 under center bg-green weight700">게시판그룹</td>
+                                <td class="td-15 p-lr3">
+                                    <select class="sel-100">
+                                        <option value="">전체공지</option>
+                                        <option value="">영업부</option>
+                                        <option value="">인사부</option>
+                                        <option value="">테스트용</option>
+                                    </select>
+                                </td>
+                                <td class="td-7 under center bg-green weight700">게시판코드</td>
+                                <td class="td-15 p-lr3">
+                                    <input type="text" class="input-100" placeholder="영어로 입력" />
+                                </td>
+                                <td class="td-7 under center bg-green weight700">게시판색상</td>
+                                <td class="td-15 p-lr3">
+                                    <select class="sel-100">
+                                        <option value="#ff0000">#ff0000</option>
+                                        <option value="#0000ff">#0000ff</option>
+                                    </select>
+                                    <span class="color"></span>
+                                </td>
+                                <td class="td-7 under center bg-green weight700">게시판 관리자</td>
+                                <td class="td-15 p-lr3">
+                                    <select class="sel-100">
+                                        <option value="">SFA</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="td-7 under center bg-green weight700">읽기권한</td>
+                                <td class="td-15 p-lr3">
+                                    <select class="sel-100">
+                                        <option value="">100</option>
+                                        <option value="">200</option>
+                                    </select>
+                                </td>
+
+                                <td class="td-7 under center bg-green weight700">쓰기권한</td>
+                                <td class="td-15 p-lr3">
+                                    <select class="sel-100">
+                                        <option value="">100</option>
+                                        <option value="">200</option>
+                                    </select>
+                                </td>
+                                <td class="td-7 under center bg-green weight700">댓글권한</td>
+                                <td class="td-15 p-lr3">
+                                    <select class="sel-100">
+                                        <option value="">100</option>
+                                        <option value="">200</option>
+                                    </select>
+                                </td>
+                                <td class="td-7 under center bg-green weight700">다운권한</td>
+                                <td class="td-15 p-lr3">
+                                    <select class="sel-100">
+                                        <option value="">100</option>
+                                        <option value="">200</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="flex flex-justify">
+                            <div>
+                                <button type="reset" class="btn-on center m-t10 m-l5 new"
+                                    style="display: none;">신규등록</button>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn-on center m-t10 m-l5 insert">등록</button>
+                                <button type="submit" class="btn-on center m-t10 m-l5 up"
+                                    style="display: none;">수정</button>
+                                <button type="reset" class="btn-off center m-t10 m-l5 reset">리셋</button>
+                                <button type="submit" class="btn-off center m-t10 m-l5 del"
+                                    style="display: none;">삭제</button>
+                            </div>
+                        </div>
+
+                    </form>
+                    <hr style="border: solid 1px #0C4A60; margin-top: 10px;">
+                </div>
+
+                <div class="title">
+                    <p class="noto font16 weight500 m-t10 m-b10 m-lr10">관리자메뉴 > 게시판 목록</p>
+                </div>
+
+                <div class="company-list m-b10 m-lr10">
+                    <table class="list center" style="table-layout: fixed;">
+                        <tr class="weight700 center font14">
+                            <td class="td-3">
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td class="td-5">순번</td>
+                            <td class="td-5">게시판그룹</td>
+                            <td class="td-13">게시판코드</td>
+                            <td class="td-5">게시판색상</td>
+                            <td>게사판제목</td>
+                            <td class="td-10">읽기권한</td>
+                            <td class="td-10">쓰기권한</td>
+                            <td class="td-10">댓글권한</td>
+                            <td class="td-10">다운권한</td>
+                            <td class="td-10">관리</td>
+                        </tr>
+                        <tr class="center font14">
+                            <td>
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>4</td>
+                            <td>테스트용</td>
+                            <td>n-0010</td>
+                            <td>#cccccc</td>
+                            <td> <a href="SFA_notice.html" target="_blank" class="under">SFA 게시물 등록 테스트 중입니다.</a>
+                            </td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>
+                                <span class="s-btn-on">수정</span>
+                                <span class="s-btn-off">삭제</span>
+                            </td>
+                        </tr>
+                        <tr class="center font14">
+                            <td>
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>3</td>
+                            <td>전체공지</td>
+                            <td>n-0003</td>
+                            <td>#cccccc</td>
+                            <td> <a href="SFA_notice.html" target="_blank" class="under">SFA 전체 공지사항</a>
+                            </td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>
+                                <span class="s-btn-on">수정</span>
+                                <span class="s-btn-off">삭제</span>
+                            </td>
+                        </tr>
+                        <tr class="center font14">
+                            <td>
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>2</td>
+                            <td>영업부</td>
+                            <td>n-0002</td>
+                            <td>#cccccc</td>
+                            <td> <a href="SFA_notice.html" target="_blank" class="under">SFA 영업부 공지사항</a>
+                            </td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>
+                                <span class="s-btn-on">수정</span>
+                                <span class="s-btn-off">삭제</span>
+                            </td>
+                        </tr>
+                        <tr class="center font14">
+                            <td>
+                                <input type="checkbox" style="width: 20px;height: 20px;" />
+                            </td>
+                            <td>1</td>
+                            <td>인사부</td>
+                            <td>n-0001</td>
+                            <td>#cccccc</td>
+                            <td> <a href="SFA_notice.html" target="_blank" class="under">SFA 인사부 공지사항</a>
+                            </td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>
+                                <span class="s-btn-on">수정</span>
+                                <span class="s-btn-off">삭제</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="page-grp center m-t10">
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-double-left"></i></a>
+                    </span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-left"></i></a>
+                    </span>
+                    <span class="page page-active">
+                        <a href="" class="f6">1</a>
+                    </span>
+                    <span class="page"><a href="">2</a></span>
+                    <span class="page"><a href="">3</a></span>
+                    <span class="page"><a href="">4</a></span>
+                    <span class="page"><a href="">5</a></span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-right"></i></a>
+                    </span>
+                    <span class="page">
+                        <a href=""><i class="fas fa-angle-double-right"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script>
+    $(function () {
+        $("tr:nth-child(n)").addClass("tr-even");
+    })
+</script>
+
+</html>

@@ -111,7 +111,7 @@
         <div class="page-wrap m-tb10">
             <div class="container">
                 <div class="title">
-                    <h3 class="noto font16 m-t10 m-b10 m-lr10">사원관리 > 사원 등록</h3>
+                    <p class="noto font16 weight500 m-t10 m-b10 m-lr10">사원관리 > 사원 등록</p>
                 </div>
                 <div class="emp-insert m-b10 m-lr10">
                     <form name="" method="post" autocomplete="off">
@@ -127,7 +127,7 @@
                                     <tr>
                                         <td class="td-7 under center bg-green weight700">사원번호</td>
                                         <td class="td-5 p-lr3">
-                                            <input type="hidden" name="" id="" class="input-100">
+                                            <input type="text" name="" id="" class="input-100" disabled="true">
                                         </td>
                                         <td class="td-7 under center bg-green weight700">사원명/성별</td>
                                         <td class="td-13 p-lr3">
@@ -172,16 +172,16 @@
                                     <tr>
                                         <td class="td-7 under center bg-green weight700">부서코드</td>
                                         <td class="p-lr3">
-                                            <input type="hidden" name="" id="" class="input-100">
+                                            <input type="text" name="" id="" class="input-100" tabindex="6">
                                         </td>
 
                                         <td class="td-7 under center bg-green weight700">부서명/직급</td>
                                         <td class="p-lr3">
-                                            <select name="" class="sel-50" id="" tabindex="6">
+                                            <select name="" class="sel-50" id="" tabindex="7">
                                                 <option value="">인사총무부</option>
                                                 <option value="">영업부</option>
                                             </select>
-                                            <select name="" class="sel-50" id="" tabindex="7">
+                                            <select name="" class="sel-50" id="" tabindex="8">
                                                 <option value="">관리자</option>
                                                 <option value="">이사</option>
                                                 <option value="">처장</option>
@@ -195,7 +195,7 @@
 
                                         <td class="td-7 under center bg-green weight700">주소</td>
                                         <td class="p-lr3" colspan="3">
-                                            <input type="text" name="" id="" tabindex="8" class="input-100" required>
+                                            <input type="text" name="" id="" tabindex="9" class="input-100" required>
                                         </td>
 
                                         <td class="td-7 under center bg-green weight700">장애여부</td>
@@ -218,16 +218,16 @@
                                         <td class="td-7 under center bg-green weight700">H.P</td>
                                         <td class="td-7 p-lr3">
                                             <input type="tel" name="" id="" class="input-100" tabindex="9"
-                                                pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}" required>
+                                                pattern="[0-1]{3}-[0-9]{3,4}-[0-9]{4}"  placeholder="000-000(0)-0000" required>
                                         </td>
                                         <td class="td-7 under center bg-green weight700">내선번호</td>
                                         <td class="td-7 p-lr3">
                                             <input type="tel" name="" id="" tabindex="10" class="input-100"
-                                                pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}" required>
+                                                pattern="[0-9]{3}-[0-9]{3,4}-[0-9]{4}"  placeholder="000-000(0)-0000" required>
                                         </td>
                                         <td class="td-7 under center bg-green weight700">이메일</td>
                                         <td class="p-lr3">
-                                            <input type="email" name="" id="" tabindex="11" class="input-100" required>
+                                            <input type="email" name="" id="" tabindex="11" class="input-100" placeholder="abc@abc.com" required>
                                         </td>
                                         <td class="td-7 under center bg-green weight700">계좌번호</td>
                                         <td class="p-lr3">
@@ -306,7 +306,7 @@
                 </div>
 
                 <div class="title">
-                    <h3 class="noto font16 m-t10 m-b10 m-lr10">사원관리 > 사원 목록</h3>
+                    <p class="noto font16 weight500 m-t10 m-b10 m-lr10">사원관리 > 사원 목록</p>
                 </div>
 
                 <div class="search-wrap flex flex-justify">
