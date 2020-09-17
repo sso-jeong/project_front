@@ -1,5 +1,19 @@
 $(function login() {
 
+    //로그인 엔터키 입력시
+    $('#password').keyup(function(event){
+        if(event.keyCode === 13) {
+            $('#btn').click();
+        }
+    });
+    //비밀번호찾기 엔터키 입력시
+    $('#email').keyup(function(event){
+        if(event.keyCode === 13) {
+            $('#btn').click();
+        }
+    });
+    
+
     $("#btn").click(function () {
         if ($("#userid").val() == '') {
             alert("사번을 입력해 주세요.");

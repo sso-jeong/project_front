@@ -1,6 +1,7 @@
 $(function () {
 
-    $('#cfm-password').keyup(function () {
+
+    $('#cfm-password').keyup(function (event) {
 
         var pwd = $("#password").val();
         var cpwd = $("#cfm-password").val();
@@ -18,6 +19,10 @@ $(function () {
                 $('#btn').prop('disabled', true);
 
             }
+        }
+
+        if(event.keyCode === 13) {
+            $('#btn').click();
         }
     });
 
@@ -73,12 +78,15 @@ $(function linklogin() {
 
         if (id == '' || id == null) {
             alert("사번을 입력해주세요.");
+            $('#userid').focus();
             return false;
         } else if (name == '' || name == null) {
             alert("이름을 입력해주세요.");
+            $('#name').focus();
             return false;
         } else if (pwd == '' || pwd == null) {
             alert("비밀번호를 입력해주세요.");
+            $('#password').focus();
             return false;
         }
         // } else {
