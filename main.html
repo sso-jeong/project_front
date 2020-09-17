@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Home</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/fullpage.css">
+
+    <style>
+        .bg {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            width: 100%;
+            height: 110px;
+            color: #fff;
+            line-height: 20px;
+            margin: 30px 30px;
+
+        }
+
+        .nav a {
+            color: #fff;
+            line-height: 2px;
+        }
+
+        .firstPage-contant {
+            text-align: center;
+            opacity: 0;
+            animation: run .8s .3s forwards;
+            margin-top: 300px;
+        }
+
+        @keyframes run {
+            100% {
+                opacity: 1;
+                margin: 0;
+            }
+        }
+
+        .firstPage-contant h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .firstPage-contant h2 {
+            font-size: 60px;
+            text-shadow: 2px 2px 1px #000;
+        }
+
+        .firstPage-wrap {
+            margin: 0 auto;
+            width: 800px;
+        }
+
+        .logo,
+        .login {
+            width: 8%;
+            vertical-align: middle;
+            text-align: center;
+
+        }
+
+        .navbar {
+            width: 65%;
+            padding-top: 8px;
+            padding-left: 29%;
+        }
+
+        .login {
+            padding-top: 8px;
+            margin-right: 50px;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/fullpage.js"></script>
+
+</head>
+
+<body>
+    <div class="nav">
+        <div class="flex flex-justify">
+            <div class="logo">
+                <h2><a class="roboto font22" href="main.html" title="HOME">SALE FORCE</a></h2>
+                <a class="roboto font20" href="main.html" title="HOME">AUTOMATION</a>
+            </div>
+            <div class="navbar">
+                <ul id="menu" class="flex flex-justify">
+                    <li class="noto weight700 font20" style="margin: 0 30px;" data-menuanchor="2ndPage">
+                        <a href="#2ndPage">회사소개</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="login">
+                <h2><a class="noto weight700 font18 f6" href="SFA_login.html" title="HOME">그룹웨어 로그인</a></h2>
+            </div>
+        </div>
+    </div>
+    <div id="fullpage">
+        <div class="section bg" style="background-image: url(images/main/m0.jpg);">
+            <div class="firstPage-wrap">
+                <div class="firstPage-contant">
+                    <h3 class="noto f6">영업 시스템의 혁신적인 플랫폼</h3>
+                    <h2 class="roboto f6">SALE FORCE AUTOMATION</h2>
+                </div>
+            </div>
+        </div>
+        <div class="section bg" style="background-color: #f5f6f7;">
+        </div>
+        <div class="section bg" style="background-color: #f5f6f7;">
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        $('#fullpage').fullpage({
+            navigation: true,
+            easingcss3: 'cubic-bezier(0.175, 0.585, 0.820, 1.275)',
+            menu: '#menu',
+            anchors: ['1stPage', '2ndPage', '3rdPage'],
+            scrollingSpeed: 600
+        });
+    });
+</script>
+
+</html>
