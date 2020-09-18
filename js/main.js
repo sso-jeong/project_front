@@ -122,7 +122,17 @@ $(function () {
         $('.menuLink').css('color', '#fff');
     });
 
+    //첨부파일
+    $('.signsave').click(function () {
+        var absnm = $('.file').val();
+        if (absnm != '') {
+            var filePathSplit = absnm.split('\\');
+            var filePathLength = filePathSplit.length;
+            var filenm = filePathSplit[filePathLength - 1]
+            $('.sign').attr('src', filenm);
+        }
 
+    });
 
 });
 
