@@ -138,8 +138,9 @@ header {
     border: 1px solid #0C4A60;
 }
 
-.calendar-wrap,
-.notice-wrap {
+
+.notice-wrap,
+.calendar-wrap {
     width: 40%;
 }
 
