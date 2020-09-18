@@ -86,20 +86,31 @@ header {
     transition: height .2s;
 }
 
+.subMenu3 {
+    position: absolute;
+    height: 0px;
+    visibility: hidden;
+    transition: height .2s;
+    right: 120px;
+
+}
+
 .subMenu li,
-.subMenu2 li {
+.subMenu2 li,
+.subMenu3 li {
     display: inline-block;
 }
 
 .topMenuLi:hover .subMenu,
-.topMenuLi:hover .subMenu2 {
+.topMenuLi:hover .subMenu2,
+.topMenuLi:hover .subMenu3 {
     visibility: visible;
     height: auto;
 }
 
 /*******main********/
 .middle {
-    margin: 10px 10px;
+    margin: 15px 15px;
     background-color: #F5F6F7;
 }
 
@@ -109,11 +120,11 @@ header {
 
 .main-notice-wrap,
 .file-wrap {
-    width: 39.5%;
+    width: 39.2%;
 }
 
 .main-sale-wrap {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .sale-wrap,
@@ -134,12 +145,12 @@ header {
 
 .sale-wrap,
 .stock-wrap {
-    width: 59.5%;
+    width: 59.2%;
 }
 
 .calendar-wrap,
 .stock-wrap {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .tbl-wrap tr:first-child,

@@ -38,10 +38,59 @@
             width: 65px;
             height: 30px;
         }
+
+        .modal-wrapper {
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .modal-wrapper.open {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.3s;
+        }
+
+        .modal-wrapper.open .modal {
+            opacity: 1;
+        }
+
+        .modal {
+            width: 1500px;
+            height: 800px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            opacity: 0;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: -60px 0 100px -90px #000, 60px 0px 100px -90px #000;
+        }
     </style>
+    <script>
+        $(function () {
+            $(".popup").click(function () {
+                $(".modal-wrapper").toggleClass("open");
+            });
+        });
+    </script>
 </head>
 
 <body onload="build();">
+    <!-- model layer -->
+    <div class="modal-wrapper">
+        <div class="modal">
+            결재 문서 양식 & 폼 & 결재 라인 <a href="" class="popup">닫기</a>
+        </div>
+    </div>
+    <!-- model layer -->
     <header>
         <div class="top-wrap flex flex-justify">
             <div class="logo-wrap" style="padding-top: 8px;">
@@ -60,13 +109,16 @@
                             </ul>
                         </li>
                         <li class="topMenuLi">
-                            <a class="menuLink noto weight700 font16 f6" href="#" title="결재관리" alt="">결재관리</a>
+                            <a class="menuLink noto weight700 font16 f6" href="SFA_approval_ready.html" title="결재관리"
+                                alt="">결재관리</a>
                             <ul class="subMenu">
+                                <li> <a class="submenuLink" href="SFA_approval_sign.html" title="결재설정" alt="">결재설정</a>
+                                </li>
                                 <li> <a class="submenuLink" href="SFA_approval_file.html" title="결재양식" alt="">결재양식</a>
                                 </li>
                                 <li> <a class="submenuLink" href="SFA_approval_ready.html" title="대기문서" alt="">대기문서</a>
                                 </li>
-                                <li> <a class="submenuLink" href="#" title="문서등록" alt="">문서등록</a></li>
+
 
                             </ul>
                         </li>
@@ -95,23 +147,13 @@
                                 </li>
                             </ul>
                         </li>
-                        <!-- <li class="topMenuLi">
-                            <a class="menuLink noto weight700 font16 f6" href="sfa_com_intro.html" title="회사소개"
-                                alt="">회사소개</a>
-                            <ul class="subMenu2">
-                                <li> <a class="submenuLink" href="sfa_com_direct.html" title="찾아오시는길" alt="">찾아오시는 길</a>
-                                </li>
-                                <li> <a class="submenuLink" href="sfa_com_intro.html" title="기업소개" alt="">기업소개</a></li>
-
-                            </ul>
-                        </li> -->
                     </ul>
                 </nav>
             </div>
             <div class="menu-icon-wrap">
                 <div class="icon font20 f6">
                     <span class="sig_icon">
-                        <a href="#" title="approve" class="f6"> <i class="fas fa-file-signature"></i></a>
+                        <a href="#" title="approve" class="popup f6"> <i class="fas fa-file-signature"></i></a>
                     </span>
                     <span class="admin-icon">
                         <a href=" ./SFA_admin.html" title="admin" class="f6"><i class="fas fa-user-cog"></i></a>
@@ -123,7 +165,6 @@
             </div>
         </div>
     </header>
-
     <main>
         <div class="middle m-tb10">
             <div class="main-wrap1  flex flex-justify">
@@ -179,7 +220,7 @@
                             <div class="notice-left">
                                 <p class="noto weight700 font14">
                                     <a href="SFA_notice_view.html" target="_blank">
-                                        <span style="color:#d92550; margin-right:10px;">[공지]</span>
+                                        <span style="color:#d92550;margin-right:10px;">[공지]</span>
                                         게시물 등록 테스트 중입니다. 작성자는 관리자입니다.
                                     </a>
                                 </p>
@@ -216,13 +257,46 @@
                     <div class="app-content m-t10 m-lr10">
                         <div style="border-bottom:1px solid #e7e7e7; padding-bottom:10px;"
                             class="app-list flex flex-justify noto weight700 font14">
-                            <div class="app-date" style="width:10%;">기안일</div>
-                            <div class="app-form" style="width:10%;">문서양식</div>
-                            <div class="app-subject center" style="width:70%;">결재문서제목</div>
-                            <div class="app-file" style="width:10%;">첨부</div>
+                            <div class="app-date center" style="width:15%;">기안일</div>
+                            <div class="app-form center" style="width:15%;">결재양식</div>
+                            <div class="app-subject center" style="width:50%;">결재문서제목</div>
+                            <div class="app-file center" style="width:20%;">첨부</div>
                         </div>
-                        <div class="center p-tb10">
-                            <span class="noto font16 weight700">결재할 문서가 없습니다.</span>
+                        <div class="p-t10">
+                            <div style="border-bottom:1px solid #e7e7e7;"
+                                class="app-list flex flex-justify noto font14 p-tb10">
+                                <div class="app-date center" style="width:15%;">2020.09.16</div>
+                                <div class="app-form center" style="width:15%;">업무일지</div>
+                                <div class="app-subject left p-lr5" style="width:50%;">0916 업무일지입니다.</div>
+                                <div class="app-file center" style="width:20%;">0916_업무일지.pdf</div>
+                            </div>
+                        </div>
+                        <div class="p-t10">
+                            <div style="border-bottom:1px solid #e7e7e7;"
+                                class="app-list flex flex-justify noto font14 p-tb10">
+                                <div class="app-date center" style="width:15%;">2020.09.16</div>
+                                <div class="app-form center" style="width:15%;">업무일지</div>
+                                <div class="app-subject left p-lr5" style="width:50%;">0916 업무일지입니다.</div>
+                                <div class="app-file center" style="width:20%;">0916_업무일지.pdf</div>
+                            </div>
+                        </div>
+                        <div class="p-t10">
+                            <div style="border-bottom:1px solid #e7e7e7;"
+                                class="app-list flex flex-justify noto font14 p-tb10">
+                                <div class="app-date center" style="width:15%;">2020.09.16</div>
+                                <div class="app-form center" style="width:15%;">업무일지</div>
+                                <div class="app-subject left p-lr5" style="width:50%;">0916 업무일지입니다.</div>
+                                <div class="app-file center" style="width:20%;">0916_업무일지.pdf</div>
+                            </div>
+                        </div>
+                        <div class="p-t10">
+                            <div style="border-bottom:1px solid #e7e7e7;"
+                                class="app-list flex flex-justify noto font14 p-tb10">
+                                <div class="app-date center" style="width:15%;">2020.09.15</div>
+                                <div class="app-form center" style="width:15%;">수주처리</div>
+                                <div class="app-subject  left p-lr5" style="width:50%;">0915 신진금속 수주 건입니다.</div>
+                                <div class="app-file center" style="width:20%;">0915_신진금속.pdf</div>
+                            </div>
                         </div>
                     </div>
                 </div>

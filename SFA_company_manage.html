@@ -20,10 +20,59 @@
         .company-list .tr-even:hover {
             background-color: rgba(219, 228, 232, 0.8);
         }
+
+        .modal-wrapper {
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .modal-wrapper.open {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.3s;
+        }
+
+        .modal-wrapper.open .modal {
+            opacity: 1;
+        }
+
+        .modal {
+            width: 1500px;
+            height: 800px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            opacity: 0;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: -60px 0 100px -90px #000, 60px 0px 100px -90px #000;
+        }
     </style>
+    <script>
+        $(function () {
+            $(".popup").click(function () {
+                $(".modal-wrapper").toggleClass("open");
+            });
+        });
+    </script>
 </head>
 
 <body>
+    <!-- model layer -->
+    <div class="modal-wrapper">
+        <div class="modal">
+            결재 문서 양식 & 폼 & 결재 라인 <a href="" class="popup">닫기</a>
+        </div>
+    </div>
+    <!-- model layer -->
     <header>
         <div class="top-wrap flex flex-justify">
             <div class="logo-wrap" style="padding-top: 8px;">
@@ -39,6 +88,20 @@
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="sfa_schedule.html" title="일정" alt="">일정관리</a></li>
                                 <li> <a class="submenuLink" href="sfa_notice.html" title="공지사항" alt="">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="SFA_approval_ready.html" title="결재관리"
+                                alt="">결재관리</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="SFA_approval_sign.html" title="결재설정" alt="">결재설정</a>
+                                </li>
+                                <li> <a class="submenuLink" href="SFA_approval_file.html" title="결재양식" alt="">결재양식</a>
+                                </li>
+                                <li> <a class="submenuLink" href="SFA_approval_ready.html" title="대기문서" alt="">대기문서</a>
+                                </li>
+
+
                             </ul>
                         </li>
                         <li class="topMenuLi">
@@ -66,23 +129,13 @@
                                 </li>
                             </ul>
                         </li>
-                        <!-- <li class="topMenuLi">
-                            <a class="menuLink noto weight700 font16 f6" href="sfa_com_intro.html" title="회사소개"
-                                alt="">회사소개</a>
-                            <ul class="subMenu2">
-                                <li> <a class="submenuLink" href="sfa_com_direct.html" title="찾아오시는길" alt="">찾아오시는 길</a>
-                                </li>
-                                <li> <a class="submenuLink" href="sfa_com_intro.html" title="기업소개" alt="">기업소개</a></li>
-
-                            </ul>
-                        </li> -->
                     </ul>
                 </nav>
             </div>
             <div class="menu-icon-wrap">
                 <div class="icon font20 f6">
                     <span class="sig_icon">
-                        <a href="#" title="approve" class="f6"> <i class="fas fa-file-signature"></i></a>
+                        <a href="#" title="approve" class="popup f6"> <i class="fas fa-file-signature"></i></a>
                     </span>
                     <span class="admin-icon">
                         <a href=" ./SFA_admin.html" title="admin" class="f6"><i class="fas fa-user-cog"></i></a>
@@ -92,7 +145,6 @@
                     </span>
                 </div>
             </div>
-
         </div>
     </header>
 
@@ -100,9 +152,9 @@
         <div class="page-wrap m-tb10">
             <div class="container">
                 <div class="title">
-                    <p class="noto font16 weight500 m-t10 m-b10 m-lr10">업체관리 > 업체 등록</p>
+                    <p class="noto font16 weight500 m-t15 m-b15 m-lr15">업체관리 > 업체 등록</p>
                 </div>
-                <div class="company-insert m-b10 m-lr10">
+                <div class="company-insert m-b15 m-lr15">
                     <form name="" method="post" action="SFA_company_manage.html" autocomplete="off">
                         <table>
                             <tr>
@@ -172,33 +224,33 @@
                         </table>
                         <div class="flex flex-justify">
                             <div>
-                                <button type="reset" class="btn-on center m-t10 m-l5 new"
+                                <button type="reset" class="btn-on center m-t15 m-l5 new"
                                     style="display: none;">신규등록</button>
                             </div>
                             <div>
-                                <button type="submit" class="btn-on center m-t10 m-l5 insert">등록</button>
-                                <button type="submit" class="btn-on center m-t10 m-l5 up"
+                                <button type="submit" class="btn-on center m-t15 m-l5 insert">등록</button>
+                                <button type="submit" class="btn-on center m-t15 m-l5 up"
                                     style="display: none;">수정</button>
-                                <button type="reset" class="btn-off center m-t10 m-l5 reset">리셋</button>
-                                <button type="submit" class="btn-off center m-t10 m-l5 del"
+                                <button type="reset" class="btn-off center m-t15 m-l5 reset">리셋</button>
+                                <button type="submit" class="btn-off center m-t15 m-l5 del"
                                     style="display: none;">삭제</button>
                             </div>
                         </div>
 
                     </form>
-                    <hr style="border: solid 1px #0C4A60; margin-top: 10px;">
+                    <hr style="border: solid 1px #0C4A60; margin-top: 15px;">
                 </div>
 
                 <div class="title">
-                    <p class="noto font16 weight500 m-t10 m-b10 m-lr10">업체관리 > 업체 목록</p>
+                    <p class="noto font16 weight500 m-t15 m-b15 m-lr15">업체관리 > 업체 목록</p>
                 </div>
 
                 <div class="search-wrap flex flex-justify">
                     <div class="">
-                        <span class="btn-normal m-b10 m-lr10">전체 업체 수 10 / PAGE</span>
+                        <span class="btn-normal m-b15 m-lr15">전체 업체 수 10 / PAGE</span>
                     </div>
                     <div class="form-wrap">
-                        <form method="post" action="" style="margin:0 10px;" autocomplete="off">
+                        <form method="post" action="" style="margin:0 15px;" autocomplete="off">
                             <select class="" name="searchOpt">
                                 <option value="ordnum">거래처코드</option>
                                 <option value="orddt">거래처명</option>
@@ -212,7 +264,7 @@
                     </div>
                 </div>
 
-                <div class="company-list m-b10 m-lr10">
+                <div class="company-list m-b15 m-lr15">
                     <table class="list center" style="table-layout: fixed;">
                         <tr class="weight700 center font14">
                             <td class="td-3">
@@ -403,7 +455,7 @@
 
                     </table>
                 </div>
-                <div class="page-grp center m-t10">
+                <div class="page-grp center m-t15">
                     <span class="page">
                         <a href=""><i class="fas fa-angle-double-left"></i></a>
                     </span>

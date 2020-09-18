@@ -20,10 +20,59 @@
         .tr-even:hover {
             border: 1px solid #d6dce7;
         }
+
+        .modal-wrapper {
+            background-color: rgba(0, 0, 0, 0.3);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        .modal-wrapper.open {
+            visibility: visible;
+            opacity: 1;
+            transition: 0.3s;
+        }
+
+        .modal-wrapper.open .modal {
+            opacity: 1;
+        }
+
+        .modal {
+            width: 1500px;
+            height: 800px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            opacity: 0;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: -60px 0 100px -90px #000, 60px 0px 100px -90px #000;
+        }
     </style>
+    <script>
+        $(function () {
+            $(".popup").click(function () {
+                $(".modal-wrapper").toggleClass("open");
+            });
+        });
+    </script>
 </head>
 
 <body>
+    <!-- model layer -->
+    <div class="modal-wrapper">
+        <div class="modal">
+            결재 문서 양식 & 폼 & 결재 라인 <a href="" class="popup">닫기</a>
+        </div>
+    </div>
+    <!-- model layer -->
     <header>
         <div class="top-wrap flex flex-justify">
             <div class="logo-wrap" style="padding-top: 8px;">
@@ -42,12 +91,26 @@
                             </ul>
                         </li>
                         <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="SFA_approval_ready.html" title="결재관리"
+                                alt="">결재관리</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="SFA_approval_sign.html" title="결재설정" alt="">결재설정</a>
+                                </li>
+                                <li> <a class="submenuLink" href="SFA_approval_file.html" title="결재양식" alt="">결재양식</a>
+                                </li>
+                                <li> <a class="submenuLink" href="SFA_approval_ready.html" title="대기문서" alt="">대기문서</a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
                             <a class="menuLink noto weight700 font16 f6" href="sfa_emp_list.html" title="인사/급여메뉴"
                                 alt="">인사/급여</a>
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="sfa_wage.html" title="급여관리" alt="">급여관리</a></li>
                                 <li> <a class="submenuLink" href="sfa_tna_manage.html" title="근태관리" alt="">근태관리</a></li>
-                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원관리" alt="">사원관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원관리</a></li>
                             </ul>
                         </li>
                         <li class="topMenuLi">
@@ -66,23 +129,13 @@
                                 </li>
                             </ul>
                         </li>
-                        <!-- <li class="topMenuLi">
-                            <a class="menuLink noto weight700 font16 f6" href="sfa_com_intro.html" title="회사소개"
-                                alt="">회사소개</a>
-                            <ul class="subMenu2">
-                                <li> <a class="submenuLink" href="sfa_com_direct.html" title="찾아오시는길" alt="">찾아오시는 길</a>
-                                </li>
-                                <li> <a class="submenuLink" href="sfa_com_intro.html" title="기업소개" alt="">기업소개</a></li>
-
-                            </ul>
-                        </li> -->
                     </ul>
                 </nav>
             </div>
             <div class="menu-icon-wrap">
                 <div class="icon font20 f6">
                     <span class="sig_icon">
-                        <a href="#" title="approve" class="f6"> <i class="fas fa-file-signature"></i></a>
+                        <a href="#" title="approve" class="popup f6"> <i class="fas fa-file-signature"></i></a>
                     </span>
                     <span class="admin-icon">
                         <a href=" ./SFA_admin.html" title="admin" class="f6"><i class="fas fa-user-cog"></i></a>
@@ -92,22 +145,21 @@
                     </span>
                 </div>
             </div>
-
         </div>
     </header>
 
     <main>
-        <div class="page-wrap m-tb10">
+        <div class="page-wrap m-tb15">
             <div class="container">
                 <div class="title">
-                    <p class="noto font16 weight500 m-t10 m-b10 m-lr10">SFA 그룹웨어 알림판</p>
+                    <p class="noto font16 weight500 m-t15 m-b15 m-lr15">SFA 그룹웨어 알림판</p>
                 </div>
                 <div class="search-wrap flex flex-justify">
                     <div class="">
-                        <span class="btn-normal m-lr10">전체게시물 수 123 / PAGE</span>
+                        <span class="btn-normal m-lr15">전체게시물 수 123 / PAGE</span>
                     </div>
                     <div class="">
-                        <form method="post" action="SAP_notice.html" style="margin-right: 10px;" autocomplete="off">
+                        <form method="post" action="SAP_notice.html" style="margin-right: 15px;" autocomplete="off">
                             <select class="" name="searchOpt">
                                 <option value="subject">게시물제목</option>
                                 <option value="writer">작성자</option>
@@ -120,7 +172,7 @@
                         </form>
                     </div>
                 </div>
-                <div class="tbl-wrap m-t10 m-b10 m-lr10">
+                <div class="tbl-wrap m-t15 m-b15 m-lr15">
                     <table class="table center" style="table-layout: fixed;">
                         <tr class="weight700 center font14">
                             <td class="td-3">
@@ -346,7 +398,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="page-grp center m-t10">
+                <div class="page-grp center m-t15">
                     <span class="page">
                         <a href=""><i class="fas fa-angle-double-left"></i></a>
                     </span>
