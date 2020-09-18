@@ -124,14 +124,21 @@ $(function () {
 
     //첨부파일
     $('.signsave').click(function () {
-        var absnm = $('.file').val();
-        if (absnm != '') {
-            var filePathSplit = absnm.split('\\');
-            var filePathLength = filePathSplit.length;
-            var filenm = filePathSplit[filePathLength - 1]
-            $('.sign').attr('src', filenm);
+        // var absnm = $('.file').val();
+        // if (absnm != '') {
+        //     var filePathSplit = absnm.split('\\');
+        //     var filePathLength = filePathSplit.length;
+        //     var filenm = filePathSplit[filePathLength - 1]
+        //     $('.sign').attr('src', filenm);
+        // }
+        var input = document.getElementById("file");
+        var fReader = new FileReader();
+        fReader.readAsDataURL(input.files[0]);
+        fReader.onloadend = function (event) {
+            var img = document.getElementById("sign");
+            img.src = event.target.result;
+            img.height = 100;
         }
-
     });
 
 });
