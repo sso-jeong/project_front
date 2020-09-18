@@ -31,7 +31,7 @@ $(function () {
         $('.reset').css('display', 'none');
     });
 
-    $('.new').click(function() {
+    $('.new').click(function () {
         $('.up').css('display', 'none');
         $('.del').css('display', 'none');
         $('.new').css('display', 'none');
@@ -124,13 +124,6 @@ $(function () {
 
     //첨부파일
     $('.signsave').click(function () {
-        // var absnm = $('.file').val();
-        // if (absnm != '') {
-        //     var filePathSplit = absnm.split('\\');
-        //     var filePathLength = filePathSplit.length;
-        //     var filenm = filePathSplit[filePathLength - 1]
-        //     $('.sign').attr('src', filenm);
-        // }
         var input = document.getElementById("file");
         var fReader = new FileReader();
         fReader.readAsDataURL(input.files[0]);
@@ -159,27 +152,8 @@ function change() {
     if ((type) == "생산입고" || type == "반품입고") {
         $('.outdt').attr('disabled', true);
         $('.indt').attr('disabled', false);
-    }
-    else if (type == "판매출고") {
+    } else if (type == "판매출고") {
         $('.indt').attr('disabled', true);
         $('.outdt').attr('disabled', false);
     }
 }
-
-// function btnIcon() {
-//     document.getElementById("adminDropdown").classList.toggle("show");
-// }
-
-// window.onclick = function (event) {
-//     if (!event.target.matches('.dropbtn')) {
-
-//         var dropdowns = document.getElementsByClassName("dropdown-content");
-//         var i;
-//         for (i = 0; i < dropdowns.length; i++) {
-//             var openDropdown = dropdowns[i];
-//             if (openDropdown.classList.contains('show')) {
-//                 openDropdown.classList.remove('show');
-//             }
-//         }
-//     }
-// }
