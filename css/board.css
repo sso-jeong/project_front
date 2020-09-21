@@ -61,3 +61,7 @@ td {
 .td-90 {
     width: 90%;
 }
+
+.accent {
+    background-color: rgba(219, 228, 232, 0.8);
+}
