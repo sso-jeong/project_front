@@ -15,6 +15,14 @@ $(function () {
         }
     });
 
+    $(document).keydown(function (event) {
+        if ($(".modal-wrapper").hasClass("open")) {
+            if (event.keyCode == 27 || event.which == 27) {
+                $(".modal-wrapper").removeClass("open");
+            }
+        }
+    });
+
     // $('.price').keyup(function() {
     //     var sur = $('.price').val() / 10; 
     //     if($('.surtax')){
