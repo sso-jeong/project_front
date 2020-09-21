@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/board.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/zTreeStyle.css">
     <script src="https://kit.fontawesome.com/b1cadc3305.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.ztree.core.js"></script>
     <style>
         .company-list tr:first-child {
             background-color: rgba(219, 228, 232, 0.8);
@@ -66,12 +68,140 @@
 
 </head>
 
+<SCRIPT type="text/javascript">
+    var aTree;
+    var formIframe;
+
+    var setting = {
+        view: {
+            dblClickExpand: false,
+            showLine: true,
+            selectedMulti: false
+        },
+
+        data: {
+            simpleData: {
+                enable: true,
+                idKey: "id",
+                pIdKey: "pId",
+                rootPId: ""
+            }
+        },
+        callback: {
+            beforeClick: function (treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("tree");
+                if (treeNode.isParent) {
+                    zTree.expandNode(treeNode);
+                    return false;
+                } else {
+                    formIframe.attr("src", treeNode.file + ".html");
+                    return true;
+                }
+            }
+        }
+    };
+
+    var zNodes = [{
+            id: 1,
+            pId: 0,
+            name: "[인사총무부 문서양식]",
+            open: true
+        },
+        {
+            id: 101,
+            pId: 1,
+            name: "업무일지",
+            file: "file/b_log"
+        },
+        {
+            id: 102,
+            pId: 1,
+            name: "연차처리",
+            file: "file/day_off"
+        },
+        {
+            id: 103,
+            pId: 1,
+            name: "급여명세서",
+            file: "file/payslip"
+        },
+
+
+        {
+            id: 2,
+            pId: 0,
+            name: "[영업부 문서양식]",
+            open: true
+        },
+        {
+            id: 201,
+            pId: 2,
+            name: "수주처리",
+            file: "file/order_manager"
+        },
+        {
+            id: 202,
+            pId: 2,
+            name: "판매처리",
+            file: "file/sale_manager"
+        }
+    ];
+
+    $(document).ready(function () {
+        var t = $("#ztree");
+        t = $.fn.zTree.init(t, setting, zNodes);
+        formIframe = $("#formIframe");
+        formIframe.bind("load", loadReady);
+        var zTree = $.fn.zTree.getZTreeObj("tree");
+        zTree.selectNode(zTree.getNodeByParam("id", 101));
+
+    });
+
+    function loadReady() {
+        var bodyH = formIframe.contents().find("body").get(0).scrollHeight,
+            htmlH = formIframe.contents().find("html").get(0).scrollHeight,
+            maxH = Math.max(bodyH, htmlH),
+            minH = Math.min(bodyH, htmlH),
+            h = formIframe.height() >= maxH ? minH : maxH;
+        if (h < 760) h = 760;
+        formIframe.height(h);
+    }
+</SCRIPT>
+
 <body>
     <!-- model layer -->
+    <!-- 바깥은 화면 전체 크기 -->
     <div class="modal-wrapper">
+        <!-- 실제 모달 크기 -->
         <div class="modal">
-            결재 문서 양식 & 폼 & 결재 라인 <a href="" class="popup">닫기</a>
+            <div class="modal-title flex flex-justify">
+                <h2 class="noto font16 m-b10">결재 양식 선택</h2>
+                <h2 class="noto font16 m-b10">결재 라인 선택</h2>
+            </div>
+            <div class="modal-top flex flex-justify">
+                <!--문서 폼 분류 -->
+                <div class="" style="width: 250px;border:1px solid #d6dce7;">
+                    <div class="form-list">
+                        <ul id="ztree" class="ztree"></ul>
+                    </div>
+                </div>
+                <!--문서 폼 -->
+                <div id="" class="" style="width: 900px;border:1px solid #d6dce7;margin:0 10px;padding: 30px;">
+                    <iframe width="100%" height="600px" id="formIframe" frameborder="0" name="formIframe"
+                        src="file/b_log.html" scrolling="auto">
+                    </iframe>
+                </div>
+                <!--결재 라인 -->
+                <div class="p10" style="width: 250px;border:1px solid #d6dce7;">
+                    결재라인
+                </div>
+            </div>
+            <div class="modal-bottom center m-t10">
+                <button class="btn-on">문서선택</button>
+                <button class="btn-off popup btn-close">선택취소</button>
+            </div>
         </div>
+
     </div>
     <!-- model layer -->
     <header>

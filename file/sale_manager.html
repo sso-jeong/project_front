@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>수주서</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/board.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/board.css">
     <style>
+        body {
+            background-color: #fff;
+        }
+
         .paper {
             width: 800px;
         }
@@ -23,13 +27,13 @@
         }
     </style>
     <script src="../lib/jquery.js" type="text/javascript"></script>
-    <script src="ckeditor/ckeditor.js"></script>
+    <script src="../ckeditor/ckeditor.js"></script>
 </head>
 
 <body>
     <div class="paper">
         <div class="paper-title">
-            <h1 class="center noto font30">수 주 서</h1>
+            <h1 class="center noto font30">판 매 서</h1>
         </div>
         <div class="paper-approval m-t20">
             <div class="approval-left float-l" style="width:350px;">
@@ -96,7 +100,7 @@
                 <tr>
 
                     <td class="center weight700" rowspan="5" style="width: 50px; ">발 <br> 주 <br> 자</td>
-                    <td class="accent" style="width:100px; ">수주번호</td>
+                    <td class="accent" style="width:100px; ">판매번호</td>
                     <td colspan="5"></td>
                 </tr>
                 <tr>
@@ -141,17 +145,6 @@
                     <td class="td-7 accent">세액</td>
                     <td class="td-20 accent">비고</td>
                 </tr>
-               
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
 
                 <tr>
                     <td></td>
@@ -198,31 +191,45 @@
                 </tr>
 
                 <tr>
-                    <td colspan="4" class="accent"> 합      계</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4" class="accent"> 합 계</td>
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
                     <td></td>
-                </tr>
-
-                <tr>
-                    <td colspan="8">
-                        <textarea name="" id="editor"
-                            style="width:100%;border:1px solid #ccc;padding:10px;border-radius: 2px;"
-                            class="noto"></textarea>
-                        <script>
-                            CKEDITOR.replace('editor');
-                            CKEDITOR.config.height = 200;
-                        </script>
-                    </td>
                 </tr>
             </table>
+            <div class="m-t10">
+                <table>
+                    <tr>
+                        <td colspan="8">
+                            <textarea name="" id="editor"
+                                style="width:100%;border:1px solid #E2E9ED;padding:10px;border-radius: 2px;"
+                                class="noto"></textarea>
+                            <script>
+                                CKEDITOR.replace('editor');
+                                CKEDITOR.config.height = 200;
+                            </script>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         </div>
 
 
 
 
-        
+
 
     </div>
 </body>

@@ -9,9 +9,12 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/board.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/zTreeStyle.css">
+
     <script src="https://kit.fontawesome.com/b1cadc3305.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/jquery.ztree.core.js"></script>
     <style>
         tr:first-child {
             background-color: rgba(219, 228, 232, 0.8);
@@ -63,91 +66,218 @@
             });
         });
     </script>
+
 </head>
-</script>
+<SCRIPT type="text/javascript">
+    var aTree;
+    var formIframe;
+
+    var setting = {
+        view: {
+            dblClickExpand: false,
+            showLine: true,
+            selectedMulti: false
+        },
+
+        data: {
+            simpleData: {
+                enable: true,
+                idKey: "id",
+                pIdKey: "pId",
+                rootPId: ""
+            }
+        },
+        callback: {
+            beforeClick: function (treeId, treeNode) {
+                var zTree = $.fn.zTree.getZTreeObj("tree");
+                if (treeNode.isParent) {
+                    zTree.expandNode(treeNode);
+                    return false;
+                } else {
+                    formIframe.attr("src", treeNode.file + ".html");
+                    return true;
+                }
+            }
+        }
+    };
+
+    var zNodes = [{
+            id: 1,
+            pId: 0,
+            name: "[인사총무부 문서양식]",
+            open: true
+        },
+        {
+            id: 101,
+            pId: 1,
+            name: "업무일지",
+            file: "file/b_log"
+        },
+        {
+            id: 102,
+            pId: 1,
+            name: "연차처리",
+            file: "file/day_off"
+        },
+        {
+            id: 103,
+            pId: 1,
+            name: "급여명세서",
+            file: "file/payslip"
+        },
+
+
+        {
+            id: 2,
+            pId: 0,
+            name: "[영업부 문서양식]",
+            open: true
+        },
+        {
+            id: 201,
+            pId: 2,
+            name: "수주처리",
+            file: "file/order_manager"
+        },
+        {
+            id: 202,
+            pId: 2,
+            name: "판매처리",
+            file: "file/sale_manager"
+        }
+    ];
+
+    $(document).ready(function () {
+        var t = $("#ztree");
+        t = $.fn.zTree.init(t, setting, zNodes);
+        formIframe = $("#formIframe");
+        formIframe.bind("load", loadReady);
+        var zTree = $.fn.zTree.getZTreeObj("tree");
+        zTree.selectNode(zTree.getNodeByParam("id", 101));
+
+    });
+
+    function loadReady() {
+        var bodyH = formIframe.contents().find("body").get(0).scrollHeight,
+            htmlH = formIframe.contents().find("html").get(0).scrollHeight,
+            maxH = Math.max(bodyH, htmlH),
+            minH = Math.min(bodyH, htmlH),
+            h = formIframe.height() >= maxH ? minH : maxH;
+        if (h < 760) h = 760;
+        formIframe.height(h);
+    }
+</SCRIPT>
 
 <body>
-   <!-- model layer -->
-   <div class="modal-wrapper">
-    <div class="modal">
-        결재 문서 양식 & 폼 & 결재 라인 <a href="" class="popup">닫기</a>
-    </div>
-</div>
-<!-- model layer -->
-<header>
-    <div class="top-wrap flex flex-justify">
-        <div class="logo-wrap" style="padding-top: 8px;">
-            <h2><a class="roboto font22 f6" href="SFA_main.html" title="HOME">SALE FORCE</a></h2>
-            <a class="roboto font20 f6" href="SFA_main.html" title="HOME">AUTOMATION</a>
-        </div>
-        <div class="menu-wrap ">
-            <nav id="topMenu">
-                <ul>
-                    <li class="topMenuLi">
-                        <a class="menuLink noto weight700 font16 f6" href="sfa_notice.html" title="시스템메뉴"
-                            alt="">시스템</a>
-                        <ul class="subMenu">
-                            <li> <a class="submenuLink" href="sfa_schedule.html" title="일정" alt="">일정관리</a></li>
-                            <li> <a class="submenuLink" href="sfa_notice.html" title="공지사항" alt="">공지사항</a></li>
-                        </ul>
-                    </li>
-                    <li class="topMenuLi">
-                        <a class="menuLink noto weight700 font16 f6" href="SFA_approval_ready.html" title="결재관리"
-                            alt="">결재관리</a>
-                        <ul class="subMenu">
-                            <li> <a class="submenuLink" href="SFA_approval_sign.html" title="결재설정" alt="">결재설정</a>
-                            </li>
-                            <li> <a class="submenuLink" href="SFA_approval_file.html" title="결재양식" alt="">결재양식</a>
-                            </li>
-                            <li> <a class="submenuLink" href="SFA_approval_ready.html" title="대기문서" alt="">대기문서</a>
-                            </li>
-
-
-                        </ul>
-                    </li>
-                    <li class="topMenuLi">
-                        <a class="menuLink noto weight700 font16 f6" href="sfa_emp_list.html" title="인사/급여메뉴"
-                            alt="">인사/급여</a>
-                        <ul class="subMenu">
-                            <li> <a class="submenuLink" href="sfa_wage.html" title="급여관리" alt="">급여관리</a></li>
-                            <li> <a class="submenuLink" href="sfa_tna_manage.html" title="근태관리" alt="">근태관리</a></li>
-                            <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원관리</a></li>
-                        </ul>
-                    </li>
-                    <li class="topMenuLi">
-                        <a class="menuLink noto weight700 font16 f6" href="sfa_item_manage.html" title="영업관리메뉴"
-                            alt="">영업관리</a>
-                        <ul class="subMenu">
-                            <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a>
-                            </li>
-                            <li> <a class="submenuLink" href="sfa_sale_manage.html" title="판매관리" alt="">판매관리</a>
-                            </li>
-                            <li> <a class="submenuLink" href="sfa_order_manage.html" title="수주관리" alt="">수주관리</a>
-                            </li>
-                            <li> <a class="submenuLink" href="sfa_company_manage.html" title="거래처등록"
-                                    alt="">거래처관리</a></li>
-                            <li> <a class="submenuLink" href="sfa_item_manage.html" title="품목관리" alt="">품목관리</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-        <div class="menu-icon-wrap">
-            <div class="icon font20 f6">
-                <span class="sig_icon">
-                    <a href="#" title="approve" class="popup f6"> <i class="fas fa-file-signature"></i></a>
-                </span>
-                <span class="admin-icon">
-                    <a href=" ./SFA_admin.html" title="admin" class="f6"><i class="fas fa-user-cog"></i></a>
-                </span>
-                <span class="login_icon">
-                    <a href="./SFA_login.html" title="login" class="f6"><i class="fas fa-door-closed"></i></a>
-                </span>
+    <!-- model layer -->
+    <!-- 바깥은 화면 전체 크기 -->
+    <div class="modal-wrapper">
+        <!-- 실제 모달 크기 -->
+        <div class="modal">
+            <div class="modal-title flex flex-justify">
+                <h2 class="noto font16 m-b10">결재 양식 선택</h2>
+                <h2 class="noto font16 m-b10">결재 라인 선택</h2>
+            </div>
+            <div class="modal-top flex flex-justify">
+                <!--문서 폼 분류 -->
+                <div class="" style="width: 250px;border:1px solid #d6dce7;">
+                    <div class="form-list">
+                        <ul id="ztree" class="ztree"></ul>
+                    </div>
+                </div>
+                <!--문서 폼 -->
+                <div id="" class="" style="width: 900px;border:1px solid #d6dce7;margin:0 10px;padding: 30px;">
+                    <iframe width="100%" height="600px" id="formIframe" frameborder="0" name="formIframe"
+                        src="file/b_log.html" scrolling="auto">
+                    </iframe>
+                </div>
+                <!--결재 라인 -->
+                <div class="p10" style="width: 250px;border:1px solid #d6dce7;">
+                    결재라인
+                </div>
+            </div>
+            <div class="modal-bottom center m-t10">
+                <button class="btn-on">문서선택</button>
+                <button class="btn-off popup btn-close">선택취소</button>
             </div>
         </div>
+
     </div>
-</header>
+    <!-- model layer -->
+    <header>
+        <div class="top-wrap flex flex-justify">
+            <div class="logo-wrap" style="padding-top: 8px;">
+                <h2><a class="roboto font22 f6" href="SFA_main.html" title="HOME">SALE FORCE</a></h2>
+                <a class="roboto font20 f6" href="SFA_main.html" title="HOME">AUTOMATION</a>
+            </div>
+            <div class="menu-wrap ">
+                <nav id="topMenu">
+                    <ul>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_notice.html" title="시스템메뉴"
+                                alt="">시스템</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_schedule.html" title="일정" alt="">일정관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_notice.html" title="공지사항" alt="">공지사항</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="SFA_approval_ready.html" title="결재관리"
+                                alt="">결재관리</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="SFA_approval_sign.html" title="결재설정" alt="">결재설정</a>
+                                </li>
+                                <li> <a class="submenuLink" href="SFA_approval_file.html" title="결재양식" alt="">결재양식</a>
+                                </li>
+                                <li> <a class="submenuLink" href="SFA_approval_ready.html" title="대기문서" alt="">대기문서</a>
+                                </li>
+
+
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_emp_list.html" title="인사/급여메뉴"
+                                alt="">인사/급여</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_wage.html" title="급여관리" alt="">급여관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_tna_manage.html" title="근태관리" alt="">근태관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_emp_list.html" title="사원목록" alt="">사원관리</a></li>
+                            </ul>
+                        </li>
+                        <li class="topMenuLi">
+                            <a class="menuLink noto weight700 font16 f6" href="sfa_item_manage.html" title="영업관리메뉴"
+                                alt="">영업관리</a>
+                            <ul class="subMenu">
+                                <li> <a class="submenuLink" href="sfa_stock_manage.html" title="재고관리" alt="">재고관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_sale_manage.html" title="판매관리" alt="">판매관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_order_manage.html" title="수주관리" alt="">수주관리</a>
+                                </li>
+                                <li> <a class="submenuLink" href="sfa_company_manage.html" title="거래처등록"
+                                        alt="">거래처관리</a></li>
+                                <li> <a class="submenuLink" href="sfa_item_manage.html" title="품목관리" alt="">품목관리</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-icon-wrap">
+                <div class="icon font20 f6">
+                    <span class="sig_icon">
+                        <a href="#" title="approve" class="popup f6"> <i class="fas fa-file-signature"></i></a>
+                    </span>
+                    <span class="admin-icon">
+                        <a href=" ./SFA_admin.html" title="admin" class="f6"><i class="fas fa-user-cog"></i></a>
+                    </span>
+                    <span class="login_icon">
+                        <a href="./SFA_login.html" title="login" class="f6"><i class="fas fa-door-closed"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
 
     <main>
         <div class="page-wrap m-tb15">
@@ -207,7 +337,9 @@
                             <td><input type="checkbox" style="width: 20px;height: 20px;" /></td>
                             <td>10</td>
                             <td>인사총무부</td>
-                            <td class="left p-lr20"><i class="far fa-folder"></i> 업무일지 문서양식</td>
+                            <td class="left p-lr20 popup">
+                                <i class="far fa-folder"></i> 업무일지 문서양식
+                            </td>
                             <td>2,200KB</td>
                             <td>폴더</td>
                             <td>2020.09.17</td>
@@ -216,16 +348,9 @@
                             <td><input type="checkbox" style="width: 20px;height: 20px;" /></td>
                             <td>9</td>
                             <td>인사총무부</td>
-                            <td class="left p-lr20"><i class="far fa-folder"></i> 연차처리 문서양식</td>
-                            <td>2,200KB</td>
-                            <td>폴더</td>
-                            <td>2020.09.17</td>
-                        </tr>
-                        <tr class="font14">
-                            <td><input type="checkbox" style="width: 20px;height: 20px;" /></td>
-                            <td>9</td>
-                            <td>인사총무부</td>
-                            <td class="left p-lr20"><i class="far fa-folder"></i> 급여명세서 문서양식</td>
+                            <td class="left p-lr20 popup dayoff">
+                                <i class="far fa-folder"></i> 연차처리 문서양식
+                            </td>
                             <td>2,200KB</td>
                             <td>폴더</td>
                             <td>2020.09.17</td>
@@ -234,7 +359,9 @@
                             <td><input type="checkbox" style="width: 20px;height: 20px;" /></td>
                             <td>8</td>
                             <td>영업부</td>
-                            <td class="left p-lr20"><i class="far fa-folder"></i> 수주처리 문서양식</td>
+                            <td class="left p-lr20 popup order_manager">
+                                <i class="far fa-folder"></i> 수주처리 문서양식
+                            </td>
                             <td>2,200KB</td>
                             <td>폴더</td>
                             <td>2020.09.17</td>
@@ -243,7 +370,9 @@
                             <td><input type="checkbox" style="width: 20px;height: 20px;" /></td>
                             <td>7</td>
                             <td>영업부</td>
-                            <td class="left p-lr20"><i class="far fa-folder"></i> 수주처리 문서양식</td>
+                            <td class="left p-lr20 popup sale_manager">
+                                <i class="far fa-folder"></i> 판매처리 문서양식
+                            </td>
                             <td>2,200KB</td>
                             <td>폴더</td>
                             <td>2020.09.17</td>
@@ -251,8 +380,10 @@
                         <tr class="font14">
                             <td><input type="checkbox" style="width: 20px;height: 20px;" /></td>
                             <td>6</td>
-                            <td>영업부</td>
-                            <td class="left p-lr20"><i class="far fa-folder"></i> 수주처리 문서양식</td>
+                            <td>인사총무부</td>
+                            <td class="left p-lr20 popup payslip">
+                                <i class="far fa-folder"></i> 급여명세서 문서양식
+                            </td>
                             <td>2,200KB</td>
                             <td>폴더</td>
                             <td>2020.09.17</td>
@@ -261,7 +392,9 @@
                             <td><input type="checkbox" style="width: 20px;height: 20px;" /></td>
                             <td>5</td>
                             <td>영업부</td>
-                            <td class="left p-lr20"><i class="far fa-folder"></i> 수주처리 문서양식</td>
+                            <td class="left p-lr20 popup order_manager">
+                                <i class="far fa-folder"></i> 수주처리 문서양식
+                            </td>
                             <td>2,200KB</td>
                             <td>폴더</td>
                             <td>2020.09.17</td>
@@ -270,7 +403,9 @@
                             <td><input type="checkbox" style="width: 20px;height: 20px;" /></td>
                             <td>4</td>
                             <td>영업부</td>
-                            <td class="left p-lr20"><i class="far fa-folder"></i> 수주처리 문서양식</td>
+                            <td class="left p-lr20 popup order_manager">
+                                <i class="far fa-folder"></i> 수주처리 문서양식
+                            </td>
                             <td>2,200KB</td>
                             <td>폴더</td>
                             <td>2020.09.17</td>
@@ -279,7 +414,9 @@
                             <td><input type="checkbox" style="width: 20px;height: 20px;" /></td>
                             <td>3</td>
                             <td>영업부</td>
-                            <td class="left p-lr20"><i class="far fa-folder"></i> 수주처리 문서양식</td>
+                            <td class="left p-lr20 popup order_manager">
+                                <i class="far fa-folder"></i> 수주처리 문서양식
+                            </td>
                             <td>2,200KB</td>
                             <td>폴더</td>
                             <td>2020.09.17</td>
@@ -288,7 +425,9 @@
                             <td><input type="checkbox" style="width: 20px;height: 20px;" /></td>
                             <td>2</td>
                             <td>영업부</td>
-                            <td class="left p-lr20"><i class="far fa-folder"></i> 수주처리 문서양식</td>
+                            <td class="left p-lr20 popup order_manager">
+                                <i class="far fa-folder"></i> 수주처리 문서양식
+                            </td>
                             <td>2,200KB</td>
                             <td>폴더</td>
                             <td>2020.09.17</td>
@@ -297,7 +436,9 @@
                             <td><input type="checkbox" style="width: 20px;height: 20px;" /></td>
                             <td>1</td>
                             <td>영업부</td>
-                            <td class="left p-lr20"><i class="far fa-folder"></i> 수주처리 문서양식</td>
+                            <td class="left p-lr20 popup order_manager">
+                                <i class="far fa-folder"></i> 수주처리 문서양식
+                            </td>
                             <td>2,200KB</td>
                             <td>폴더</td>
                             <td>2020.09.17</td>
@@ -334,6 +475,23 @@
     $(function () {
         $("tr:nth-child(n)").addClass("tr-even");
     })
+
+    $('.dayoff').click(function () {
+        src = "file/day_off.html";
+        $("#formIframe").attr('src', src);
+    });
+    $('.payslip').click(function () {
+        src = "file/payslip.html";
+        $("#formIframe").attr('src', src);
+    });
+    $('.order_manager').click(function () {
+        src = "file/order_manager.html";
+        $("#formIframe").attr('src', src);
+    });
+    $('.sale_manager').click(function () {
+        src = "file/sale_manager.html";
+        $("#formIframe").attr('src', src);
+    });
 </script>
 
 </html>
