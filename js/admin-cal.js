@@ -39,8 +39,8 @@ function showCalendar() {
         monthCnt++;
         calendarBody.appendChild($tr);
     }
-    
-    
+
+
 }
 showCalendar();
 
@@ -77,7 +77,7 @@ function prev() {
         first = pageFirst;
     }
     today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
-    currentTitle.innerHTML = first.getFullYear()+"년" + '&nbsp;&nbsp;&nbsp;&nbsp;' + monthList[first.getMonth()];
+    currentTitle.innerHTML = first.getFullYear() + "년" + '&nbsp;&nbsp;&nbsp;&nbsp;' + monthList[first.getMonth()];
     removeCalendar();
     showCalendar();
     showMain();
@@ -110,7 +110,7 @@ function next() {
         first = pageFirst;
     }
     today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
-    currentTitle.innerHTML = first.getFullYear()+"년" + '&nbsp;&nbsp;&nbsp;&nbsp;' + monthList[first.getMonth()];
+    currentTitle.innerHTML = first.getFullYear() + "년" + '&nbsp;&nbsp;&nbsp;&nbsp;' + monthList[first.getMonth()];
     removeCalendar();
     showCalendar();
     showMain();
@@ -152,11 +152,13 @@ function changeToday(e) {
     today = new Date(today.getFullYear(), today.getMonth(), clickedDate1.id);
     showMain();
     keyValue = today.getFullYear() + '' + today.getMonth() + '' + today.getDate();
+
     reshowingList();
 }
 
 function reshowingList() {
-    keyValue = today.getFullYear() + '' + today.getMonth() + '' + today.getDate();
+    keyValue = today.getFullYear() + '' + (today.getMonth() + 1) + '' + today.getDate();
+    //alert(todoList[keyValue].length);
     if (todoList[keyValue] === undefined) {
         inputList.textContent = '';
         todoList[keyValue] = [];
@@ -206,6 +208,13 @@ function reshowingList() {
             function deleteTodo() {
                 $div.remove();
                 $btn.remove();
+                var result = confirm("일정을 삭제 하시겠습니까?");
+                if (result) {
+                    todoList[keyValue].pop();
+                    alert("일정이 삭제되었습니다.");
+                    reshowingList();
+                }
+
             }
         }
     }
@@ -218,7 +227,7 @@ var inputList = document.getElementById('input-list');
 var delText = 'X';
 inputDate.addEventListener('click', addTodoList);
 var dataCnt = 1;
-var keyValue = today.getFullYear() + '' + today.getMonth() + '' + today.getDate();
+var keyValue = today.getFullYear() + '' + (today.getMonth() + 1) + '' + today.getDate();
 let todoList = [];
 todoList[keyValue] = [];
 
@@ -242,15 +251,20 @@ function addTodoList() {
     function deleteTodo() {
         $div.remove();
         $btn.remove();
+        var result = confirm("일정을 삭제 하시겠습니까?");
+        if (result) {
+            todoList[keyValue].pop();
+            alert("일정이 삭제되었습니다.");
+        }
     }
 }
 
-function initForm(){
+function initForm() {
 
     pageFirst = new Date(first.getFullYear(), first.getMonth(), 1);
     first = pageFirst;
     today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-    currentTitle.innerHTML = first.getFullYear()+"년" + '&nbsp;&nbsp;&nbsp;&nbsp;' + monthList[first.getMonth()];
+    currentTitle.innerHTML = first.getFullYear() + "년" + '&nbsp;&nbsp;&nbsp;&nbsp;' + monthList[first.getMonth()];
 
 
     showMain();
