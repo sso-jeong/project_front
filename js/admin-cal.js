@@ -39,12 +39,11 @@ function showCalendar() {
         monthCnt++;
         calendarBody.appendChild($tr);
     }
-    currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;' + first.getFullYear();
-    showMain();
-
-
+    
+    
 }
 showCalendar();
+
 
 function removeCalendar() {
     let catchTr = 100;
@@ -78,7 +77,7 @@ function prev() {
         first = pageFirst;
     }
     today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
-    currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;' + first.getFullYear();
+    currentTitle.innerHTML = first.getFullYear()+"년" + '&nbsp;&nbsp;&nbsp;&nbsp;' + monthList[first.getMonth()];
     removeCalendar();
     showCalendar();
     showMain();
@@ -111,7 +110,7 @@ function next() {
         first = pageFirst;
     }
     today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
-    currentTitle.innerHTML = monthList[first.getMonth()] + '&nbsp;&nbsp;&nbsp;&nbsp;' + first.getFullYear();
+    currentTitle.innerHTML = first.getFullYear()+"년" + '&nbsp;&nbsp;&nbsp;&nbsp;' + monthList[first.getMonth()];
     removeCalendar();
     showCalendar();
     showMain();
@@ -126,6 +125,7 @@ function showMain() {
     mainTodayDay.innerHTML = dayList[today.getDay()];
     mainTodayDate.innerHTML = today.getDate();
 }
+
 var clickedDate1 = document.getElementById(today.getDate());
 clickedDate1.classList.add('active');
 var prevBtn = document.getElementById('prev');
@@ -211,6 +211,7 @@ function reshowingList() {
     }
 
 }
+
 var inputBox = document.getElementById('input-box');
 var inputDate = document.getElementById('input-data');
 var inputList = document.getElementById('input-list');
@@ -243,6 +244,27 @@ function addTodoList() {
         $btn.remove();
     }
 }
+
+function initForm(){
+
+    pageFirst = new Date(first.getFullYear(), first.getMonth(), 1);
+    first = pageFirst;
+    today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    currentTitle.innerHTML = first.getFullYear()+"년" + '&nbsp;&nbsp;&nbsp;&nbsp;' + monthList[first.getMonth()];
+
+
+    showMain();
+    clickedDate1 = document.getElementById(today.getDate());
+    clickedDate1.classList.add('active');
+    clickStart();
+    reshowingList();
+}
+
+initForm();
+
+
+
+
 console.log(keyValue);
 
 function checkList(e) {
