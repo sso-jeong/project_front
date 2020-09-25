@@ -58,6 +58,35 @@
             padding: 20px;
             box-shadow: -60px 0 100px -90px #000, 60px 0px 100px -90px #000;
         }
+
+        .tab_menu_btn {
+            display: inline-block;
+            width: 100px;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            background-color: #edeff5;
+            border: 1px solid #d4d4d4;
+            color: #000;
+        }
+
+        .tab_menu_btn.on {
+            display: inline-block;
+            width: 100px;
+            height: 45px;
+            text-align: center;
+            line-height: 45px;
+            background-color: rgba(219, 228, 232, 0.8);
+            border: 1px solid transparent;
+        }
+
+        .tab_box {
+            display: none;
+        }
+
+        .tab_box.on {
+            display: block;
+        }
     </style>
     <script>
         $(function () {
@@ -222,13 +251,13 @@
                         </li>
                         <li class="topMenuLi">
                             <a class="menuLink noto weight700 font16 f6" href="SFA_approval_ready.html" title="결재관리"
-                                alt="">결재관리</a>
+                                alt="">전자결재</a>
                             <ul class="subMenu">
                                 <li> <a class="submenuLink" href="SFA_approval_sign.html" title="결재설정" alt="">결재설정</a>
                                 </li>
                                 <li> <a class="submenuLink" href="SFA_approval_file.html" title="결재양식" alt="">결재양식</a>
                                 </li>
-                                <li> <a class="submenuLink" href="SFA_approval_ready.html" title="대기문서" alt="">대기문서</a>
+                                <li> <a class="submenuLink" href="SFA_approval_ready.html" title="결재관리" alt="">결재관리</a>
                                 </li>
 
 
@@ -302,141 +331,236 @@
                     </div>
                 </div>
 
-                <div class="arady-list m-tb15 m-lr15">
-                    <table class="list center" style="table-layout: fixed;">
-                        <tr class="weight700 center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-5">기안일</td>
-                            <td class="td-10">결재양식</td>
-                            <td class="td-10">긴급/일반</td>
-                            <td>문서제목</td>
-                            <td class="td-7">첨부파일</td>
-                            <td class="td-10">기안자</td>
-                        </tr>
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-3">2020-09-16</td>
-                            <td class="td-5">업무일지</td>
-                            <td class="td-5">일반</td>
-                            <td class="td-5 left p-lr5">0916 업무일지입니다.</td>
-                            <td class="td-5">-</td>
-                            <td class="td-5">이명규 사원</td>
-                        </tr>
+                <div class="tab_wrap">
+                    <div class="tab_menu_container m-t15 m-lr15">
+                        <button class="tab_menu_btn1 tab_menu_btn float-l on" type="button">전체</button>
+                        <button class="tab_menu_btn2 tab_menu_btn float-l" type="button">진행중</button>
+                        <button class="tab_menu_btn3 tab_menu_btn float-l" type="button">결재완료</button>
+                    </div>
+                    <div class="tab_box_container">
+                        <div class="arady-list tab_box1 tab_box on m-lr15">
+                            <table class="list center" style="table-layout: fixed;">
+                                <tr class="weight700 center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">기안일</td>
+                                    <td class="td-10">결재양식</td>
+                                    <td class="td-10">긴급/일반</td>
+                                    <td>문서제목</td>
+                                    <td class="td-7">첨부파일</td>
+                                    <td class="td-10">기안자</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-16</td>
+                                    <td class="td-5">업무일지</td>
+                                    <td class="td-5">일반</td>
+                                    <td class="td-5 left p-lr5">0916 업무일지입니다.</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">이명규 사원</td>
+                                </tr>
 
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-3">2020-09-16</td>
-                            <td class="td-5">업무일지</td>
-                            <td class="td-5">일반</td>
-                            <td class="td-5 left p-lr5">0916 업무일지입니다.</td>
-                            <td class="td-5">-</td>
-                            <td class="td-5">김태임 사원</td>
-                        </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-16</td>
+                                    <td class="td-5">업무일지</td>
+                                    <td class="td-5">일반</td>
+                                    <td class="td-5 left p-lr5">0916 업무일지입니다.</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">김태임 사원</td>
+                                </tr>
 
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-3">2020-09-16</td>
-                            <td class="td-5">업무일지</td>
-                            <td class="td-5">일반</td>
-                            <td class="td-5 left p-lr5">0916 업무일지입니다.</td>
-                            <td class="td-5">-</td>
-                            <td class="td-5">남현수 사원</td>
-                        </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-16</td>
+                                    <td class="td-5">업무일지</td>
+                                    <td class="td-5">일반</td>
+                                    <td class="td-5 left p-lr5">0916 업무일지입니다.</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">남현수 사원</td>
+                                </tr>
 
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-3">2020-09-15</td>
-                            <td class="td-5">연차처리</td>
-                            <td class="td-5">일반</td>
-                            <td class="td-5 left p-lr5">0915 연차건입니다.</td>
-                            <td class="td-5">-</td>
-                            <td class="td-5">이명규 사원</td>
-                        </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-15</td>
+                                    <td class="td-5">연차처리</td>
+                                    <td class="td-5">일반</td>
+                                    <td class="td-5 left p-lr5">0915 연차건입니다.</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">이명규 사원</td>
+                                </tr>
 
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-3">2020-09-15</td>
-                            <td class="td-5">수주처리</td>
-                            <td class="td-5">긴급</td>
-                            <td class="td-5 left p-lr5">0915 신진금속 수주 건입니다!</td>
-                            <td class="td-5">-</td>
-                            <td class="td-5">이명규 사원</td>
-                        </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-15</td>
+                                    <td class="td-5">수주처리</td>
+                                    <td class="td-5">긴급</td>
+                                    <td class="td-5 left p-lr5">0915 신진금속 수주 건입니다!</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">이명규 사원</td>
+                                </tr>
 
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-3">2020-09-13</td>
-                            <td class="td-5">업무일지</td>
-                            <td class="td-5">일반</td>
-                            <td class="td-5 left p-lr5">0913 업무일지입니다.</td>
-                            <td class="td-5">-</td>
-                            <td class="td-5">이명규 사원</td>
-                        </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-13</td>
+                                    <td class="td-5">업무일지</td>
+                                    <td class="td-5">일반</td>
+                                    <td class="td-5 left p-lr5">0913 업무일지입니다.</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">이명규 사원</td>
+                                </tr>
 
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-3">2020-09-13</td>
-                            <td class="td-5">업무일지</td>
-                            <td class="td-5">일반</td>
-                            <td class="td-5 left p-lr5">0913 업무일지입니다.</td>
-                            <td class="td-5">-</td>
-                            <td class="td-5">김태임 사원</td>
-                        </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-13</td>
+                                    <td class="td-5">업무일지</td>
+                                    <td class="td-5">일반</td>
+                                    <td class="td-5 left p-lr5">0913 업무일지입니다.</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">김태임 사원</td>
+                                </tr>
 
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-3">2020-09-12</td>
-                            <td class="td-5">업무일지</td>
-                            <td class="td-5">일반</td>
-                            <td class="td-5 left p-lr5">0912 업무일지입니다.</td>
-                            <td class="td-5">-</td>
-                            <td class="td-5">이명규 사원</td>
-                        </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-12</td>
+                                    <td class="td-5">업무일지</td>
+                                    <td class="td-5">일반</td>
+                                    <td class="td-5 left p-lr5">0912 업무일지입니다.</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">이명규 사원</td>
+                                </tr>
 
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-3">2020-09-11</td>
-                            <td class="td-5">연차처리</td>
-                            <td class="td-5">일반</td>
-                            <td class="td-5 left p-lr5">0911 연차건입니다.</td>
-                            <td class="td-5">-</td>
-                            <td class="td-5">남현수 사원</td>
-                        </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-11</td>
+                                    <td class="td-5">연차처리</td>
+                                    <td class="td-5">일반</td>
+                                    <td class="td-5 left p-lr5">0911 연차건입니다.</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">남현수 사원</td>
+                                </tr>
 
-                        <tr class="center font14">
-                            <td class="td-3">
-                                <input type="checkbox" style="width: 20px;height: 20px;" />
-                            </td>
-                            <td class="td-3">2020-09-10</td>
-                            <td class="td-5">수주처리</td>
-                            <td class="td-5">긴급</td>
-                            <td class="td-5 left p-lr5">0910 신진금속 수주 건입니다!</td>
-                            <td class="td-5">-</td>
-                            <td class="td-5">이명규 사원</td>
-                        </tr>
-                    </table>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-10</td>
+                                    <td class="td-5">수주처리</td>
+                                    <td class="td-5">긴급</td>
+                                    <td class="td-5 left p-lr5">0910 신진금속 수주 건입니다!</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">이명규 사원</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="arady-list tab_box2 tab_box m-lr15">
+                            <table class="list center" style="table-layout: fixed;">
+                                <tr class="weight700 center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">기안일</td>
+                                    <td class="td-10">결재양식</td>
+                                    <td class="td-10">긴급/일반</td>
+                                    <td>문서제목</td>
+                                    <td class="td-7">첨부파일</td>
+                                    <td class="td-10">기안자</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-16</td>
+                                    <td class="td-5">업무일지</td>
+                                    <td class="td-5">일반</td>
+                                    <td class="td-5 left p-lr5">0916 업무일지입니다.</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">이명규 사원</td>
+                                </tr>
+
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-16</td>
+                                    <td class="td-5">업무일지</td>
+                                    <td class="td-5">일반</td>
+                                    <td class="td-5 left p-lr5">0916 업무일지입니다.</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">김태임 사원</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="arady-list tab_box3 tab_box m-lr15">
+                            <table class="list center" style="table-layout: fixed;">
+                                <tr class="weight700 center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-5">기안일</td>
+                                    <td class="td-10">결재양식</td>
+                                    <td class="td-10">긴급/일반</td>
+                                    <td>문서제목</td>
+                                    <td class="td-7">첨부파일</td>
+                                    <td class="td-10">기안자</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-16</td>
+                                    <td class="td-5">업무일지</td>
+                                    <td class="td-5">일반</td>
+                                    <td class="td-5 left p-lr5">0916 업무일지입니다.</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">이명규 사원</td>
+                                </tr>
+
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-16</td>
+                                    <td class="td-5">업무일지</td>
+                                    <td class="td-5">일반</td>
+                                    <td class="td-5 left p-lr5">0916 업무일지입니다.</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">김태임 사원</td>
+                                </tr>
+                                <tr class="center font14">
+                                    <td class="td-3">
+                                        <input type="checkbox" style="width: 20px;height: 20px;" />
+                                    </td>
+                                    <td class="td-3">2020-09-10</td>
+                                    <td class="td-5">수주처리</td>
+                                    <td class="td-5">긴급</td>
+                                    <td class="td-5 left p-lr5">0910 신진금속 수주 건입니다!</td>
+                                    <td class="td-5">-</td>
+                                    <td class="td-5">이명규 사원</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </main>
@@ -446,6 +570,26 @@
     $(function () {
         $("tr:nth-child(n)").addClass("tr-even");
     })
+
+    $('.tab_menu_btn').on('click', function () {
+        $('.tab_menu_btn').removeClass('on');
+        $(this).addClass('on')
+    });
+
+    $('.tab_menu_btn1').on('click', function () {
+        $('.tab_box').hide();
+        $('.tab_box1').show();
+    });
+
+    $('.tab_menu_btn2').on('click', function () {
+        $('.tab_box').hide();
+        $('.tab_box2').show();
+    });
+
+    $('.tab_menu_btn3').on('click', function () {
+        $('.tab_box').hide();
+        $('.tab_box3').show();
+    });
 </script>
 
 </html>
