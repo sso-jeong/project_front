@@ -128,12 +128,30 @@ create table EMP_TBL(
 	MARRYGUBUN char(1),			
 	LINGUISTIC varchar(20),				
 	REWARD	varchar(20),			
-	JOINDATE char(10),			
+	JOINDATE char(10),				
+	ATTDATNUM VARCHAR(30),			
+	ATTDATEXFILE VARCHAR(10),	
 	seq int,				
 	insert_person varchar(10),		
-	regdate datetime,				
-	primary key(EMPID) 
+	regdate datetime,		
+	primary key(EMPID),
+	foreign key(attdatnum ) references ATTACH_TBL (attdatnum)
+
+ALTER TABLE EMP_TBL
+ADD FOREIGN KEY (ATTDATNUM) references ATTACH_TBL (ATTDATNUM)
 );
+
+ALTER TABLE EMP_TBL ADD ATTDATNUM VARCHAR(30);
+ALTER TABLE EMP_TBL ADD FOREIGN KEY (ATTDATNUM) references ATTACH_TBL (ATTDATNUM);
+
+ALTER TABLE ITEM_TBL ADD ATTDATNUM VARCHAR(30);
+ALTER TABLE ITEM_TBL ADD FOREIGN KEY (ATTDATNUM) references ATTACH_TBL (ATTDATNUM);
+
+ALTER TABLE STOCK_TBL ADD ATTDATNUM VARCHAR(30);
+ALTER TABLE STOCK_TBL ADD FOREIGN KEY (ATTDATNUM) references ATTACH_TBL (ATTDATNUM);
+
+ALTER TABLE STOCK_TBL ADD ATTDATNUM VARCHAR(30);
+ALTER TABLE STOCK_TBL ADD FOREIGN KEY (ATTDATNUM) references ATTACH_TBL (ATTDATNUM);
 
 // 근태
 CREATE TABLE DL_TAL (
@@ -201,7 +219,7 @@ CREATE TABLE APPROVAL_TAL(
 	regdate datetime,						
 	PRIMARY APPNUM, 
 	FOREIGN KEY(EMPID) REFERENCES EMP_TAL(EMPID),
-	foreign key(attdatnum ) references ATTACH_TBL (attdatnum)
+	foreign key(attdatnum) references ATTACH_TBL (attdatnum)
 
 );
 

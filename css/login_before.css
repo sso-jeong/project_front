@@ -16,7 +16,7 @@
 }
 
 .register {
-    height: 730px;
+    height: 630px;
 }
 
 .logo-text>h2{
@@ -42,20 +42,6 @@ form {
 }
 
 .input {
-    width: 100%;
-    height: 45px;
-    vertical-align: top;
-    font-size: 20px;
-    font-family: 'Noto Sans KR', sans-serif;
-    border: 2px solid #0C4A60;
-    background-color: #fff;
-    box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    padding-left: 35px;
-    margin-bottom: 15px;
-}
-
-.sel {
     width: 100%;
     height: 45px;
     vertical-align: top;

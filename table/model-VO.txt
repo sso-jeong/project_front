@@ -1,0 +1,13 @@
+MemberVO
+
+	private int EMPID, DEPTID, seq;
+	private String DEPTNM, GRADE, EMPAUTH, EMPNM, EMPPWD;		
+	/* 성별, 생년월일, 양력/음력, 주민등록번호, 주소, HP, CP, EMAIL*/
+	private String GENDER, BIRTH, BIRTHTYPE, REGNUM, EMPADDR, EMPHP, EMPCP, EMAIL;			
+	/* 계좌번호, 희망직무, 보유자격, 취미, 특기*/
+	private String ACCOUNTNUM, HOPE, LICENCE, HOBBY, FORTE;
+	/* 채용형태, 병역구분, 장애여부, 보훈대상, 종교, 결혼여부, 어학사항, 상벌사항, 첨부파일번호*/
+	private String CHAGUBUN, MILIGUBUN, IMPEDIMENT, PATRIOTISM,	RELIGION, MARRYGUBUN, LINGUISTIC, REWARD, ATTDATNUM;		
+	/* 입사일자, 등록자*/
+	private String JOINDATE, insert_person;		
+	private Date regdate;
